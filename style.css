@@ -1,1 +1,6 @@
-body {max-width:800px}
+body {
+  max-width:800px
+  background-image: url("sailingship.jpg");
+  background-repeat: no-repeat;
+}
+
