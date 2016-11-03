@@ -1,5 +1,9 @@
-body {
+body p, h1{
   max-width:800px;
   text-indent: 50px;
+  margin-left: 50px;
 }
 
+img{
+  margin-left: 50px;
+}
