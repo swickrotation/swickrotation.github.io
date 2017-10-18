@@ -23,7 +23,7 @@ a { font-family: "Open Sans", sans-serif }
 .group.top-nav { margin-bottom: -20px }
 .group.top-nav nav a { text-decoration: none }
 .group.top-nav nav a:hover { 
-	color: #FF6C40; -webkit-transition: all .25s ease-in-out;
+	color: #FFFFFF; -webkit-transition: all .25s ease-in-out;
    -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
      -o-transition: all .2s ease-in-out;
@@ -41,7 +41,7 @@ a { font-family: "Open Sans", sans-serif }
     font-size: 20px;
     text-transform: capitalize;
 }
-.top-nav .item-nav li.active a { color: #FF6C40 }
+.top-nav .item-nav li.active a { color: #FFFFFF }
 .top-nav .item-nav li a {
     font-family: "Lato", sans-serif;
     font-size: 15px;
@@ -121,7 +121,7 @@ img.img-intro {
 }
 
 .content .post a h1:hover{
-	color: #FF6C40;
+	color: #FF;
 -webkit-transition: all .2s ease-in-out;
    -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
@@ -151,7 +151,7 @@ a.read-more {
 }
 
 a.read-more:hover {
-	background-color: #FF6C40;
+	background-color: #FFFFFF;
 	color: #fff;
 	-webkit-transition: all .25s ease-in-out;
 	   -moz-transition: all .25s ease-in-out;
