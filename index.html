@@ -13,7 +13,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 
-<script type="text/javascript" async src="MathJax-master/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" async src="MathJax-master/MathJax.js?config=TeX-AMS_CHTML-full"></script>
 
 </head>
 <body>
@@ -59,76 +59,93 @@
 <!-- Post -->
 			<div class="post">
 				<!-- Heading -->
-				<a href="#"><h1>One Year</h1></a>
+				<a href="#"><h1>Your Signature, not your John Hancock: A Note on Conventions</h1></a>
 				<hr>
 				<div class="in-content">
 					<p>
-						Ahoy-hoy! I started this site a year ago yesterday. So far, most of my time working on it has been devoted to superficial things- in particular the design of the site and fixing bugs with the CSS code. I'm pretty happy with it so far. I think I'll start posting some more technical things, once I can figure out how to get mathjax working on the site. That shouldn't be so hard, but this isn't exactly my only project. 
+						The point of this post is two-fold: First, I've just tried to implement MathJax in the site, and I'm gonna try to test it out. If you're seeing this, it probably worked. Secondly, I've been thinking a lot about conventions in physics, how they're useful, when they're not, and what we gain by thinking about them. In a more abstract sense, the line of thought leads (or at least has lead me) to the unsurprising but important realization that the order in which learn things can substantially effect our tastes, and not always benignly. 	
 					</p>
+					
+					<p>
+						So I've been taking a course called "Quantum Field Theory for Cosmology" at Perimeter this semester. It's a spiritual successor to a course I took the previous semester, which focused on general relativity. In both of these courses, we've got this thing called a "metric", which is essentially a way of telling us how far away certain events are in spacetime. In Minkowski (flat) spacetime, we've got two ways of representing the metric. In general relativity and quantum gravity, the convention is for writing the metric: 
+
+$$
+\eta^{\mu \nu}= \eta_{\mu \nu} =
+
+\begin{pmatrix}
+    -1 & 0 & 0 & 0 \\
+     0 & 1 & 0 & 0 \\
+     0 & 0 & 1 & 0 \\
+     0 & 0 & 0 & 1 \\
+\end{pmatrix}
+$$
+
+and in quantum field theory and particle physics, the convention is
+
+$$
+\eta^{\mu \nu}= \eta_{\mu \nu}=
+
+\begin{pmatrix}
+     1 & 0 & 0 & 0 \\
+     0 & -1 & 0 & 0 \\
+     0 & 0 & -1 & 0 \\
+     0 & 0 & 0 & -1 \\
+\end{pmatrix} 
+$$
+					</p>
+
+					<p>
+						It's important to note for the non-specialist that these will give you the same physics, as long as you're consistent in your choice. I'll give an example: take the Lagrangian of a real scalar field-
+
+$$
+\mathcal{L} = \frac{1}{2}\eta_{\mu \nu}\partial_{\mu}\phi\partial_{\nu}\phi - m^2\phi^2
+$$
+
+This is going to look a little different depending on our choice of metric: in the first, it's going to be 
+
+$$
+-\frac{1}{2}\dot{\phi}^2 + \frac{1}{2}(\nabla\phi)^2-m^2\phi^2
+$$
+
+and in the second, 
+
+$$
+\frac{1}{2}\dot{\phi}^2 - \frac{1}{2}(\nabla\phi)^2-m^2\phi^2
+$$
+
+Solving the equations of motion, 
+
+$$\frac{\partial\mathcal{L}}{\partial\phi} = -m^2\phi \quad , \quad \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)} = (-\dot{\phi}, \nabla\phi)$$
+
+Very similarly, in the second metric, 
+
+$$\frac{\partial\mathcal{L}}{\partial\phi} = -m^2\phi \quad , \quad \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)} = (\dot{\phi}, -\nabla\phi)$$
+
+These both lead to very similar Euler-Lagrange equations:
+
+$$\ddot{\phi} - \nabla^2\phi+m^2\phi = 0$$
+
+For the negative signature, or
+
+$$-\ddot{\phi} + \nabla^2\phi+m^2\phi = 0 $$
+
+for the positive. 
+
+These both lead to, in relativistic notation, identical reductions to what is termed the Klein-Gordon equation:
+
+$$(\partial^{\mu}\partial_{\mu} + m^2)\phi = 0$$
+
+
+So they both work. I first learned the first one, and so in the tribal way that people tend towards, I decided it was the best way to do things and that the other way wasn't as good. But they both have their strengths and their weaknesses, but only really in the aspects that become more obvious depending on the sign. It's an aesthetic choice, and (as far as I can tell) nothing deper. I still prefer the first one, but only because I'm used to it. I don't think that the other one is inferior anymore. 
+					</p>
+
+					<p>
+						The point I'm trying to make, and I swear there is one, is that I've been thinking a lot these past couple of days about how much of what we learn is stylistic in nature rather than substantiative, and the interrelation of style and substance. No serious conclusions yet, but I'm going to use this example as a reminder to be more open-minded about ways to frame information, ways of knowing, and ways of understanding. 
+					</p>
+
 				</div>
 			</div>
 <!-- /post -->
-
-<!-- Post -->
-			<div class="post">
-				<!-- Heading -->
-				<a href="#"><h1>Old Project, New Space</h1></a>
-				<hr>
-				<div class="in-content">
-					<p>
-						One of those failed projects that I talked about in the last post was a sort of "undergraduate wiki" that I was going to implement and distribute around for the new folk coming into UW, or for people in upper-years who might want some more specific advice. A few meetings with department folks later, and some 35 pages in, I found it wasn't going to be implementable alone. I tried to get some other folk on board for the project and while there was enthusiasm for the idea, there wasn't enough impetus among potential co-writers for the project to take traction. However, not all is lost: I think that the book reviews are still pretty useful. I'm posting all of that in the archive section. I hope you find something you like!
-					</p>
-				</div>
-			</div>
-<!-- /post -->
-
-<!-- Post -->
-			<div class="post">
-				<!-- Heading -->
-				<a href="#"><h1>"That" Post</h1></a>
-				<hr>
-				<div class="in-content">
-					<p>
-						Right, it's been over a full semester since the last update. A lot has happened. Made a few new friends, lost a few old ones, and was out, then in, then out of a couple romantic relationships. Managed to get to Fredericton for all of four days and three nights. I learned a lot of math, which seems to be more and more what I study these days. I tried my hand at a few projects; some of which failed while others succeeded. I've learned a lot about myself, and how to manage some limitations that I previously had not allowed myself to accept. 
-					</p>
-
-					<p>
-						I was without address (read: couch-surfing) for two months and change, from late July to early October. This wasn't the first time that I've had to do a stint living the life of a real transient, but with some more hard work and a fair wind, it will be the last time. That being said, if anyone wants to talk about bootstraps and treat poverty as anything other than a chronic condition, they would do well to talk to me about it. I've got a solid place to live right now, in an arrangement I can expect to hold for quite enough time.  
-					</p>
-
-					<p>
-						Ok, so what am I up to right now? Well, one of my successful projects is nearing completion, and with luck there'll be a pre-pub on arXiv by the end of the year. This semester I'm taking courses in quantum physics and theory, electrodynamics, and further coursework in general relativity. It's exciting. I've also read a ton of books in the last couple of months, the notable ones being Candide, On the Road, Madame Bovary, and Fifteen Dogs. The last one was pretty fun because it largely took part in my old neighbourhood in Toronto, and made explicit reference to the intersection nearest my earliest place of residence.
-					</p>
-				</div>
-			</div>
-			<!-- /post -->
-
-			<!-- Post -->
-			<div class="post">
-				<!-- Heading -->
-				<a href="#"><h1>Montreal for the Week</h1></a>
-				<hr>
-				<div class="in-content">
-					<p>
-						Ok, so in rather unfortunate timing, I lost my Grandmother on Sunday afternoon. Thankfully, the first week is the easiest to miss, and so I hopped the nearest transport to Montreal. My grandmother was really cool, and we miss her a lot. I'll post in a few about her activism, but for now I'm busy getting things together for her funeral this Thursday. 
-					</p>
-				</div>
-			</div>
-			<!-- /post -->
-
-			<!-- Post -->
-			<div class="post">
-				<!-- Heading -->
-				<a href="#"><h1>Once More Unto the Breach</h1></a>
-				<hr>
-				<div class="in-content">
-					<p>
-						Tomorrow marks the first day of one of my final semesters at the University of Waterloo, at the very least as an undergraduate student. This semester is mostly patching holes in coursework I should have probably officially taken by now, so I'll use the coinciding downtime to do more thinking about what I want to do post-degree. Presently I only have vague notions of wanting to do work in RQI and QG, but I'm not well-acquainted enough to know exactly where to start. For now, learning as much math as I can seems like a good option. A friend of mine handed me <a href = "https://arxiv.org/abs/1401.0946">this paper</a>, which implies that if gravitation can only be moddled classically, that gravity cannot create entanglement between gravitationally coupled resonators. To me, this would imply that if you can show (experimentally?) that you can entangle systems with gravity, that a model descibing such an interaction well would be a pretty good start for a theory of quantum gravity. However, the paper relies on a lot of math I don't know yet, particularly in stochastics, so I didn't follow into super-rigorous detail.  
-					</p>
-				</div>
-			</div>
-			<!-- /post -->
-
 
 	<footer>
 		<div class="container">
