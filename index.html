@@ -67,7 +67,7 @@
 					</p>
 					
 					<p>
-						So I've been taking a course called "Quantum Field Theory for Cosmology" at Perimeter this semester. It's a spiritual successor to a course I took the previous semester, which focused on general relativity. In both of these courses, we've got this thing called a "metric", which is essentially a way of telling us how far away certain events are in spacetime. In Minkowski (flat) spacetime, we've got two ways of representing the metric. In general relativity and quantum gravity, the convention is for writing the metric: 
+						So I've been taking a course called "Quantum Field Theory for Cosmology" at Perimeter this semester. It's a spiritual successor to a course I took the previous semester, which focused on general relativity. In both of these courses, we've got this thing called a "metric", which is essentially a way of telling us how far away certain events are in spacetime. In Minkowski (flat) spacetime, we've got two ways of representing the metric. In general relativity and quantum gravity, the convention is: 
 
 $$
 \eta^{\mu \nu}= \eta_{\mu \nu} =
@@ -95,22 +95,22 @@ $$
 					</p>
 
 					<p>
-						It's important to note for the non-specialist that these will give you the same physics, as long as you're consistent in your choice. I'll give an example: take the Lagrangian of a real scalar field-
+						It's important to note for the non-specialist that these will give you the same physics, as long as you're consistent in your choice. I'll give an example: take the Lagrangian density of a real scalar field-
 
 $$
-\mathcal{L} = \frac{1}{2}\eta_{\mu \nu}\partial_{\mu}\phi\partial_{\nu}\phi - m^2\phi^2
+\mathcal{L} = \frac{1}{2}\eta_{\mu \nu}\partial_{\mu}\phi\partial_{\nu}\phi - \frac{1}{2}m^2\phi^2
 $$
 
 This is going to look a little different depending on our choice of metric: in the first, it's going to be 
 
 $$
--\frac{1}{2}\dot{\phi}^2 + \frac{1}{2}(\nabla\phi)^2-m^2\phi^2
+-\frac{1}{2}\dot{\phi}^2 + \frac{1}{2}(\nabla\phi)^2-\frac{1}{2}m^2\phi^2
 $$
 
 and in the second, 
 
 $$
-\frac{1}{2}\dot{\phi}^2 - \frac{1}{2}(\nabla\phi)^2-m^2\phi^2
+\frac{1}{2}\dot{\phi}^2 - \frac{1}{2}(\nabla\phi)^2-\frac{1}{2}m^2\phi^2
 $$
 
 Solving the equations of motion, 
@@ -136,7 +136,7 @@ These both lead to, in relativistic notation, identical reductions to what is te
 $$(\partial^{\mu}\partial_{\mu} + m^2)\phi = 0$$
 
 
-So they both work. I first learned the first one, and so in the tribal way that people tend towards, I decided it was the best way to do things and that the other way wasn't as good. But they both have their strengths and their weaknesses, but only really in the aspects that become more obvious depending on the sign. It's an aesthetic choice, and (as far as I can tell) nothing deper. I still prefer the first one, but only because I'm used to it. I don't think that the other one is inferior anymore. 
+So they both work. I first learned the first one, and so in the tribal way that people tend towards, I decided it was the best way to do things and that the other way wasn't as good. But they both have their strengths and their weaknesses, but only really in the aspects that become more obvious depending on the sign. For the (+,-,-,-) convention, you get timelike 4-vectors with positive magnitude. For (-,+,+,+), you keep familiar 3-d formalism. You also don't have to worry about your determinant flipping in a generalized dimensionality case.  It's an aesthetic choice, and (as far as I can tell) nothing deper. I still prefer the first one, but only because I'm used to it. I don't think that the other one is inferior anymore. 
 					</p>
 
 					<p>
