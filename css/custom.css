@@ -119,7 +119,12 @@ img.img-intro {
     font-weight: 400;
     position: relative;
 }
-
+ .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 .content .post a h1:hover{
 	color: #FF;
 -webkit-transition: all .2s ease-in-out;
@@ -133,6 +138,12 @@ img.img-intro {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: 400;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 .in-content { margin-top: 55px }
 a.read-more {
