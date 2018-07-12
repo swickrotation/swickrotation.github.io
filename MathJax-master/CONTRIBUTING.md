@@ -159,7 +159,7 @@ tested and merged.
 If you're not completely clear on how to submit / update / *do* Pull
 Requests, please check out our [source control
 policies](https://github.com/mathjax/MathJax/wiki/Source-control-policies). For
-more insights, chech the excellent in depth [Git Workflow
+more insights, check the excellent in depth [Git Workflow
 guide](https://github.com/TryGhost/Ghost/wiki/Git-Workflow) from
 Ghost, in particular
 
