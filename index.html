@@ -71,6 +71,7 @@
 			<div class="post">
 				<!-- Heading -->
 				<a>
+<<<<<<< HEAD
 					<h1>Random Number Generation: Quantum and Classical</h1>
 				</a>
 				<hr>
@@ -122,6 +123,68 @@
 					 <p>
 						If this new technology is a sign of things to come, it's going to mean the world will need all sorts of new communication schemes, new facilities, new research, and new infrastructure to handle these fundamental changes. It will likely also necessitate shifts in public policy, in governance and corporate regulation, and in distribution of the technology. No technology, no matter how mundane or innocuous it seems, is divorced from the dynamics of power. It bears keeping that in mind. It will be incumbant on those with the wherewithal to use these new technologies to do so in a responsible manner.
 					 </p>
+=======
+					<h1>Bolzano-Weierstrass without a ruler</h1>
+				</a>
+				<hr>
+				<div class="in-content">
+					<p> 
+						The <a href = https://en.wikipedia.org/wiki/Bolzano%E2%80%93Weierstrass_theorem> Bolzano-Weierstrass theorem</a> is often thought of as a critical piece of elementary education in real analysis. While its criticality is not up for debate, at least with me, its position as a theorem of real analysis certainly is! In fact, it is possible to derive the theorem by shear topological methods, and with a little help from a base idea of functional analysis- no metric required. 
+					</p>
+
+					<p>
+						Ordinarily, the theorem is stated as the result that a sequence is compact (read: <a href=https://en.wikipedia.org/wiki/Sequentially_compact_space>sequentially compact</a>) iff it is closed and bounded. This, however, is not an appropriate statement on a generalized topological space which, while closed in many cases, does not offer a solid interpretation of boundedness (in particular, there is no concept of a "ball" in a general topological space, just neighbourhoods- which may be infinite). That means we're going to have to get a little creative. An alternative formulation to the above is the following, as presented in Wald's <i>General Relativity</i>:
+					</p>
+
+					<p>
+						<b>Theorem: Balzano-Weierstrass - </b> <i>Let $(X, \mathscr{T})$ be a topological space and let $A \subset X$. If $A$ is compact, then every sequence $\{x_n\}$ of points in $A$ has an accumulation point lying in $A$. Conversely, if $(X, \mathscr{T})$ is second-countable, and every sequence in $A$ has an accumulation point in $A$, then $A$ is compact. Thus, if $(X, \mathscr{T})$ is second-countable, $A$ is compact if and only if every sequence in $A$ has a convergent subsequence whose limit lies in $A$.</i>
+					</p>
+
+					<p>
+						For the uninitiated, there's quite a lot to unpack here. There are handy resources online for learning what all of these terms mean, and I encourage the reader to read those if they seek great detail. I will go over some of these definitions in brief. I am going to assume a passing familiarity with topology, and thus a pre-existing understanding of compactness and the properties of topological spaces. 
+					</p>
+
+					<p>
+						We call a point $y$ an <i>accumulation point</i> or <i>limit point</i> of a sequence $\{x_n\}$ if any neighbourhood of $y$ contains an infinite number of points contained in $\{x_n\}$. As every neighbourhood of the limit itself contains the limit, the limit is automatically an accumulation point. It is not guaranteed in general that every accumulation point $y$ has a subsequence $\{y_n\}$ of $\{x_n\}$ such that $\{y_n\}$ converges to $y$, though it is possible if the space where these sequences lie is <i>first-countable</i>, which we define below.  
+					</p>
+
+					<p>
+						A topological space $(X, \mathscr{T})$ is called <i>second-countable</i> if every open set in $X$ is expressible as a union of open sets from some countable set of open sets. i.e. where $A$, $\mathcal{O}_\alpha$ are open sets, $$ \forall A \subset X, A = \bigcup\limits_\alpha \mathcal{O}_\alpha$$ In this way, it is easy to see that second-countability implies first-countability, which is the notion that every point in $X$ is contained in at least one of a countable collection of open sets. 
+					</p>
+
+					<p>
+						With the bookkeeping out of the way, we get to the proof of the theorem. It goes like this- we start in the forward direction: if $A$ is compact, then the sequences $\{x_n\}$ in $A$ have accumulation points in $A$. The definition of compactness of a set is that any open covering of that set must admit a finite subcovering. We attempt a proof by contradicton, in that we start with a comapct set set in which the seqeunces do not have accumulation points in the set. It is our hope that this leads to a regime in which $A$ cannot be compact, thus invalidating the assumption. 
+					</p>
+
+					<p>
+						for each $a \in A$, we choose an open set $\mathcal{U}_a$ containing $a$ such that a sequence $\{x_n\}$ contains a finite amount of points in $\mathcal{U}_a$. $\{\mathcal{U}_a | a \in A \}$ is an open cover of $A$, namely the set $\{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$. However, if $\{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$ is an open cover, $\{x_n \} \subset \{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$. Then some $\mathcal{U}_{a_i}\}$ in $\{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$ contains infinitely many points of $\{x_n\}$  as the sequence $\{x_n\}$ is infinite. A contradiction! If there are to be finitely many sets covering $A$, these sets must contain accumulation points.
+					</p>
+					
+					<p>
+						Ok, so that's step one. The second step is considerably more involved. We aim to prove that if $(X,\mathscr{T})$ is 2nd-countable, and if every sequence $\{x_n\}$ in $A$ has an accumulation point in $A$, that $A$ is compact. This will be done directly, though we will invoke an idea from a hitherto-unused part of mathematics. Don't worry, it's straightforward. 
+					</p>
+
+					<p>
+						First- if  $(X,\mathscr{T})$ is 2nd-countable, it is first countable and that guarantees that every convergent sequence in  $(X,\mathscr{T})$ has convergent subsequences- i.e. every accumulation point $y$ of a sequence $\{x_n\}$ may be written as the limit of a sequence $\{y_n\}$ such that $\{y_n\} \subset  \{x_n\}$. Thus for what it's worth, we can say that the set $A$ is closed, as $A = \overline{A}$. 
+					</p>
+
+					<p>
+						Now we need the concept of "nets", from functional analysis. A "net" is a function taking a "directional set" to a topological space. A directional set is a set with an implicit ordering, like the integers. As an example case, we say $A$ is a set with an index set on the elements of $A$, $\{n,n-1,\ldots,1\}$, such that elements follow the relation according to their index: $a_n \geq a_{n-1} \geq \ldots \geq a_1$. That is, in plain english, the last element is greater than or equal to the second-last, and so-on until you reach the terminal element, if applicable. 
+					</p>
+
+					<p>
+						Say a net $\{X_{\lambda}\}_{\lambda \in \Lambda}$ has a "cluster point" $x$ if for every neighbourhood $\mathcal{O}$ of $X$ the index set $\{\lambda : X_{\lambda} \in \mathcal{O}\}$ is cofinal in $\Lambda$. $x$ is a cluster point of the net $\{X_{\lambda}\}_{\lambda \in \Lambda}$ iff some subset $\{X_{\gamma}\}_{\gamma \in \Gamma}$ converges to $x$. $x$ is an accumulation point of $A$ iff $\exists$ a net $X \notin \{X_{\lambda}\}_{\lambda \in \Lambda} \subset A$ that converges to $x$. $x \in X$ is an accumulation point of $A$ if $\mathcal{O}(x)$ contains infinitely many limit points. We have a lemma to prove:
+					</p>
+
+					<p>
+						<b>Lemma:</b> <i>$A \subset X$ is countably compact iff every infinite subset has a limit point iff every sequence has a cluster point.</i> <br> We start with the last point: let $K$ be an infinite set, and suppose every sequence has a cluster point. Clearly, we may construct a sequence in $K$ such that its cluster point is a limit point in $K$. Now on the other hand, suppose that any infinite subset has an accumulation point.  We take some infinite subset $k \in K$ : consider any distinct sequence $\{x_n\}$ with distinct elements. Any of these elements is a cluster point. <br> Now suppose $X$ is compact. Let $\{x_n\}$ be a sequence in $X$ and say $B_n = \overline{\{x_i\}}_{i=n}^{\infty}$ so that $\exists x \in \cap_{n=1}^{\infty}B_n$. Any neighbourhood of $x$, say $\mathcal{O}$, intersects infinitely many points of  $\{x_n\}$ as otherwise $\cap_{n=1}^{\infty}B_n = \emptyset$. On the other hand, suppose every sequence has a cluster point, and let $B_n$ be a sequence of closed sets such that they satisfy the property of finite intersections. We choose any $x_n \in B_1 \cap \ldots \cap B_n$. Any cluster point of $\{x_n\}$, like $x$, is therefore in $\cap_{n=1}^{\infty}B_n$. 
+					</p>
+
+					<p>
+						From our construction, we know that countable compactness implies limit point compactness, and due to first-countability, vice-versa. Due to second-countability, we know that every open covering must be made up of a countable union of open sets from some countable set of open sets- thus countable compactness implies compactness. This only works because our space is countable! Were it not for that fact, one might take some uncountable open covering of $X$ which would admit no finite subcovering. This acknowledgement concludes the proof. 
+					</p>
+
+>>>>>>> 793e8366799596d2b451d90fc4e6a01e43786cf8
 				</div>
 			</div>
 		</div>
