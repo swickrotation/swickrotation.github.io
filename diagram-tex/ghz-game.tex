@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+\title{test.tex}
+\author{will.gertler }
+\date{January 2019}
+
+\begin{document}
+\tikzstyle{block} = [draw, fill=white!20, rectangle, text badly centered, text width=6em, minimum height=4em, minimum width=7em, node distance =2cm]
+\tikzstyle{bblock} = [rectangle, draw, fill=black!20, text width=5em, text centered, rounded corners, minimum height=4em, node distance =2.75cm]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+\tikzstyle{line} =[draw, very thick, color=black, -latex]
+\begin{tikzpicture}
+    \hspace{0.7cm} 
+    \node (ref) [block] {Referee};
+    \node (bob) [block, below of=ref, node distance = 2.4cm] {Bob answers $b$};
+    \node (alice) [block, left of=bob, node distance = 3.5cm] {Alice answers $a$};
+    \node (charlie) [block, right of=bob, node distance = 3.5cm] {Charlie answers $c$};
+    \node (measure1) [block, below of=alice, node distance = 2.4cm] {Measure Bit $a$};
+    \node (measure2) [block, below of=bob, node distance = 2.4cm] {Measure Bit $b$};
+    \node (measure3) [block, below of=charlie, node distance = 2.4cm] {Measure Bit $c$};
+    \node (result) [block, below of=measure2, node distance = 2.4cm] {$a \oplus b \oplus c \stackrel{?}{=} r \vee s \vee t$};
+    \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$s$} (bob);
+    \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$r$} (alice);
+    \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$t$} (charlie);
+    \path [line] (alice) -- (measure1);
+    \path [line] (bob) -- (measure2);
+    \path [line] (charlie) -- (measure3);
+    \path [line] (measure1) -- (result);
+    \path [line] (measure2) -- (result);
+    \path [line] (measure3) -- (result);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wgertler | Tumbling Down the Rabbit Hole</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="William Gertler">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="icon"       href="img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript" async src="MathJax-master/MathJax.js?config=TeX-AMS_CHTML-full"></script>
+<script type="text/javascript" src="MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="MathJax-master/braket/braket.js"></script>
+
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="index.html">wgertler</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">wgertler</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="index.html">Home</a></li>
+				        <li><a href="about.html">About</a></li>
+				        <li><a href="archive.html">Archive</a></li>
+				        <li><a href="contact.html">Contact</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->
+				<a>
+					<h1>All of Pythagoras's Friends</h1>
+				</a>
+				<hr>
+				<div class="in-content">
+			
+					<p>
+						A lot of the reason I read a particular textbook has to do with its portability. I've got a lot of moving around to do over the course of the day. If I want to kill the commute time, reading has always been my go-to. Reading on the bus is kinda nice, but if you've got a text that's a little too large, it can be prohibitive. Not to mention the fact that you've got to carry it around all day. Fortunately, there are a plentitude of texts that fit <i>right in your pocket!</i> The one I picked off the shelf today is called <i>Introduction to Elliptic Curves and Modular Forms</i>, by a guy named Neal Koblitz. He's a cryptographer at the university of Washington, and an adjunct faculty member here at Waterloo.
+					</p>
+			
+					<p>
+						I don't actually know any number theory, though. So this book has been an adventure. I've had to brush up on some definitions, sit and ponder a few things. The first problem I worked out today had to do with primitive Pythagorean triples, which is a 3-tuple of intergers $(X,Y,Z)$ such that $X^2+Y^2=Z^2$, with none of the intergers sharing a common factor. We suppose that $a>b$ without loss of generality, and say that they're not both odd, and relatively prime. The problem is to show that, given the relations 
+					</p>
+
+					<p>
+						$$ X=a^2-b^2,\, Y=2ab,\, Z= a^2+b^2$$
+					</p>
+
+					<p>
+						form a triple so-described, and that all primitive Pythagorean triples take this form. Showing that this is formulation of $(X,Y,Z)$ is a triple is simple, all that's needed is to recognize that these values fulfill the Pythagorean theorem. Showing that they form all primitive solutions is a little trickier. Letting both $a$ and $b$ be even, we see that $Y$ and $Z$ are no longer coprime. Similarly, if both $a$ and $b$ are odd, all $(X,Y,Z)$ become even, and thus no two of them are coprime. Thus, we need one of $(a,b)$ to be odd, and the other even.
+					</p>
+
+					<p>
+						The reason we know <i>all</i> primitive triples are found this way is the most interesting part. The easiest way to see it is to draw a picture:
+					</p>
+					
+					<p style="text-align:center;">
+						<img src="img/unit.png" alt="Unit Circle with chord from (-1,0) to (u,v) in first quadrant" class="center">
+					</p>
+
+					<p>
+						Re-paramaterizing from $$ X=a^2-b^2,\, Y=2ab,\, Z= a^2+b^2$$ to $$u=\frac{X}{Z},\,v=\frac{Y}{Z}$$, we see that following the Pythagorean theorem leads us to know that $u^2+v^2=1$, naturally leading us to a parametrization of the unit circle. Cycling through the intergers for $a$ and $b$ gives us all possible Pythagorean triples.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+					<ul class="social list-flat right">
+						<li><a href="mailto:will.gertler@gmail.com"><i class="fa fa-send"></i></a></li>
+						<li><a href="http://twitter.com/swickrotation"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/william-gertler-7a965375/"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/kube.min.js"></script>
+</body>
+</html>

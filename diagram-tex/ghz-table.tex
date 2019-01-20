@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\title{test.tex}
+\author{will.gertler }
+\date{January 2019}
+
+\begin{document}
+\begin{table}
+    \begin{tabular}{P{2cm}|P{2cm}}
+        $rst$ & $a \oplus b \oplus c $ \\ \hline
+        000 & 0 \\
+        011 & 1 \\
+        101 & 1 \\
+        110 & 1 \\
+    \end{tabular}
+\end{table}
+\end{document}
