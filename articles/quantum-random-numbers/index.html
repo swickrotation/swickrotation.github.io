@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wgertler | Tumbling Down the Rabbit Hole</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="William Gertler">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/kube.min.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/custom.min.css" />
+    <link rel="icon"       href="/img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript" async src="/MathJax-master/MathJax.js?config=TeX-AMS_CHTML-full"></script>
+<script type="text/javascript" src="/MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/MathJax-master/braket/braket.js"></script>
+
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="index.html">wgertler</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">wgertler</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="index.html">Home</a></li>
+				        <li><a href="/about/index.html">About</a></li>
+				        <li><a href="/articles/index.html">Articles</a></li>
+				        <li><a href="/contact/index.html">Contact</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+    </div>
+    
+<!-- Content -->
+<div class="content">
+	<div class="container">
+
+		<!-- Post -->
+		<div class="post">
+			<!-- Heading -->
+				<h1>Random Number Generation: Quantum and Classical</h1>
+			<hr>
+			<div class="in-content">
+				<p>
+					Happy new year! Hope you had a nice holiday and that 2019 is treating you well thus far, and that it continues to do so. After the past few years, I think the world could use a good one. Something interesting happened to me last year. My friend Tim, a software engineer and security consultant at <a href="https://chosenplaintext.ca">Chosen Plaintext</a> got tapped to evaluate a quantum random number generator. That required some physics background that he didn't have, so he called yours truly to lend a hand to the project! 
+				</p>
+
+				<p>
+					Unfortunately, due to some circumstances outside of our control, the project was put on indefinite hiatus before we could really start. We did, however, get to have an excuse to spend some time together learning about some interesting technology- which I will describe here in broad strokes shortly. But first, it's helpful to have some idea what we want random numbers for in the first place, as well as how we might acquire them by classical means. 
+				</p>
+
+				<p>
+					Random numbers, or more often pseudo-random numbers, are a necessity in modern secure communication schemes. The creation of session keys in TLS, secure Wi-Fi connections over WPA2, reliable SSH connections, and even basic plaintext encryption rely deeply on our ability to generate random numbers. These are just a few of the use-cases, but these cases alone are enough to illustrate the drastic importance of random numbers, and random-number generation.  
+				</p>
+
+				<p>
+					But how do you generate a random number, and what does it mean to do that? And what exactly does it mean to have a random number generated securely? How do we know that there is no process to reverse the output to find the "seed number"- the initial input?
+				</p>
+
+				<p>
+					In short, you often don't have an absolutely fool-proof way of making sure things are totally secure- and for almost every use-case, that's totally fine. The sheer scale of computing power necessary to crack a "cryptographically secure" pseudo-random number generating scheme is usually so absurdly high that it makes it impractical for most adversaries (including ones with very large amounts of resources at their disposal) to take the time to compromise. There are specific cryptographically-secure pseudo-random number generators (CSPRNG's) that are industry standards, though the way seeds are determined is often still a classical, and technically deterministic process.
+				</p>
+
+				<p>
+					My personal favourite of these classical processes involves something called a "hardware RNG". A device that measures something physical and uses that measurement to seed the random number generation. For example, thermal noise in a chip may be used, and the stochastic process are generally unpredictable in a deterministic way that is indistindistinguishable from true randomness. That is not to say that truly ingenious hackers might not be able to create conditions in which they can expect only a small number of possible seeds and thus reverse the process, but with sufficient care the user should be able to protect against attack with only a small amount of comparative effort. Unfortunately hardware RNG's tend to deteriorate over time, becoming less and less random. 
+				</p>
+
+				<p>
+					Right. So here's where we get a little picky. While CSPRNG's are outstanding for most purposes, they still have their own vulnerabilities- they may be implemented improperly, they may break down, they may distributed by <a href = "https://www.reuters.com/article/us-usa-security-rsa/exclusive-secret-contract-tied-nsa-and-security-industry-pioneer-idUSBRE9BJ1C220131220">untrustworthy vendors</a>, or any other such problem. While not wholly invulnerable, some implementations of QRNG's can address these issues. Furthermore, they are, in principal, verifiably random numbers- for those who cannot afford to trust a third-party vendor's CSPRN. The number of use cases in which one would prefer the expense of a dedicated QRNG to a cheaper, reliable CSPRNG is small. But to those users, the extra assurance is of critical importance.
+				</p>
+
+				<p>
+					QRNG's work by using randomness not generated by an algorithm, but by using properties of nature. Using a prepared superposition of states, one has the opportunity to make a measurement (or many measurements) that will give a random output with some probability. It is not necessary that these probabilities be uniform, as one may use Von Neumann's trick to balance the results (as long as the bias remains fixed). For a two-level system, it is straightforward to convert multiple mea   a number of times gives a long binary string, which may easily be converted into a decimal representation should that be desirable. This works as an effective seed, in a theoretical setting. But how can you actually implement such a device? 
+				</p>
+
+				<p>
+					There are a few different ideas here: one could use a <a href = https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment>Stern-Gerlach experiment</a> (in which ions are seperated by their spins) as a way of generating their numbers, if they have such a device at their exposal. Such devices would be rather difficult to maintain and are impractical to utilise, not to mention sheerly expensive. One might also attempt a type of tunneling device- described by <a href = "https://arxiv.org/abs/1711.01752">Zhou et. al.</a>, the scheme measures whether or not a tunelling event occurs after prodding a potential well with a periodic voltage, measuring tunneling events as 1 and a lack of such events as 0. Post-processing of these seeds render viable random numbers. This kind of device seems more viable for consumer electronics to me, as it's a little easier to make such a well on a nano-scale and implement it than it is to make a miniture Stern-Gerlach experiment. There are plenty of other interesting implementation schemes, another popular type using light-polarizing beamsplitters, with much the same idea (and similar limitations) as the Stern-Gerlach apparatus in terms of applicability to consumer electronics. These devices all count on the user trusting the manufacturer, short of developing the devices themselves. We designate devices of this type, the kind available on the market for purchase today, as "trusted" QRNG's.
+					</p>
+					
+					<p>
+					So are there devices that allow for self-testing, to be sure there is no tampering from the originator? Well, yes and no. There are devices that allow for self-testing to ensure perfect randomness and total security, but they require random seeds to start with. That means you either need to trust the manufacturer or build one of the QRNG's above to generate your own number, each time you want to generate a new random number. These self-testing QRNG's are also generally much slower and unable to compete in a practical way with the speed at which classical or trusted QRNG's can operate- in fact, they're blown out of the water, by a factor of more than 2 billion to one. The tradeoff is that self-testing QRNG's deliver randomness that does not depend on the implementation of the device in question, and that they do offer total security <a href = "https://www.researchgate.net/publication/43148427_Random_Numbers_Certified_by_Bell's_Theorem">guaranteed against classical adversaries</a>, hinging mostly on violation of the <a href = "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.23.880">CHSH inequality</a> that can only be gleaned by entanglement influencing the outcome of the experiments.
+					</p>
+
+					<p>
+					So what does all this mean? First and foremost, it means that quantum technologies have quite a way to go- but that's not necessarily a bad thing. Being able to get in on the ground floor of development of new technologies is an exciting position to be in for many reasons, not the least of which is that the position gives one the opportunity to make lasting contributions to the field. It also means that, having many (though not all) of the fundamentals worked out means that ground is broken in quantum technologies. Thus further development should be expected, not just in RNG's, but in quantum tech in general. 
+					</p>
+
+					<p>
+					If this new technology is a sign of things to come, it's going to mean the world will need all sorts of new communication schemes, new facilities, new research, and new infrastructure to handle these fundamental changes. It will likely also necessitate shifts in public policy, in governance and corporate regulation, and in distribution of the technology. No technology, no matter how mundane or innocuous it seems, is divorced from the dynamics of power. It bears keeping that in mind. It will be incumbant on those with the wherewithal to use these new technologies to do so in a responsible manner.
+					</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<footer>
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+					<ul class="social list-flat right">
+						<li><a href="mailto:will.gertler@gmail.com"><i class="fa fa-send"></i></a></li>
+						<li><a href="http://twitter.com/swickrotation"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/william-gertler-7a965375/"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="/js/jquery.min.js"></script>
+    <script src="/js/kube.min.js"></script>
+</body>
+</html>
