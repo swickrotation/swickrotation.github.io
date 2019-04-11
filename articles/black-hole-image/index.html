@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wgertler | Tumbling Down the Rabbit Hole</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="William Gertler">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/kube.min.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/custom.min.css" />
+    <link rel="icon"       href="/img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/javascript" async src="/MathJax-master/MathJax.js?config=TeX-AMS_CHTML-full"></script>
+<script type="text/javascript" src="/MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/MathJax-master/braket/braket.js"></script>
+
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="/">wgertler</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">wgertler</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="/">Home</a></li>
+				        <li><a href="/about/">About</a></li>
+				        <li><a href="/articles/">Articles</a></li>
+				        <li><a href="/contact/">Contact</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+<!-- Content -->
+<div class="content">
+    <div class="container">
+        <!-- Post -->
+        <div class="post">
+            <!-- Heading -->
+                <h1>The Giant's Shadow</h1>
+            <hr>
+            <div class="in-content">
+                <p>
+                As you've probably heard by now, the long-awaited results of the Event Horizon Telescope (EHT) have been <a href = 'https://iopscience.iop.org/journal/2041-8205/page/Focus_on_EHT', target=_blank>announced</a>- and we have for the first time ever imaged the area directly surrounding a black hole. This is a pretty astounding result for physics, and is further evidence for the existence of black holes as more than a mathematical phenomenon. However, there have been indications of the existence of black holes for quite some time. There are scores solutions to the Einstein field equations indicating their existence. The <a href ='https://www.ligo.caltech.edu/page/detection-companion-papers', target=_blank>LIGO results</a> pretty definitively determine the existence of gravitational waves, at strengths consistent with Einstein's theory applied to a black hole merger. UCLA's <a href = 'http://www.astro.ucla.edu/%7Eghezgroup/gc/', target=_blank>Galactic Center Group</a> under the direction of <a href ='http://www.astro.ucla.edu/~ghez/', target=_blank>Andrea Ghez</a> performed observations around the center of the Milky Way at an object referred to as "Sagittarius A*" (and often abbreviated to Sgr A*) which produced convincing results:
+                </p>
+
+                <p style="text-align:center;">
+                     <img src="keck-ucla-bh.gif" alt="Ghez Image of orbits near Sgr A*" class="center"> 
+                </p>
+
+                <p>
+                    This is the first direct image of a black hole's environment ever constructed, and a very convincing result- all but confirming the existence of black holes in nature. Not that there were many doubters left! Here's a look: 
+                </p>
+
+                <p style="text-align:center;">
+                    <img src="m87*.jpg" alt="EHT Photo of M87*" class="center">
+                </p>
+                
+                <p>
+                    I think this image is pretty fascinating. However there are a lot of things the interested though untrained eye might miss, misinterpret, or not understand. I'm going to address some of the questions the gifted amateur might have: How was this image made, why is it so blurry, what is that ring around the shadow, and why is it so uneven?
+                </p>
+
+                <p>
+                    We'll start with the first question. This image was created using data collected from 8 different observation stations in 6 locations in April of 2017. They used a technique called <a href='https://en.wikipedia.org/wiki/Very-long-baseline_interferometry', target=_blank>"very long baseline interferometry"</a> in which signals are combined respecting the time-difference between receipt of the signals in such a way that emulates a telescope that is as large as the distance in between the observing stations. Given the seperation of the telescopes, and thanks to the Earth's rotation, this has effectively given the researchers an Earth-sized telescope with an observational wavelength of 1.3mm (which puts it in the class of "extremely high frequency" microwaves). The data, once collected, was flown to the <a href='https://www.mpifr-bonn.mpg.de/', target=_blank>Max Planck Institute for Radio Astronomy</a> in Bonn, Germany and the <a href ='https://www.haystack.mit.edu/', target=_blank>Haystack Observatory</a> in Westford, Massachusetts. The daunting quantity of analysable data needed to be physically transported to these research stations- there was simply too much to practically transfer electronically.
+                </p>
+ 
+                <p>
+                    The data was processed using two sets of algorithms that account both for the under-constrained circumstances due to the sparse population of detectors on the globe and for the lack of optimal phase calibration resulting in some large uncertainties in amplitude callibration. The first set of these algorithms are called "<a href ='http://cdsads.u-strasbg.fr/abs/1974A%26AS...15..417H', target=_blank>CLEAN</a>" algorithms, which were first devised by Jan Högbom in 1974. The algorithm finds the strongest signal and convolves it with a "point-source function", and then reduces the gain from this convolution from the image. This process acts as an interative noise-reduction process. The second set of algorithms used are called "regularized maximum likelyhood" (RML) algorithms that conform to the observed results, but try to interpret the data in a way that adhere to certain desired properties- smooth and compact images being expected in the case of a black hole. Both research teams (acting independently to avoid crossover bias) came up with similar images of an asymmetric ring around a large, dark spot. This process was repeated along different "pipelines"- different fabrications of the images using distinct methodologies. 
+                </p>
+
+                <p>
+                    You can read more about the RML algorithms, first developed by <a href='http://articles.adsabs.harvard.edu/cgi-bin/nph-iarticle_query?1986ARA%26A..24..127N&amp;data_type=PDF_HIGH&amp;whole_paper=YES&amp;type=PRINTER&amp;filetype=.pdf', target=_blank>Narayan and Nityananda</a> in 1986 and developed extensively by <a href='https://watermark.silverchair.com/psu070.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAjswggI3BgkqhkiG9w0BBwagggIoMIICJAIBADCCAh0GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMLMkr0OcyxT2Xh9pcAgEQgIIB7o55tG9vkPqYTi0JGW6-uDnwvxmPFnSYGdqYJEUHFhR4DTH9p7nbuuCfHo4NutiCt5m5UJRtjMjxo44YbVjOYX98L7D5sOlT2shc-fqPP9Ot85ehjeJgWhJRzBOeUcUG7Y0Fg6Un21g03i-kqJNdUeU0-oCf5rH0rN-7k03me8U2foloKM4VueTn6VWxJjVmgs0IwuUebaT83JvwucXIZG2fCme4kg7IexLncwVHLKlGDxyiKE2HhJHZtNWUyfN3NdTTgmt0cXIRubSXdKDQ-f226qbJ3PhEBqdLJrfXfumPA9G9r6pyJ0dcoQJhse_qZ6ZuP9YIwwcvFaTK3kiL95LTrlPGCmu8qxn9yk9K-wSDqb6zfgRDIi4c9WopQOe_lmajnCDNCLckY4hBTR0K_P6d0ZOr8DJHCw1Ht32uVaUznCMwEGWjUneozD0figBxCWjJYp_OFH_8GZ2yCjgFZrDWX8TJOiFJZWsNtWpaSTlCM8cpkGeomwzewmrqGG0iLtc9yhogpdkyz5ZCTmsFVYW8GxWrV6vL_E4W_CunIVSqrKENJ9onKmc84D9paixWliYEHz7asz36et_zi1dxUVeTd1zv26YJWF3gfF3aSbEoo9DnO6BSQSGVwcDh3wSVVTidJpZeWf8htJguU0aM', target=_blank>Honma et. al.</a>, <a href='https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Bouman_Computational_Imaging_for_CVPR_2016_paper.pdf'>Bouman et. al.</a>, <a href='https://iopscience.iop.org/article/10.3847/1538-3881/aa6302/pdf', target=_blank> Akiyama et. al.</a>, and <a href ='https://arxiv.org/pdf/1803.07088.pdf', target=_blank>Chael et. al.</a>. In particular, you can read this profile of Bouman's work <a href='http://news.mit.edu/2016/method-image-black-holes-0606', target=_blank> here</a>.
+                </p>
+
+                <p>
+                    The blur is pretty stragihtforawrd to answer- for one thing, there's a small gaussian blurring effect added to each of the images to account for the differences in angular resolution across the different pipelines. The image of the black hole above is the average image across all three pipelines. The main contribution to the blur, however, is due to the fact that the object being viewed is astoundingly far away and, while very large by itself, does not compare in size to its distance from Earth. Even with an effective telescope diameter the size of the earth, it's very difficult to get a high-resolution image in the short timespan in which the data was being collected.
+                </p>
+
+
+                <p>
+                    Now why do we see an asymmetric ring around the black hole? The ring is comprised of light that has escpaed from its orbit around the black hole- and warped into a ring around the black hole's shadow by a process called <a href='https://en.wikipedia.org/wiki/Gravitational_lens',target=_blank>gravitational lensing</a>. The space around the black hole is bent in such a way that it curves the light around it, bending its trajectory, and resulting in this ring we observe. But why the asymmetry? This arises due to the fact that the black hole itself is rotating- in this case, clockwise! The rotation of the black hole serves to doppler boost the light coming from the side moving towards the observer, and to doppler dim the light coming from the side moving away from the observer. Pretty neat, huh? Now, normally this effect would be very small. We don't typically see this kind of stuff happening about rotating massive objects in the night sky- the noticeablility of this effect hinges on the fact that the rotations are incredibly fast: almost at light speed!
+                </p>
+
+                <p>
+                    This is an inspiring feat of science, and a testament to the effectiveness of collective efforts. With an interdisciplinary team including hundreds of scientists, engineers, and programmers based in North and South America, Asia, Africa, and Europe, and with observatories just as far flung, this project and its staggering results are an incredible display of the sheer power of international cooperation.
+                </p>
+
+                <p>
+                    On a personal note, I am lucky enough to know some of the authors. I want to congratulate Professor Avery Broderick, whose wisdom I was fortunate to benefit from while he was my instructor in stellar astrophysics in 2015. I also want to congratulate my friends Chunchong (Rufus) Ni, with whom I spent many late nights working at the physics building on Waterloo campus, and Paul Tiede, from whom I have sought advice and direction more than once. They are some of the hardest-working people I know. With this, their efforts have more than paid off.
+                </p>
+
+                <p> 
+                    For further interest, and for those with the background to understand the details, the papers may be found <a href='https://iopscience.iop.org/journal/2041-8205/page/Focus_on_EHT', target=_blank>here</a>. They're totally open, and free to access without institutional credentials courtesy of the Intitute of Physics. 
+                </p>  
+            </div>
+        </div>
+    </div>
+</div>	
+
+	<footer>
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+					<ul class="social list-flat right">
+						<li><a href="mailto:will.gertler@gmail.com"><i class="fa fa-send"></i></a></li>
+						<li><a href="http://twitter.com/swickrotation"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/william-gertler-7a965375/"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="/js/jquery.min.js"></script>
+    <script src="/js/kube.min.js"></script>
+</body>
+</html>
