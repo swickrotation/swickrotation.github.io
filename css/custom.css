@@ -2,6 +2,11 @@
  *  License (MIT License)
  */
 
+@font-face {
+    font-family: "Futura";
+    src: url("/fonts/FuturaBT-Medium.ttf")
+}
+
 body { margin-bottom: 50px }
 a { font-family: "Open Sans", sans-serif }
 .container {
