@@ -38,7 +38,7 @@ a { font-family: "Open Sans", sans-serif }
 .logo {
     font-family: 'Futura', sans-serif;
     font-weight: 700;
-    font-size: 27px;
+    font-size: 35px;
     color: #000;
     letter-spacing: -2px;
 }
@@ -46,10 +46,10 @@ a { font-family: "Open Sans", sans-serif }
     font-size: 20px;
     text-transform: capitalize;
 }
-.top-nav .item-nav li.active a { color: #3e2323 }
+.top-nav .item-nav li.active a { color: #800000 }
 .top-nav .item-nav li a {
     font-family: "Futura", sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     color: #A4A4A4;
 }
@@ -60,7 +60,7 @@ a { font-family: "Open Sans", sans-serif }
     background: url(/img/blackboard.jpg) #F7F7F7 center top;
 }
 p.p-intro {
-    color: #E85F37;
+    color: #800000;
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
     letter-spacing: 2px;
@@ -68,7 +68,7 @@ p.p-intro {
     text-transform: uppercase;
     padding: 10px 25px;
     background-color: #F5F5F5;
-    border: 1px solid #3e2323;
+    border: 1px solid #800000;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -83,7 +83,7 @@ p.p-intro:after {
     position: absolute;
     border-style: solid;
     border-width: 9px 9px 9px 0;
-    border-color: transparent #3e2323;
+    border-color: transparent #800000;
     display: block;
     width: 0;
     z-index: 1;
@@ -106,7 +106,7 @@ img.img-intro {
     border-radius: 100px;
     width: 47px;
     background-color: #FFF;
-    border: 1px solid #DC5227;
+    border: 1px solid #800000;
     -moz-box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
@@ -162,11 +162,11 @@ img.img-intro {
 a.read-more {
     padding: 5px 10px;
     background-color: #FFF;
-    border: 1px solid #E85F37;
+    border: 1px solid #800000;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    color: #E85F37;
+    color: #800000;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
