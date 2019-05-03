@@ -43,13 +43,13 @@ a { font-family: "Open Sans", sans-serif }
     letter-spacing: -2px;
 }
 .navigation-toggle .logo {
-    font-size: 20px;
+    font-size: 18px;
     text-transform: capitalize;
 }
 .top-nav .item-nav li.active a { color: #800000 }
 .top-nav .item-nav li a {
     font-family: "Futura", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: #A4A4A4;
 }
