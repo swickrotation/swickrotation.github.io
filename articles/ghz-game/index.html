@@ -74,17 +74,21 @@
                     Here's the scheme: we have three players in what we call a "cooperative game" which just means that all the players are not competing with each other, rather (in this case) with chance in the form of a referee who sends the players questions randomly. Each player, say Alice, Bob, and Charlie (later $A$, $B$, and $C$) are handed a question at random from the referee. The referee sends the question $r$ to Alice, $s$ to Bob, and $t$ to Charlie. Each of these participants respond with $a$, $b$, $c$ respectively. Here's a diagram to make things a little easier to chew-
                 </p>
 
+                <div class="container">
                 <p style="text-align:center;">
                     <img src="ghz-game.png" alt="Diagrammatic description of classical GHZ game" class="center">
                 </p>
+                </div>
 
                 <p>
                     We say that $r,s,t \in \{0,1\}$ and that the bit strings chosen uniformly by the referee are $rst \in \{000,011,101,110\}$. Each player takes the question corresponding to its position in the bit string and answers according to some strategy, such that with Alice returning the answer $a$ and so on, their answers $a,b,c \in \{0,1\}$. The game is won by the players if the addition modulo 2 of the bits $a,b,c$ is equal to the logical disjunction of the referee's questions: here's a table to for the winning outcomes.
                 </p>
-                
+
+                <div class="container">
                 <p style="text-align:center;">
                         <img src="ghz-table.png" alt="Table of Winning Results" class="center">
                 </p>
+                </div>
 
                 <p>
                     Well, how do we win this game? We can see from the table that if Alice, Bob, and Charlie answer 1 no matter what the referee passes to them, then they're going to win with a percentage approaching 75% after repeated trials. It turns out that there is no strategy that can win with 100% certainty, using a classical strategy. The proof of this is straightforward: summing the winning conditions modulo 2, we see that
