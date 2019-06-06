@@ -43,9 +43,9 @@
 			    <nav id="navbar-1" class="navbar item-nav navbar-right">
 				    <ul>
 				        <li><a href="/">Home</a></li>
-				        <li><a href="/about//">About</a></li>
-				        <li><a href="/articles//">Articles</a></li>
-				        <li><a href="/contact//">Contact</a></li>
+				        <li><a href="/about/">About</a></li>
+				        <li><a href="/articles/">Articles</a></li>
+				        <li><a href="/contact/">Contact</a></li>
 				    </ul>
 				</nav>
 			</header>
@@ -63,7 +63,18 @@
             <hr>
             <div class="in-content">
 
-                <h5>Introduction and Explanation</h5>
+                <h5>Index</h5>
+                
+                <ol type='i'>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#zero">The "Zeroeth" Law</a></li>
+                    <li><a href="#energy">Heat, Work, Energy: The First Law</a></li>
+                    <li><a href="ideal">The Ideal Gas Law</a></li>
+                    <li><a href="states">Microstates and Macrostates</a></li>
+                    <li><a href="#entropy">Entropy</a></li>
+                </ol>
+
+                <h5 id = "intro"> Section 1.1 - Introduction</h5>
 
                 <p>
 					This is going to be the first in a series of posts regarding
@@ -74,14 +85,44 @@
 				</p>
 
                 <p>
-                    Speaking of particulars, one of the first things that needs
-                    to be covered in a ground-up approach is elementary thermal
-                    physics. So in the spirit of walking before we run, lets
-                    take some time to cover the necessities in that field.
+                    But before we dive in, it becomes us to elaborate an 
+                    overview of the field. In brief, black hole thermodynamics
+                    is all about the interplay between gravitational physics
+                    and quantum field theory- two fields which even the 
+                    most amateur physicist is likely to know do not tend to 
+                    agree. Despite the two fields being supremely accurate 
+                    descriptions of natural phenomena at certain scales, 
+                    attempting to apply the laws of one to the other leads 
+                    frequently to disastorous results.
                 </p>
 
                 <p>
-                    The most important concept we need to tackle in this part is
+                    But in a region of space at or near the event horizon of a
+                    black hole, the mingling ofthe two lines of thought are 
+                    simply unavoidable. For in the event of a strong vacuum
+                    fluctuation in such a region, in such circumstances so that
+                    one of the pairs produced in that phenomena is captured by
+                    the black hole and the other is not, we are left with the
+                    recourse that the black hole itself must "radiate" in some
+                    capacity- though the particulars of such radiation are open
+                    to a certain level of interpretation. However, the reader
+                    can begin to see now the potential links between this 
+                    field and quantum gravity (and we will see links to 
+                    quantum information theory too- all in due time!)
+                </p>
+
+                <p>
+                    Speaking, conveniently, of particulars, one of the first 
+                    things that needs to be covered in a ground-up approach is 
+                    elementary thermal physics. So in the spirit of walking 
+                    before we run, lets take some time to cover the necessities 
+                    in that field.
+                </p>
+
+                <h5 id="zero"> Section 1.2 - The Zeroeth Law </h5>
+
+                <p>
+                    The most important concept to discuss in this article is 
                     entropy- we will see later that there are strong parallels
                     between thermodynamic entropy and informational entropy that
                     motivate much of the work in the field. However,before we 
@@ -91,12 +132,19 @@
 
                 <p>
                     Like all sane people, we're going to index at zero and start
-                    with that law. The zeroeth law of thermodynamics is
-                    intuitive: all it states is that if two thermal systems are
+                    with that law. The zeroeth law of thermodynamics is fairly
+                    intuitive.
+                </p>
+                    
+                <p>
+                    <b>ZEROETH LAW:</b>If two thermal systems are
                     in thermal equilibrium with a third system, then they
-                    are in thermal equilibrium with each other. For the 
-                    mathematicians in the room, this is essentially a statement
-                    asserting that thermal equilibrium obeys the
+                    are in thermal equilibrium with each other. 
+                </p>
+
+                <p>
+                    For the mathematicians in the room, this is essentially a
+                    statement asserting that thermal equilibrium obeys the 
                     transitive property. Further, we consider it obvious that 
                     the notion of thermal equilibrium is reflexive and 
                     symmetric- which makes thermal equilibrium an equivalence
@@ -125,6 +173,8 @@
                 <p>
                     I'm so glad you asked.
                 </p>
+
+                <h5 id = "energy">Section 1.3 - Heat, Work, and Energy: The First Law</h5>
 
                 <p>
                     Thermal energy is difficult to explain directly because
@@ -171,13 +221,38 @@
                 <p>
                     As we might say the total energy in a dynamical system is
                     $U = T + V$, we say that the total change in energy in a 
-                    thermal system is give by $\Delta U = W + Q$. At this point,
-                    it is necessary to introduce the idea of temperature and its 
-                    relationship to thermal energy. 
+                    thermal system is give by $\Delta U = W + Q$. This is 
+                    essentially a statement of the first law of thermodynamics,
+                    but we might as well make that explicit.
+                </p>
+                
+                <p>
+                    <b>FIRST LAW:</b> The total energy of an isolated system 
+                    (i.e. any system free from outside interaction) is conserved
+                    and the changes in energy of a closed system (i.e. one free
+                    from exchanges in matter but free to exchange energy) are 
+                    given by $$\Delta U = W + Q$$ following the IUPAC conention.
                 </p>
 
+                <p>
+                    At this point, it is necessary to introduce the idea of 
+                    temperature and its relationship to thermal energy. To do
+                    that, I want to introduce yet another element into the mix.
+                </p>
+                
+                <h5 id="ideal">1.5 - The Ideal Gas Law
 
-
+                <p>
+                    The ideal gas law is a result that predicts certain 
+                    properties of gasses in "ideal" conditions- in which the 
+                    particles in the gas are moving fairly quickly (but not too
+                    quickly) and are in general not close enough together to
+                    be succeptible to interactions with the other particles. 
+                    It was first concieved of as an amalgamation of many results
+                    chemists had found in the early 19th century, but may also
+                    be thought of as a result <a href="/">derived</a> from the <a href="https://en.wikipedia.org/wiki/Equipartition_theorem">equipartition theorem</a>.
+                    
+                </p>
             </div>
         </div>
         <!-- /post -->
