@@ -69,9 +69,9 @@
                     <li><a href="#intro">Introduction</a></li>
                     <li><a href="#zero">The "Zeroeth" Law</a></li>
                     <li><a href="#energy">Heat, Work, Energy: The First Law</a></li>
-                    <li><a href="ideal">The Ideal Gas Law</a></li>
-                    <li><a href="states">Microstates and Macrostates</a></li>
-                    <li><a href="#entropy">Entropy</a></li>
+                    <li><a href="#ideal">The Ideal Gas Law</a></li>
+                    <li><a href="#states">Microstates and Macrostates</a></li>
+                    <li><a href="##entropy">Entropy</a></li>
                 </ol>
 
                 <h5 id = "intro"> Section 1.1 - Introduction</h5>
@@ -239,14 +239,11 @@
                     that, I want to introduce yet another element into the mix.
                 </p>
                 
-                <h5 id="ideal">1.4 - The Ideal Gas Law
+                <h5 id="ideal">1.4 - The Ideal Gas Law</h5>
 
                 <p>
                     The ideal gas law is a result that predicts certain 
-                    properties of gasses in "ideal" conditions- in which the 
-                    particles in the gas are moving fairly quickly (but not too
-                    quickly) and are in general not close enough together to
-                    be succeptible to interactions with the other particles. 
+                    properties of gasses in "ideal" conditions- detailed below.
                     It was first concieved of as an amalgamation of many results
                     chemists had found in the early 19th century, but may also
                     be thought of as a result 
@@ -258,8 +255,109 @@
                 </p>
 
                 <p>
+                    The particular assumptions we make for this derivation are
+                    in line with the assumptions of the kinetic theory of gasses-
+                    as follows:
 
+                    <ol>
+                        <li>Gas particles (points, atoms, or molecules) obey Newton's laws of motion</li>
+                        <li>Particles move randomly in a varying distribution of speeds, which do not change.</li>
+                        <li>Particles undergo elastic collisions with each other and with the edges of their containers</li>
+                        <li>The number of particles in a gas is large, but the mean seperation between particles is large compared to their cross-sectional area</li>
+                    </ol>
+
+                    We find it simple, then, to talk about the average of the 
+                    dynamics at play rather than the specifics of each object's
+                    motion.
                 </p>
+
+                <p>
+                    The law is written as follows: $$PV = Nk_BT$$ where $P$ is 
+                    the pressure of our gas, $V$ is the volume it fills, $T$ is
+                    the temperature of the system, $N$ is the number of 
+                    particles in the gas, and $k_B$ is Boltzmann's constant.
+                </p>
+
+                <p>
+                   From this equation we can find a link between temperature and
+                   velocity, and so a link between  temperature and kinetic 
+                   energy. We imagine an ideal gas contained in a piston-
+                   <img src="piston.jpg" alt="A piston with q single gas particle" class="center">
+
+                   In a very rough way, we can talk about average pressure in
+                   terms of the average force- the average change in velocity in
+                   a given time. From here we begin: Starting with the pressure,
+                   and assuming that pressure is imparted solely perpendicular 
+                   to the face of the piston,
+                   
+                   $$
+                   \overline{P} = \frac{\overline{F}}{A}
+                   $$
+
+                   We pick coordinates so that the piston is aligned with the 
+                   $x$-axis along its length. Then we can say that the time it 
+                   takes for a particle to bounce from the piston cap to the end
+                   of the cylinder and back again is $\Delta t = \frac{2L}{v_x}$.
+                   We continue-
+
+                   $$
+                   \frac{\overline{F}}{A} = \frac{mV\Deltav_x}{A\Deltat}
+                   $$
+
+                   But $\Deltav$ is just the differences between initial and
+                   final velocity of the piston: $\Deltav_x = \overline{v_x} - 
+                   \overline{-v_x} = 2\overline{v_x}$. We recover:
+
+                   $$
+                   \frac{m\Deltav_x}{A\Deltat} = \frac{m(2v_x)}{A\left(\frac{2L}{v_x}\right)} \\
+                   = \frac{mv_x^2}{V}
+                   $$
+
+                   For a system of $N$ particles in a volume $V$, we get 
+                   $PV = m\overline{v_x^2}$. Equating this with the ideal gas law,
+
+                   $$
+                   PV = Nm\overline{v_x^2} = Nk_bT \\ 
+                   m\overline{v_x^2} = k_bT \\
+                   \frac{1}{2}m\overline{v_x^2} = \frac{1}{2}
+                   $$
+
+                   and so we find the average transitive kinetic energy is, upon
+                   making the same assumptions in the $y$ and $z$ directions, is
+
+                   $$
+                   \overline{T_{\text{trans}}} = \frac{1}{2}m\overline{(v_x^2 + v_y^2 + v_z^2)} \\
+                   = \frac{3}{2}k_BT
+                   $$
+
+                   and thus we finally have a relationship between average 
+                   kinetic energy and the temperature of a thermal system.
+                </p>
+
+                <p>
+                    But that's not the whole story, is it? The discerning eye 
+                    will note that this is only the translational kinetic energy.
+                    What about rotaional and vibrational energy? We have a
+                    theorem (for which I have a proof in Appendix A)
+                </p>
+
+                <p>
+                    <b>Equipartition Theorem</b>: The average energy of any 
+                    quadratic degree of freedom is $\frac{1}{2}k_BT$.
+                </p>
+
+                <p>
+                    So any rotation, translation, or vibration gives an average
+                    energy of  $\frac{1}{2}k_BT$. In a system with $N$ particles
+                    and no non-quadratic temperture-dependent forms of energy
+                    are present, then we say 
+                    $U_{\text{thermal} = \frac{1}{2}Nfk_BT$, where $f$ is the 
+                    number of available degrees of freedom. We're now ready to 
+                    move on.
+                </p>
+
+                <h5 id="states">1.5 - Microstates and Macrostates</h5>
+
 
             </div>
         </div>
