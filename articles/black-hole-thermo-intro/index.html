@@ -357,8 +357,71 @@
                 </p>
 
                 <h5 id="states">1.5 - Microstates and Macrostates</h5>
+                
+                <p>
+                    In this last section before we finally talk about entropy, I
+                    want to introduce some additional terminology that we will 
+                    be seeing frequently later on.
+                </p>
 
+                <p>
+                    In physics, we frequently encounter two-state systems, in 
+                    particular when one studies quantum mechanics and especially
+                    quantum information theory. If quantum computing succeeds as
+                    a field, it will be because some very clever people figure
+                    out how to reliably create and maintain qubits, which are
+                    essentially quantum-mechanical analogs of transistors. We're
+                    going to take an example from a slightly more macroscopic 
+                    object: the two-state paramagnet. 
+                </p>
+                
+                <p>
+                    A paramagnet is a magnet in which the individual particles
+                    constituting the magnet align themselves parallel or 
+                    anti-parallel to an applied magnetic field.  
+                </p>
 
+                <p>
+                    We adopt the same verbiage as D.V. Schroeder in his textbook
+                    "Thermal Physics" (which I am already borrowing from), and 
+                    call these individual particles "dipoles", due to their 
+                    individual dipole moments being the actual object of our 
+                    consideration rather than their particular physical form. At
+                    a quantum-mecanical scale, the measure of the individual
+                    dipole takes certain, discrete values. In our case, we 
+                    simplify to strictly two states- this could be the result of
+                    a particular configuration of the material or perhaps simply
+                    a result of the specifics of our magnetic field. We say that
+                    the dipoles pointing one way, parallel, are positive or "up",
+                    and that the dipoles aligned anti-parallel are negative or
+                    "down".
+                </p>
+
+                <p>
+                    Now we define the words heading this section. We call the 
+                    specific situation of a dipole, i.e. that the <u>first</u> 
+                    dipole is "<u>up</u>", that the <u>second</u> dipole is "
+                    <u>down</u>" and so on a "microstate". It is not only the
+                    sum of the results up and down of paramagnetic system,but
+                    also the order in which they arranged. We call a
+                    generalization of the microstates, where we simply say how
+                    many of our dipoles are up and how many are down a
+                    "macrostate". Specifying the microstate of a system gives
+                    you the macrostate implicitly, but the reverse is not
+                    true.  The ambiguity requires another term: we call the
+                    number of microstates a given macrostate could inhabit the
+                    "multiplicity" of the macrostate. We can count the
+                    multiplicity of a macrostate using the choice function which
+                    should be familiar from a cursory study of combinatorics. In
+                    a two-state paramagnet, we write: 
+                    $$
+                    \binom{N}{N_\uparrow} = \frac{N!}{N_\uparrow! N_\downarrow!}
+                    $$
+                </p>
+
+                <p>
+
+                </p>
             </div>
         </div>
         <!-- /post -->
