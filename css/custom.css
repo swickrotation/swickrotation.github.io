@@ -142,6 +142,9 @@ img.img-intro {
     margin-right: auto;
     width: 50%;
 }
+.quote {
+    text-align: center;
+}
 .content .post a h1:hover{
 	color: #FF;
 -webkit-transition: all .2s ease-in-out;
