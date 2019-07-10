@@ -290,7 +290,8 @@
                    From this equation we can find a link between temperature and
                    velocity, and so a link between  temperature and kinetic 
                    energy. We imagine an ideal gas contained in a piston-
-                   <img src="piston.jpg" alt="A piston with q single gas particle" class="center">
+                   <img src="piston.jpg" 
+                   alt="A piston with q single gas particle" class="center">
 
                    In a very rough way, we can talk about average pressure in
                    terms of the average force- the average change in velocity in
@@ -449,29 +450,69 @@
                     \binom{q+N-1}{q}.
                     $$
                     This gives us the total number of different arrangements of
-                    energy units across the whole system- but as one again,
-                    slightly familiar with the basics of enumeration could see
+                    energy units across the whole system- but as one (again
+                    slightly familiar with the basics of enumeration) could see
                     fairly quickly, these arrangements are not equitably
                     distributed. Rather, there are some arrangements which are
                     more likely than others- generally much more likely. For
                     large systems, there are in fact very few of the allowable
-                    arrangements one would ever expect to observe. Lets explore
-                    the distribution of multiplicities for individual 
-                    microstates.
+                    arrangements one would ever expect to observe. 
                 </p>
                 
+                <p> 
+                    We can explore the distributions by plotting the total
+                    multiplicity of interacting Einstein solids against the
+                    alotted energy to one of those solids, say $q_a$. Starting
+                    small and keeping the number of particles per solid equal
+                    for simplicity's sake, we take $N_a = N_b = 3$, 
+                    $q_{total} = 6$:
+                    <img src="multiplicity_6_3.png" 
+                    alt="Bar graph of multiplicity 1" class="center">
+                    
+                    Now trying something slightly bigger, with 5 particles and
+                    12 energy allotments:
+                    <img src="multiplicity_12_5.png" 
+                    alt="Bar graph of multiplicity 2" class="center">
+
+                    which we can see is a fair amount larger. Let's go bigger:
+                    with 30 particles apiece and 
+                    <img src="multiplicity_100_30.png" 
+                    alt="Bar graph of multiplicity 3" class="center">
+                    
+                    Something important to note - there is an important
+                    assumption that is made in thermodynamics that we call
+                    the "Fundamental Postulate of Statistical Mechanics". The
+                    postulate states that in an isolated system with known
+                    energy and composition, each individual microstate is
+                    equally likely to be measured. There is as of yet no known
+                    way of proving this mathematically, but the assumption
+                    bears extensive experimental testing. With that accepted,
+                    and given the scale of multiplicities even for somewhat
+                    small systems, it should be pretty clear that even at this
+                    comparatively small scale that the multiplicities at the
+                    tails are almost never observed in nature. At thermal
+                    equilibriium, one can rest assured that their measurement
+                    of multiplicity is at or very near its maximal state.
+                </p>
+
                 <p>
-                    Here are a few examples: if we take $N = 20$ and $ q = 100$,
-                    we get 
-                    $$
-                    \binom{119}{100} = 4910371215196105953021
-                    $$
-                    which seems like a large number of arrangements of state,
-                    but in matter of fact it is absolutely puny when we consider
-                    that the number of particles that make up the matter we are
-                    comfortable dealing with in "ordinary life" are on the order
-                    of $10^{23}$, not counting the energy we might allocate to
-                    such a system. For example, say we take $10^{23}$ particles
+                    By the way, if you're
+                    beginning to suspect that these distributions are
+                    well-described by a Gaussian, you're absolutely right.
+                </p>
+                    
+                <p> In the last multiplicity distribution above, we saw that
+                    the multiplicity was on the order of $10^{42}$.  This
+                    seems like a large number of arrangements of state, but in
+                    matter of fact it is absolutely puny when we consider that
+                    the number of particles that make up the matter we are
+                    comfortable dealing with in "ordinary life" are on the
+                    order of $10^{23}$, not counting the energy we might
+                    allocate to such a system. 
+                </p>
+
+                <p>    
+                    For example, say we take $10^{23}$ particles
                     with $10^23$ "units" of energy distributed amongst them. The
                     multiplicity of this system is given by
                     $$
@@ -499,7 +540,7 @@
                 <h5 id="entropy">1.6 - Entropy</h5>
 
                 <p>
-
+                    
                 </p>
 
             </div>
