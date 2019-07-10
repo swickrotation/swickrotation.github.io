@@ -144,7 +144,7 @@ img.img-intro {
 }
 .quote {
     text-align: right;
-    text-style: italic;
+    font-style: italic;
 }
 .content .post a h1:hover{
 	color: #FF;
