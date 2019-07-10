@@ -143,7 +143,8 @@ img.img-intro {
     width: 50%;
 }
 .quote {
-    text-align: center;
+    text-align: right;
+    text-style: italic;
 }
 .content .post a h1:hover{
 	color: #FF;
