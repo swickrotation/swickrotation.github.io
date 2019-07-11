@@ -425,7 +425,8 @@
                     should be familiar from a cursory study of combinatorics. In
                     a two-state paramagnet, we write: 
                     $$
-                    \binom{N}{N_\uparrow} = \frac{N!}{N_\uparrow! N_\downarrow!}
+                    \Omega = \binom{N}{N_\uparrow} = 
+                    \frac{N!}{N_\uparrow! N_\downarrow!}
                     $$
                 </p>
 
@@ -448,7 +449,7 @@
                     amongst them. The general formula for the multiplicity of an
                     entire system of this kind is given by 
                     $$
-                    \binom{q+N-1}{q}.
+                    \Omega = \binom{q+N-1}{q}.
                     $$
                     This gives us the total number of different arrangements of
                     energy units across the whole system- but as one (again
@@ -463,10 +464,15 @@
                 <p> 
                     We can explore the distributions by plotting the total
                     multiplicity of interacting Einstein solids against the
-                    alotted energy to one of those solids, say $q_a$. Starting
-                    small and keeping the number of particles per solid equal
-                    for simplicity's sake, we take $N_a = N_b = 3$, 
-                    $q_{\text{total}} = 6$:
+                    alotted energy to one of those solids, say $q_a$. The
+                    multiplicity of an interacting system is simply the
+                    product of the multiplicities of each individual system:
+                    $$
+                    \Omega_{\text{total}} = \Omega_a \Omega_b
+                    $$
+                    Starting small and keeping the number of particles per
+                    solid equal for simplicity's sake, we take $N_a = N_b =
+                    3$, $q_{\text{total}} = 6$:
                     <img src="multiplicity_6_3.png" 
                     alt="Bar graph of multiplicity 1" class="center">
                     <br>                    
@@ -560,7 +566,20 @@
                 </p>
 
                 <p>
-                    Though, however, it may remain the same.
+                    Which is to say, if any changes occur, it must result in an
+                    increase in entropy or have no effect. We say that any
+                    process that increases entropy is an "irreversible" process,
+                    and those that keep entropy the same are "reversible"
+                    processes.  Entropy, besides being a quantity small enough
+                    to work with, has, due to the properties of the logarithm,
+                    the useful feature that the entropy of an interacting
+                    system can be expressed as the sum of the individual
+                    entropies:
+                    $$
+                    S_{\text{total}}  = k_B \ln{\Omega_{\text{total}}
+                    = k_B\ln{\Omega_A \Omega_B} = k_B\ln{\Omega_A} +
+                    k_B\ln{Omega_B}
+                    $$
                 </p>
             </div>
         </div>
