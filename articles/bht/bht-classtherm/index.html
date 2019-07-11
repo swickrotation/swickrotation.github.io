@@ -505,11 +505,72 @@
                 <p>
                     By the way, if you're
                     beginning to suspect that these distributions are
-                    well-described by a Gaussian, you're absolutely right.
+                    well-described by a Gaussian, you're absolutely right. If we
+                    make the simplifying assumption that $q \gg N$ (the
+                    "high-energy limit"), then we can fairly quickly demonstrate
+                    that the logarithm of the multiplicity may be transformed in
+                    a useful way:
+                    $$
+                    \ln\Omega = \ln\left(\frac{(q+N-1)!}{q!N!}\right) \\
+                    \approx \ln\left(\frac{(q+N)!}{q!N!}\right) \\
+                    = \ln(q+N)! - \ln q! - \ln N!
+                    \approx (q+N)\ln(q+N) - q\ln q - N \ln N,
+                    $$
+                    where we have used the artihmetic of large numbers to
+                    eliminate the fairly meaningless but computationally pesky
+                    $-1$ from our factorial, and Stirling's approximation for
+                    the last lines. Using our assumption that $q \gg N$ and
+                    the Taylor series expansion for $\ln(1+x)$ where $|x|\ll 1$:
+                    $$
+                    \ln(q+N) = \ln\left(q\left(1+\frac{N}{q}\right)\right)
+                    \approx \ln q + \frac{N}{q}.
+                    $$
+                    Plugging this into the above gives us
+                    $$
+                    \ln\Omega \approx N\ln\frac{q}{N} + N + \frac{N^2}{q}.
+                    $$
+                    With $q \gg N , \frac{N^2}{q} \approx 0$ so we can take the
+                    exponent of this term and recover that
+                    $$
+                    \Omega \approx \left(\frac{eq}{N}\right)^N.
+                    $$
+                    For two interacting systems, as we have above, we see that
+                    the multiplicity is then
+                    $$
+                    \left(\frac{e}{N}\right)^{2N}(q_Aq_B)^N
+                    $$
+                    The highest point of this distribution is when $q_A = q_B =
+                    q/2$.
+                    $$
+                    \Omega_{\text{max}} = 
+                    \left(\frac{e}{N}\right)^{2N}\left(\frac{q}{2}\right)^{2N}.
+                    $$
+                    Near the peak, say adjusting $q_A$ by $+x$, $q_B$ by $-x$,
+                    we get that
+                    $$
+                    \Omega = \left(\frac{e}{N}\right)^{2N}
+                    \left[\left(\frac{q}{2}\right)^2 - x^2 \right]^N.
+                    $$
+                    Taking the logarithm to simplify our manipulations,
+                    $$
+                    \ln\left[\left(\frac{q}{2}\right)^2 - x^2 \right]^N =
+                    N\ln\left[\left(\frac{q}{2}\right)^2 - x^2 \right] \\
+                    =N\ln\left[\left(\frac{q}{2}\right)^2 
+                    \left(1-\left(\frac{2x}{q}\right)^2\right) \right] \\
+                    \approx N\left[\ln\left(\frac{q}{2}\right)^2 - 
+                    \left(\frac{2x}{q}\right)^2\right].
+                    $$
+                    Exponentiating yields
+                    $$
+                    \Omega = \left(\frac{e}{N}\right)^{2N}
+                    e^{N\ln(q/2)^2}e^{-N(2x/q)^2} = 
+                    \Omega_{\text{max}}\cdot e^{-N(2x/q)^2},
+                    $$
+                    which is the Gaussian we are familiar with. 
                 </p>
                     
-                <p> In the last multiplicity distribution above, we saw that
-                    the multiplicity was on the order of $10^{42}$.  This
+                <p> Now in the last multiplicity distribution graph above, we
+                    saw the multiplicity was on the order of $10^{42}$.  This
                     seems like a large number of arrangements of state, but in
                     matter of fact it is absolutely puny when we consider that
                     the number of particles that make up the matter we are
@@ -581,6 +642,17 @@
                     k_B\ln{Omega_B}
                     $$
                 </p>
+
+                <div class = "quote">
+                    <p>
+                        The content of this article was greatly inspired by and
+                        summarises much of the first two chapters of D.V.
+                        Schroeder's "Thermal Physics". For a more in-depth take
+                        on elementary classical thermodynamics, I would 
+                        recommend no other text.
+                    </p>
+                </div>
+
             </div>
         </div>
         <!-- /post -->
