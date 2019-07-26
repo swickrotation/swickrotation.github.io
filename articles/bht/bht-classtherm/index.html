@@ -657,6 +657,68 @@
                     and for this, we will be working in base 2.
                 </p>
 
+                <p> Armed with this understanding of entropy, we may now
+                    derive a more useful, theoretically-based definition of
+                    temperature. Take again for example the weakly-coupled
+                    interaction of two Einstein solids. If we graph the
+                    entropies of each solid with respect to the allocation of
+                    energy to one of those solids (without loss of generality,
+                    say $q_A$), as well as the total entropy with respect to
+                    the same, we will find that at some point the total
+                    entropy maximizes: 
+                    $\frac{\partial{S_{\text{total}}}}{\partial{q_A}} = 0$.
+                    Due to the construction of our definitions, we have no need
+                    to fear that this will in fact be a minima. Because the
+                    difference between $q_A$ and $U_A$ is a constant, we may
+                    actually re-write at equilibrium, 
+                    $$
+                    \frac{\partial{S_{\text{total}}}}{\partial{U_A}} = 0\\
+                    \text{and for two systems,}\\
+                    \frac{\partial{S_A}}{\partial{U_A}} +
+                    \frac{\partial{S_B}}{\partial{U_A}} = 0.
+                    $$
+                    Looks a little funny. Realising that $dU_A = -dU_B$, we can
+                    instead write (again, at equilibrium) 
+                    $$
+                    \frac{\partial{S_A}}{\partial{U_A}} =
+                    \frac{\partial{S_B}}{\partial{U_B}}.
+                    $$
+                </p>
+
+                <p>
+                    With that factor of Boltzmann's constant, the units here are
+                    in $1/K$. This leads us to the following proposal:
+                    $$
+                    T \equiv \left(\frac{\partial{S}}{\partial{U}}\right)^{-1},
+                    $$
+                    or more explicitly,
+                    $$
+                    \frac{1}{T} \equiv 
+                    \left(\frac{\partial{S}}{\partial{U}}\right)_{N,V}.
+                    $$
+                    We make one further small digression to close out the
+                    article: the direct measurement of entropyis often tricky,
+                    but it is easier to measure its changes. If you add a bit
+                    of heat to a system, you should see 
+                    $$
+                    dS = \frac{dU}{T} = \frac{Q}{T} = \frac{C_VdT}{T} \\
+                    \rightarrow S = \int_{T_i}^{T_f}\frac{C_v}{T}dT
+                    $$
+                    and if you are lucky enough to know $C_V$ all the way to 
+                    $0K$, the total entropy of a system can be calculated
+                    directly:
+                    $$
+                    S_f - S(0) = \int_{0}^{T_f}\frac{C_v}{T}dT.
+                    $$
+                    Now, what is $S(0)$? Well, it should in principle be zero.
+                    At $0K$, the system is in its lowest energy state and it
+                    should have $\Omega = 1$, so clearly $S = 0$. The keen-eyed
+                    will notice that in fact the last integral diverges as 
+                    $T \rightarrow 0$. The only way to get out of it is to have
+                    that $C_V \rightarrow 0 \text{as} T \rightarrow 0$. We call
+                    this result <b>the Third Law of Thermodynamics</b>. 
+                </p>
+
             <div class = "quote">
                 <p>
                    The content of this article was greatly inspired by and
