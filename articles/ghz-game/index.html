@@ -99,14 +99,15 @@
                     Here's a diagram to make things a little easier to chew-
                 </p>
 
-                <!--
+                
                 <div class="image">
                     <p style="text-align:center;">
                         <img src="ghz-game.png" alt="Diagrammatic description of classical GHZ game" class="center">
                     </p>
                 </div>
-                //-->
+                
 
+                <!--
                 <script type="text/tikz">
                     \begin{tikzpicture}
                         \hspace{0.7cm}
@@ -119,7 +120,7 @@
  21                     \node (measure3) [block, below of=charlie, node distance = 2.4cm] {Measure Bit $c$};
  22                     \node (result) [block, below of=measure2, node distance = 2.4cm] {$a \oplus b \oplus     c \stackrel{?}{=} r \vee s \vee t$};
  23                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$s$} (bob);
-             24         \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$r$} (alice);
+ 24                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$r$} (alice);
  25                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$t$} (charlie);
  26                     \path [line] (alice) ~~ (bob);
  27                     \path [line] (alice) -- (measure1);
@@ -130,6 +131,7 @@
  32                     \path [line] (measure3) -- (result);
  33                 \end{tikzpicture}
                 </script>
+                //-->
 
                 <p>
                     We say that $r,s,t \in \{0,1\}$ and that the bit strings 
@@ -144,11 +146,13 @@
                     table to for the winning outcomes.
                 </p>
 
+                <!--
                 <div class="image">
                     <p style="text-align:center;">
                         <img src="ghz-table.png" alt="Table of Winning Results" class="center">
                     </p>
                 </div>
+                -->
 
                 <p>
                     Well, how do we win this game? We can see from the table 
