@@ -27,6 +27,8 @@
 <script type="text/javascript" async src="/MathJax-master/MathJax.js?config=TeX-AMS_CHTML-full"></script>
 <script type="text/javascript" src="/MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript" src="/MathJax-master/braket/braket.js"></script>
+<link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
+<script src="http://tikzjax.com/v1/tikzjax.js"></script>
 
 </head>
 <body>
@@ -97,11 +99,35 @@
                     Here's a diagram to make things a little easier to chew-
                 </p>
 
-                <div class="image">
-                    <p style="text-align:center;">
-                        <img src="ghz-game.png" alt="Diagrammatic description of classical GHZ game" class="center">
-                    </p>
-                </div>
+#                <div class="image">
+#                    <p style="text-align:center;">
+#                        <img src="ghz-game.png" alt="Diagrammatic description of classical GHZ game" class="center">
+#                    </p>
+#                </div>
+
+                <script type="text/tikz">
+                    \begin{tikzpicture}
+                        \hspace{0.7cm}
+ 15                     \node (ref) [block] {Referee};
+ 16                     \node (bob) [block, below of=ref, node distance = 2.4cm] {Bob answers $b$};
+ 17                     \node (alice) [block, left of=bob, node distance = 3.5cm] {Alice answers $a$};
+ 18                     \node (charlie) [block, right of=bob, node distance = 3.5cm] {Charlie answers $c$};
+ 19                     \node (measure1) [block, below of=alice, node distance = 2.4cm] {Measure Bit $a$};
+ 20                     \node (measure2) [block, below of=bob, node distance = 2.4cm] {Measure Bit $b$};
+ 21                     \node (measure3) [block, below of=charlie, node distance = 2.4cm] {Measure Bit $c$};
+ 22                     \node (result) [block, below of=measure2, node distance = 2.4cm] {$a \oplus b \oplus     c \stackrel{?}{=} r \vee s \vee t$};
+ 23                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$s$} (bob);
+             24         \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$r$} (alice);
+ 25                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$t$} (charlie);
+ 26                     \path [line] (alice) ~~ (bob);
+ 27                     \path [line] (alice) -- (measure1);
+ 28                     \path [line] (bob) -- (measure2);
+ 29                     \path [line] (charlie) -- (measure3);
+ 30                     \path [line] (measure1) -- (result);
+ 31                     \path [line] (measure2) -- (result);
+ 32                     \path [line] (measure3) -- (result);
+ 33                 \end{tikzpicture}
+                </script>
 
                 <p>
                     We say that $r,s,t \in \{0,1\}$ and that the bit strings 
