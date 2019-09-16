@@ -8,7 +8,7 @@
 \begin{tikzpicture}
 \node[block](a) {Initial Source};
 \node[block, right=of a](b) {Transmitter};
-\node[block, right=of b](c) {};
+\node[block, right=of b](c) {\textit{Message In-Transit}};
 \node[block, right=of c](d) {Reciever};
 \node[block, right=of d](e) {Destination};
 \node[block] (f) at ([yshift=-2.5cm]$(b)!1.0!(c)$) {Noise Source};
