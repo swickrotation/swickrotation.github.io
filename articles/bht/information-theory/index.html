@@ -157,14 +157,21 @@
                     quantity is defined in the following way:
 
                     $$
-                        C = \lim_{T \to \infty} \frac{log(N(T)}{T}
+                        C = \lim_{T \to \infty} \frac{\log_2(N(T)}{T}
                     $$
 
                     where $N(T)$ is the number of number of allowed signals of
-                    duration $T$.
+                    duration $T$. This definition works for the discrete
+                    noiseless channel, but needs to be generalized for other
+                    cases. For polynomial $N(T)$ of order less than $2^{T^2}$,
+                    we will have a finite channel capacity, as we will for any
+                    function bounded in size by $2^{T^2}$ from above. We have a
+                    vacuous lower bound of signals of length 0.
                 </p>
 
-
+                <p>
+                    We have a good theorem for calculating channel capacities.
+                </p>
 
             </div>
         </div>
