@@ -60,6 +60,8 @@
             <!-- Heading -->
                 <h1>Part II - Information Theory</h1>
                 <h4>August 2019</h4>
+                <h5><a href="/articles/bht/classtherm">Part I</a>
+                    <a href="/articles/bht/geometry-1">Part III</a></h5>
             <hr>
             <div class="in-content">
                 <div class="quote">
@@ -75,6 +77,9 @@
 
                 <ol type='i'>
                     <li><a href="#intro">Introduction & Motivation</a></li>
+                    <li><a href="#capacity">Channel Capacity</a></li>
+                    <li><a href="#markov">Markov Processes</a></li> 
+                    <li><a href="#entropy">Information Entropy</a></li>
                 </ol>
 
                 <h5 id="intro">Section 2.1 - Introduction & Motivation</h5>
@@ -90,6 +95,25 @@
                     and mathematicians. In this section, we will focus mainly on
                     understanding fundamental results.
 				</p>
+
+                <p>
+                    For the physicist, information theory has been of monumental
+                    interest since the early days of quantum mechanics. Upon
+                    discovering the correlations between certain measurements
+                    made on quantum states (a phenomenon of great importance
+                    called entanglement), basic questions of how information is
+                    shared between states have fascinated and beguiled the 
+                    community. Furthermore, when coming to grips with
+                    entanglement and its implications, physicists began to
+                    wonder how it might be used in a practical setting: and so
+                    began the field of study we now know as quantum computing.
+                    Those physicists with a bent towards the theoretical
+                    continued to wonder at the basic nature of information, and
+                    assert the maxim that information itself if a physical
+                    quantity to be measured  - that it, too, with mass and
+                    charge and all the rest is a quantity by which we might
+                    characterise physical phenomena.
+                </p>
 
                 <p>
                     For many, information theory as a field of research starts
@@ -113,8 +137,8 @@
                     <br> 
                     Here is a diagram.
                     <br>
-                    <img src="com-scheme.png" alt="Diagram of a
-                    communication system">
+                    <img src="com-scheme.png" alt="Diagram of a communication
+                    system">
                 </p>
 
                 <p>
@@ -151,13 +175,16 @@
                     examples above.
                 </p>
 
+
+                <h5 id="capacity">Section 2.2 - Channel Capacity</h5>
+
                 <p>
                     Shannon begins in a natural place in the description of such
                     schemes: with the capacity of the scheme itself. This
                     quantity is defined in the following way:
 
                     $$
-                        C = \lim_{T \to \infty} \frac{\log_2(N(T)}{T}
+                        C = \lim_{T \to \infty} \frac{\log_2(N(T)}{T},
                     $$
 
                     where $N(T)$ is the number of number of allowed signals of
@@ -170,8 +197,90 @@
                 </p>
 
                 <p>
-                    We have a good theorem for calculating channel capacities.
+                    Messages transferred may be encoded in a character set of
+                    smaller size than the set used in the original alphabet that
+                    constructed the message, e.g. we may encode the latin
+                    alphabet into the 32 bitstrings of length 5, with characters
+                    to spare. If we imagine this kind of encoding, we may also
+                    imagine a graph that represents the construction of these
+                    strings. Starting from an empty string, we may either append
+                    a 1 or a 0 to it, and repeat for as long as we wish to make
+                    our message. We may also encode seperation strings, things
+                    that specify that what message being sent is a letter or a
+                    word, sending us back to a new empty string. We thus have
+                    two nodes: one for beginning new strings and one for 
+                    building them. This sort of messaging system, in which there
+                    are only a few distinct options after each step, are in fact
+                    excellent models of practical communication systems. So what
+                    is the capacity of such a system?
                 </p>
+
+                <p> We will prove that is comes down to the following. <\br>
+                    <b>THEOREM 1:</b> Let $b^{(s)}_{ij}$ be the duration of an
+                    allowable symbol $s$ that leads from state $i$ to state
+                    $j$. Then the channel capacity $C$ is equal to $\log W$,
+                    there $W$ is given by the largest real solution to the
+                    determinant equation
+                    $$
+                    \left| \sum_s W^{-b^{s}_{ij}} - \delta_{ij} \right| = 0.
+                    $$
+                    <br>
+                    <b>PROOF:</b>Let $N_i(L)$ be the number of strings of length
+                    L that end in state $i$. We may write that 
+                    $$N_j(L) = \sum_{i,s} N_i(L - b_{i,j}^{(s)}$$
+                    where $b_{i,j}^{(n)} are the lengths of the symbols which
+                    take state $i$ to state $j$. The objects being summed over
+                    are linear differences and thus we have a solution of the
+                    form $N_j = A_jW^L$ as $L \rightarrow \infty$. Substituting
+                    in this solution form into our difference equation, we
+                    recover
+                    $$
+                    A_jW^L = \sum_{i,s}A_iW^{L-b_{ij}^{(s)}}\\
+                    A_j = \sum_{i,s}A_iW^{-b_{ij}^{(s)}}\\ 
+                    \sum_i\left(\sum_s W^{-b_{ij}^{(s)}}-\delta_{ij}\right)A_i 
+                    = 0.
+                    $$
+                    For this to make sense, we need that the determinant
+                    vanishes: 
+                    $D(W) = \left|a_{ij}\right| = 
+                    \left| \sum_s W^{-b^{s}_{ij}} - \delta_{ij} \right = 0$.
+                    This requirement uniquely characterises $W$, and it is the
+                    largest root to the determinant equation.$\blacksquare$ 
+                    We may then give the quantity $C$ as
+                    $$
+                    C = \lim_{L \to \infty}\frac{\log\sum_j{A_jW^L}{L} = \log W.
+                    $$
+                    A more generalised definition of the channel capacity is
+                    $C = \sup_{p_X(x)} I(X;Y)$, where $I(X;Y)$ is the mutual
+                    information shared by random variables $X,Y$ and the
+                    supremum is taken over the marginal distribution $p_X(x)$
+                    which happens to characterise the joint distribution between
+                    $X$ and $Y$. We choose to ignore this definition for now, as
+                    it's needless but bears mentioning. 
+                </p>
+
+                <h5 id="markov">Section 2.3 - Markov Processes</h5>
+
+                <p>
+                    We often come across information systems that produce
+                    seemingly random outputs across a generally non-uniform
+                    distribution. We call strings generated by these information
+                    systems "Markov chains" (also sometimes called
+                    "random walks"). In a Markov process, the proceeding steps
+                    may be influenced by the position in which one starts. We
+                    call this re-adjustment of distributions a "residue of
+                    influence". Markov processes are another construction that
+                    are well expressed graphically. 
+
+                    <br>
+                    <img src="markov.png" alt="Diagram of a Markov process">
+                    <br>
+
+                    In this example, we can see that the distribution associated
+                    with this process is going to produce strings with many C's.
+                <p>
+                    
+                <h5 id="entropy">Section 2.4 - Information Entropy</h5>
 
             </div>
         </div>
