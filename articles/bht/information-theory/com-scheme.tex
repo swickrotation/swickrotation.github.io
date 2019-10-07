@@ -2,10 +2,11 @@
 \usetikzlibrary{positioning,fit,calc}
 \tikzset{block/.style={draw,thick,text width=2cm,minimum height=1cm,align=center},
          line/.style={-latex}
-}
-\begin{document}
+     }
 
+\begin{document}
 \begin{tikzpicture}
+%\tikzstyle{every state}=[scale=1.2]
 \node[block](a) {Initial Source};
 \node[block, right=of a](b) {Transmitter};
 \node[block, right=of b](c) {\textit{Message In-Transit}};
