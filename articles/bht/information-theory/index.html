@@ -248,7 +248,14 @@
                     $$D(W) = \left|a_{ij}\right| = 
                     \left| \sum_s W^{-b^{s}_{ij}} - \delta_{ij} \right| = 0$$.
                     This requirement uniquely characterises $W$, and it is the
-                    largest root to the determinant equation.$\blacksquare$ <br>
+                    largest root to the determinant equation.
+                    <span style="float:right;">
+                        $\blacksquare$
+                    </span>
+                    <br>
+                </p>
+
+                <p>
                     We may then give the quantity $C$ as
                     $$
                     C = \lim_{L \to \infty}\frac{\log\sum_j{A_jW^L}}{L} = \log W.
@@ -291,11 +298,41 @@
                     from a single, sufficiently long random sampling. In plain
                     language, that means that each sequence produced by an
                     ergodic process has the same kind of statistical properties
-                     - individual letter distributions, digram and trigram
-                     distributions, and so on. Resultant of this definition is
-                     an inference that we can make on the structure of the graph
-                     defining such a process: for one, the graphs must not
-                     contain "islands" that are impossible to escape
+                    - individual letter distributions, digram and trigram
+                    distributions, and so on. Resultant of this definition are
+                    inferences that we can make on the structure of the graph
+                    defining such a process: 
+                    <ol>
+                        <li>
+                            The graphs must not contain "islands" that are
+                            impossible to escape - that is, an ergodic process
+                            may not be described by a directed graph that
+                            takes a starting state to some terminal node or
+                            subset of nodes where it may not return to the
+                            original state. If $A \rightarrow C$ with some
+                            probability and $C$ is unable to return to $A$
+                            either directly or through other connections along
+                            the graph, then we do not have an ergodic
+                            system.
+                        </li>
+                        <li>
+                            We call any closed walk on the graph a "circuit",
+                            and say that the length of the circuit is the number
+                            of edges the circuit takes to close. In the graph
+                            above, starting at node $A$ and taking the path
+                            $BCA$ is a circuit of length 3. A requirement of
+                            ergodicity is that all circuit lengths of a given
+                            graph are coprime.
+                        </li>
+                    </ol>
+                    This first result is fairly intuitive: you can't have a
+                    uniform statistical structure if one sampling may give you
+                    characters that another sample literally cannot. But what of
+                    the second result? This is due to the fact that if we have a
+                    common divisor $d > 1$, the sequences that arise will
+                    contain a periodic structure. Their statistical properties
+                    will be the same, but the different sequences will be
+                    shifted in their origin. 
                 </p>
                     
                 <h5 id="entropy">Section 2.4 - Information Entropy</h5>
