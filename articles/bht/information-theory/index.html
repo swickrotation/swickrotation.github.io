@@ -342,11 +342,109 @@
                     common divisor $d > 1$, the sequences that arise will
                     contain a periodic structure. Their statistical properties
                     will be the same, but the different sequences will be
-                    shifted in their origin. 
+                    shifted in their origin. This is fixable by shifting up from
+                    0 to $d-1$. Furthermore, the if the first condition is
+                    violated, your graph may be broken up into smaller graphs so
+                    that each individually is ergodic. If this must occur and
+                    the second condition remains intact, then we have a mixed
+                    manifested out of a number of pure components - terminology
+                    not unfamiliar to those with some background in quantum
+                    mechanics. These pure states are associated with
+                    probabilities so that measurement or sampling identifies
+                    which ergodic subgraph we end up on.
+                </p>
+
+                <p>
+                    We're going to assume from this point on that the processes
+                    we're talking about are ergodic. Ergodic processes have a
+                    longstanding relation to problems in physics, and ergodic
+                    theory in general was invented as an approach to problems in
+                    statistical mechanics.
                 </p>
                     
                 <h5 id="entropy">Section 2.4 - Information Entropy</h5>
+                
+                <p>
+                   Now that we have a descriptive model of information transfer
+                   (at least over a discrete source), how do we quantize the
+                   amount of information that gets transfered, and at what rate?
+                   If we take a random discrete source that produces outputs
+                   $1 , \ldots , n$ with knownprobabilities $p_1 , \ldots ,
+                   p_n$, we try to measure the amount of "choice" or
+                   "uncertainty" in the event measured. Say we have a function
+                   $S$ of the probabilities that is intended to do this
+                   measurement. $S$ should follow the following properties:
+                   <ol>
+                       <li>$S$ must be continuous in its domain</li>
+                       <li>If the elements of its domain, the $p_i$, are all
+                           equal (i.e. the distribution is uniform), then $S$
+                           is monotonically increasing in $n$.</li>
+                       <li>If choices must be broken down into succesive
+                           choices, the total $S$ must be the weigthed sum of
+                           individual values of $S$.</li>
+                   </ol>
+                </p>
 
+                <p>
+                    <b>THEOREM:</b> There is only one measure satisfying each
+                    of these three properties. This function is the Shannon
+                    entropy equation, written 
+                    $$
+                    H = -K\sum^n_{i=1} p_i \log p_i,
+                    $$
+                    with $K$ being a positive constant depending on your
+                    logarithm's base.<br>
+                    <b>PROOF:</b> We use a few easily generalizable special
+                    cases to make our calculations easier. Let's assume we're
+                    making a choice of one out of $N$ objects, so that our
+                    choice is distributed uniformly, any one object having a
+                    probability of $\frac{1}{N}$ of being selected. We write
+                    that $S(\frac{1}{N}, \ldots, \frac{1}{N}) \equiv f(N)$.
+                    Breaking $N$ into $m$ groups, each group $i$ having elements
+                    $n_i$. Picking now in two steps, picking an element of group
+                    $i$ has probablity 
+                    $$
+                    p_i = \frac{n_i}{N},
+                    $$
+                    and the second choice of an element in group $i$ is of
+                    of probability $1/n_i$. We say that the first step has
+                    an uncertainty of $S(p_1, \ldots, p_m)$ and the second step
+                    has an expected value of uncertainty of $\sum^m_{i=1} p_i
+                    f(n_i)$. Thus, we see that
+                    $$
+                    f(N) = S(p_1, \ldots, p_m) + \sum^m_{i=1} p_i f(n_i).
+                    $$
+                    Considering the special case in which each of the $m$ groups
+                    have $n$ elements, we have two important relations: 
+                    $$
+                    f(N) = S(\frac{1}{m},\ldots,\frac{1}{m})+
+                    \sum^m_{i=1}\frac{1}{m}f(n), \\
+                    \\
+                    f(N) = f(nm) = f(n) + f(m), \text{for arbitrary} n,m.
+                    $$
+                    This second line is in fact a version of the Cauchy
+                    functional equation, this type having only a single
+                    well-behaved continuous solution: that $f(m) = K\log(m)$.
+                    For our purposes, we further limit allowable results to
+                    positive values of $K$, in keeping with the necessity of
+                    $S$ to be monotonically increasing with $n$ (as asserted in 
+                    condition 2).<br>
+                    Plugging this back into the general case, we get
+                    $$
+                    K\log(N) = S(p_1,\ldots,p_m) + \sum^m_{i=1}p_iKf(n_i)\\
+                    S(p_1,\ldots,p_m) = K\log(N) - \sum^m_{i=1}p_iKf(n_i)\\
+                    = K\sum^m_{i=1}p_i\log(N) - K\sum^m_{i=1}p_if(n_i)\\
+                    = K\sum^m_{i=1}p_i\log\left(\frac{N}{n_i}\right)\\
+                    =-K\sum^m_{i=1}p_i\log(p_i)
+                    $$
+                    <span style="float:right;">
+                        $\blacksquare$
+                    </span>
+                    
+                    This of course, bears resemblance to the famous Boltzmann
+                    entropy we derived in the previous section. More will be
+                    said about this relation presently.
+                    
             </div>
         </div>
         <!-- /post -->
