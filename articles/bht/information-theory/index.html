@@ -443,8 +443,47 @@
                     
                     This of course, bears resemblance to the famous Boltzmann
                     entropy we derived in the previous section. More will be
-                    said about this relation presently.
-                    
+                    said about this relation presently - but for now, we can see
+                    that this function (which I will now call Shannon entropy,
+                    or simply entropy) follows the same properties of
+                    Boltzmann entropy, due to its logarithmic nature. Those are:
+                    <ol>
+                        <li>$S=0$ iff all $p_i$ are 0 except for one, which has
+                        a value of one. Otherwise, $S$ is positive.</li>
+                        <li>$S$ is maximised when all probabilities are equal.
+                        This is also the situation with the most uncertainty,
+                        for purposes of intuition.</li>
+                        <li> The joint entropy is less than the sum of the
+                        individual entropies, i.e. $S(x,y) \leq S(X) + 
+                        S(y)$.</li>
+                        <li>Any change towards equalizing the probabilities in
+                        the domain of $S$ increases $S$.</li>
+                        <li>Say we have two events $x,y$ not necessarily
+                        inedpendent of each other. For any value $i$ that $x$
+                        can assume, there is a conditional probability $p_i(j)$
+                        that $y$ takes the value $j$. This conditional
+                        probability is given by
+                        $$
+                        p_i(j) = \frac{p(i,j)}{\sum_jp(i,j)},
+                        $$
+                        and define the "conditional entropy" of $y$, $S_x(y)$,
+                        as the average entropy of $y$ for each value of $x$.
+                        Subbing in the values of $p_i(j)$ we obtain
+                        $$
+                        S_x(y) = S(x,y) - S(x).
+                        $$
+                        The joint entropy of $x,y$ is the entropy of $x$ plus
+                        the conditional entropy of $y$ on known $x$.
+                        </li>
+                        <li>From properties 3 and 5, we can see that $S(y)
+                        \geq S_x(y)$.</li>
+                    </ol>
+                </p> 
+
+                <p>
+                
+                </p>
+                                
             </div>
         </div>
         <!-- /post -->
