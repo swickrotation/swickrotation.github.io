@@ -232,7 +232,9 @@
                     $$
                     \left| \sum_s W^{-b^{s}_{ij}} - \delta_{ij} \right| = 0.
                     $$
-                    <br>
+                 </p>
+
+                 <p>
                     <b>PROOF:</b>Let $N_i(L)$ be the number of strings of length
                     L that end in state $i$. We may write that 
                     $$N_j(L) = \sum_{i,s} N_i(L - b_{i,j}^{(s)}$$
@@ -388,14 +390,17 @@
                 </p>
 
                 <p>
-                    <b>THEOREM:</b> There is only one measure satisfying each
+                    <b>THEOREM 2:</b> There is only one measure satisfying each
                     of these three properties. This function is the Shannon
                     entropy equation, written 
                     $$
                     H = -K\sum^n_{i=1} p_i \log p_i,
                     $$
                     with $K$ being a positive constant depending on your
-                    logarithm's base.<br>
+                    logarithm's base.
+                </p>
+
+                <p>
                     <b>PROOF:</b> We use a few easily generalizable special
                     cases to make our calculations easier. Let's assume we're
                     making a choice of one out of $N$ objects, so that our
@@ -570,11 +575,8 @@
                     \left| \frac{\log p}{N} - \sum_{i,j} P_i p_{ij} 
                     \log p_{ij} \right| < \eta.
                     $$
-                </p>
-                
-                <p>
                     A bit of arithmetic is sufficient to show that this is
-                    equivalent to our theorem's statement. $\blacksquare$
+                    equivalent to our theorem. $\blacksquare$
                 </p>
 
                 <h5 id="thermo">Information and Thermodynamics</h5>
