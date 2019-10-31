@@ -83,6 +83,7 @@
                     <li><a href="#markov">Markov and Ergodic Processes</a></li> 
                     <li><a href="#entropy">Information Entropy</a></li>
                     <li><a href="#infosource">Sources and Entropy</a></li>
+                    <li><a href="#thermo">Information and Thermodynamics</a></li>
                 </ol>
 
                 <h5 id="intro">Section 2.1 - Introduction & Motivation</h5>
@@ -484,8 +485,99 @@
                 <h5 id="infosource">Sources and Entropy</h5>
 
                 <p>
-                    
+                   Consider again the discrete sources with finite signals that
+                   we have been describing thus far. Each state $j$ that can be
+                   produced by the source has an associated probability
+                   $P_i$, and individual probabilities producing each
+                   symbol in the signal $p_i(j)$. Each state, then, has an
+                   associated entropy! This is given by $S_i$, and we can say
+                   that the total entropy is the individual state entropies
+                   weigthed with the state probabilities - i.e.
+                   $$
+                    S = \sum_i P_iS_i \\
+                    = -\sum_i\sum_j P_ip_i(j)\log p_i(j).
+                   $$
+                   In plain language, this is the entropy of the source per
+                   symbol of the signal. The source entropy, if the signal is
+                   produced in a fixed frequency $f_i$, may be described in
+                   entropy per second: $S' = \sum_i f_i S_i$. This may be
+                   further reduced to $S' = nS$ where $n$ is the number of
+                   symbols produced by the source per second.
                 </p>
+
+                <p>
+                    For independent symbols in the source signal,
+                    $$
+                    S = -\sum_i p_i \log p_i,
+                    $$
+                    $p_i$ again being the probability of recieving symbol $i$.
+                    Taking a long, $n$-character message, we will observe with
+                    high probability $np_1$ occurences of the first symbol, and
+                    so on to $np_m$ occurences of the $m^{\text{th}}$, for a
+                    signal producing symbols from an alphabet of length $m$.
+                    The probability of receiving a particular signal of this
+                    type is approximately $p \approx p_1^{np_1}p_2^{np_2} \ldots 
+                    p_m^{np_m}$. We take the logarithm and tidy up:
+                    $$
+                    \log p \approx m \sum_i^m p_i \log p_i\\
+                    \log p \approx -mS\\
+                    S \approx \frac{\log\frac{1}{p}}{n}.
+                    $$
+                    This result holds for any source, and we can tighten it up
+                    with the following theorem:
+                </p>
+
+                <p>
+                    <b>THEOREM 3:</b> Given any $\epsilon > 0 \text{and}
+                    \delta > 0$, we may find $n_0$ so that any sequences of
+                    length $n \geq n_0$ fall into two cases:
+                    <ol>
+                        <li> a set whose total probability is less than 
+                            $\epsilon$</li>
+                        <li>The remainder, whose probabilities satisfy
+                        $$
+                        \left| \frac{\log p^{-1}}{n} - S\right| < \delta
+                        $$
+                        </li>
+                    </ol>
+                </p>
+
+                <p>
+                    <b>PROOF:</b> Again assuming we are dealing with an ergodic
+                    system, we have that any state may transition into another with
+                    some probability $P>0$ and will take a particular path with
+                    $p > 0$ to do so. By the relationship of pointwise ergodicity
+                    and the strong law of large numbers, we can say that the number
+                    of times a particular path $p_{ij}$ is taken in a sequence of
+                    length $N$ is proportional to the probability of being at point
+                    $i$, say $P_i$, and then choosing this path at any point, 
+                    $p_{ij}N$. If $N$ is suddiciently large, the probability of
+                    percentage error $\pm \delta$ is less than $\epsilon$. 
+                    Almost all of the numbers, excluding a set with small
+                    probability, the actual numbers lie within this 
+                    $$
+                    (P_ip_{ij} \pm \delta)N,
+                    $$
+                    so almost all sequences have a probability $p$ given by the
+                    expression
+                    $$
+                    p = \prod_{i,j}p_{ij}^{(P_ip_{ij} \pm \delta)N}, 
+                    $$
+                    from which we can determine
+                    $$
+                    \frac{\log p}{N} = \sum_{i,j} (P_i p_{ij} \pm \delta) \log 
+                    p_{ij}\\ 
+                    \left| \frac{\log p}{N} - \sum_{i,j} P_i p_{ij} 
+                    \log p_{ij} \right| < \eta.
+                    $$
+                </p>
+                
+                <p>
+                    A bit of arithmetic is sufficient to show that this is
+                    equivalent to our theorem's statement. $\blacksquare$
+                </p>
+
+                <h5 id="thermo">Information and Thermodynamics</h5>
 
                 <p>
                     IN HERE -- INFORMATION AND THERMODYNAMIC ENTROPY 
