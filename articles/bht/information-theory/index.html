@@ -427,7 +427,7 @@
                     f(N) = S(\frac{1}{m},\ldots,\frac{1}{m})+
                     \sum^m_{i=1}\frac{1}{m}f(n), \\
                     \\
-                    f(N) = f(nm) = f(n) + f(m), \text{for arbitrary} n,m.
+                    f(N) = f(nm) = f(n) + f(m), \text{for arbitrary} n,m.}
                     $$
                     This second line is in fact a version of the Cauchy
                     functional equation, this type having only a single
@@ -533,7 +533,7 @@
                 </p>
 
                 <p>
-                    <b>THEOREM 3:</b> Given any $\epsilon > 0 \text{and}
+                    <b>THEOREM 3:</b> Given any $\epsilon > 0 \text{ and }
                     \delta > 0$, we may find $n_0$ so that any sequences of
                     length $n \geq n_0$ fall into two cases:
                     <ol>
@@ -548,16 +548,17 @@
                 </p>
 
                 <p>
-                    <b>PROOF:</b> Again assuming we are dealing with an ergodic
-                    system, we have that any state may transition into another with
-                    some probability $P>0$ and will take a particular path with
-                    $p > 0$ to do so. By the relationship of pointwise ergodicity
-                    and the strong law of large numbers, we can say that the number
-                    of times a particular path $p_{ij}$ is taken in a sequence of
-                    length $N$ is proportional to the probability of being at point
-                    $i$, say $P_i$, and then choosing this path at any point, 
-                    $p_{ij}N$. If $N$ is suddiciently large, the probability of
-                    percentage error $\pm \delta$ is less than $\epsilon$. 
+                    <b>PROOF:</b> Again assuming we are dealing with an
+                    ergodic system, we have that any state may transition into
+                    another with some probability $P>0$ and will take a
+                    particular path with $p > 0$ to do so. By the relationship
+                    of pointwise ergodicity and the strong law of large
+                    numbers, we can say that the number of times a particular
+                    path $p_{ij}$ is taken in a sequence of length $N$ is
+                    proportional to the probability of being at point $i$, say
+                    $P_i$, and then choosing this path at any point,
+                    $p_{ij}N$. If $N$ is sufficiently large, the probability
+                    of percentage error $\pm \delta$ is less than $\epsilon$. 
                     Almost all of the numbers, excluding a set with small
                     probability, the actual numbers lie within this 
                     $$
@@ -581,6 +582,32 @@
                         $\blacksquare$
                     </span>
                     <br>
+                </p>
+
+                <p>
+                    We also have the following theorem relating entropy to 
+                    the number of strings needed to be added up to reach some
+                    probability $q$:
+                </p>
+
+                <p>
+                    <b>THEOREM 4:</b> 
+                    $$
+                    \lim_{N \to \infty$} \frac{\log n(q)}{N} = S,
+                    $$
+                    when $q \neq 0,1$.
+                </p>
+
+                <p>
+                    <b>PROOF:</b> Suppose $q = 0$. Then clearly $n(q) = 0$. If,
+                    however, we have $q = 1$, then $n(q)$ should be the number
+                    of strings of length $N$. We assume that we are working with
+                    bitstrings, and thus may express this number as $2^N$. It
+                    is easy to generalize our result to strings with characters
+                    from alphabets of any size. We see then that to achieve
+                    probability 1, we need all $2^N$ strings.
+
+
                 </p>
 
                 <h5 id="thermo">Information and Thermodynamics</h5>
