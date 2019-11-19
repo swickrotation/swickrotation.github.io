@@ -13,22 +13,12 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<script type="text/javascript" async src="/MathJax-master/MathJax.js?config=TeX-AMS_CHTML-full"></script>
-<script type="text/javascript" src="/MathJax-master/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script type="text/javascript" src="/MathJax-master/braket/braket.js"></script>
 
 </head>
+
 <body>
 	<!-- Navigation -->
 	<div class="main-nav">
@@ -52,7 +42,7 @@
 		</div>
 	</div>
 
-	<!-- Content -->
+<!-- Content -->
 <div class="content">
     <div class="container">
         <!-- Post -->
@@ -605,15 +595,38 @@
                     bitstrings, and thus may express this number as $2^N$. It
                     is easy to generalize our result to strings with characters
                     from alphabets of any size. We see then that to achieve
-                    probability 1, we need all $2^N$ strings.
+                    probability 1, we need all $2^N$ strings. 
+                </p>
 
-
+                <p>
+                    From theorem 3, we have that almost all of our sequences
+                    of characters come with a probability approaching $p =
+                    2^{-SN}$ for large $N$. If we arrange the probabilites of
+                    each string in descending order, we will have that the
+                    number of strings to reach probability $q$ will be
+                    $q2^{SN}$, and we will not see any of the strings with
+                    probability less than $\epsilon$ in our collection.
+                    Therefore, $n(q) = \frac{q}{2^{-SN} = q2^{SN}$. From here,
+                    we can see very quickly that 
+                    $$
+                    \frac{\log n(q)}{N} = S 
+                    $$
+                    <\br>
+                    <span style="float:right;">
+                        $\blacksquare$
+                    </span>
                 </p>
 
                 <h5 id="thermo">Information and Thermodynamics</h5>
 
                 <p>
-                    IN HERE -- INFORMATION AND THERMODYNAMIC ENTROPY 
+                    The real crux of the article is how we relate thermodynamic
+                    entropy and information theory. Evidently, we use similar
+                    jargon between the disciplines, in particular the use of the
+                    word "entropy". The Boltzmann thermodynamic 
+                    entropy formula may in fact be viewed as a particular case
+                    of Shannon's information entropy, with Boltzmann's constant
+                    acting as a constant of proportionality between the two. 
                 </p>
             </div>
         </div>
