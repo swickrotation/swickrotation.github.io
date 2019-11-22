@@ -24,7 +24,6 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/javascript" src="/MathJax-master/braket/braket.js"></script>
-
 </head>
 
 <body>
@@ -190,7 +189,7 @@
                     quantity is defined in the following way:
 
                     $$
-                        C = \lim_{T \to \infty} \frac{\log_2(N(T)}{T},
+                        C = \lim_{T \to \infty} \frac{\log_2(N(T))}{T},
                     $$
 
                     where $N(T)$ is the number of number of allowed signals of
@@ -634,8 +633,19 @@
                     word "entropy". The Boltzmann thermodynamic 
                     entropy formula may in fact be viewed as a particular case
                     of Shannon's information entropy, with Boltzmann's constant
-                    acting as a constant of proportionality between the two. 
+                    acting as a constant of proportionality between the two, and
+                    with the logarithm taking a different base. The conversion
+                    factor from base $e$ to base 2 may be absorbed into a
+                    constant itself, and so we have a simple way of converting
+                    between the two.
                 </p>
+
+                <p>
+                    There is an interesting parallel between our assumption of
+                    ergodic processes and the canonical ensemble of
+                    statistical mechanics -  
+                </p>
+
             </div>
         </div>
         <!-- /post -->
