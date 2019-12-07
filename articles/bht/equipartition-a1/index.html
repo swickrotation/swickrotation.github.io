@@ -91,10 +91,37 @@
                 </p>
 
                 <p>
-                    <b>DEFINITION A1.1:</b> an <em>n-dimensional manifold</em>
-                    $M$ is a pointed topological space such that each point
-                    has a neighbourhood that is homeomorphic to Euclidean
-                    n-space i.e. $\forall x \in M $ 
+                    <b>DEFINITION A1.1:</b> a <em>n-dimensional topological
+                        manifold</em> $M$ is a pointed topological space that
+                    fulfills the following three properties:
+                    <ol>
+                        <li>
+                            $M$ is <em>Hausdorf</em>: for $p,q \in M, \exists
+                            U, V \subset M$ such that $p \in U, q \in V, U 
+                            \intersect V = \emptyset$. In other words, any two
+                            points in the topological space $M$ may be expressed
+                            as members of disjoint neighbourhoods.
+                        </li>
+                        <li>
+                            $M$ is <em>Second-Countable</em>: $\exists \{A_i\}$
+                            such that $M \subset \Union_i A_i, 
+                            \left|\{A_i\}\right| \leq \Aleph_0$. Again in plain
+                            language, this means that there are a countable (if
+                            not finite) union of topological spaces that when
+                            "glued together" contain the topological space $M$.
+                        </li>
+                        <li>
+                            $M$ is <em>Locally n-Euclidean</em>: each point $x
+                            \in M$ has a neighbourhood homeomorphic to an open
+                            subset of $\mathbb{R}^n$, i.e. $\forall x \in M
+                            \exists$ open $U \subset M$ such that $x in U$ and a
+                            homeomorphism $\phi$ that takes this neighbourhood
+                            into an open set in $\tilde{U} \subset 
+                            \mathbb{R}^n$: $\phi:U \rightarrow \tilde{U}$.
+                            We remind ourselves that a homeomorphism is a 
+                            continuous bijective map with a continuous inverse.
+                        </li>
+                    </ol>
                 </p>
 
             </div>
