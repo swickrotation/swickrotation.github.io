@@ -25,7 +25,6 @@ MathJax.Extension["TeX/boldsymbol"] = { version: "2.7.3" };
 MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
     MathJax.InputJax.TeX.Definitions.Add({
         macros: {
-
             bra: ["Macro", "{\\langle {#1} \\vert}", 1],
             ket: ["Macro", "{\\vert {#1} \\rangle}", 1],
             braket: ["Macro", "{\\langle {#1} \\rangle}", 1],
@@ -34,7 +33,6 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
             Bra: ["Macro", "{\\left\\langle { #1} \\right\\vert}", 1],
             Ket: ["Macro", "{\\left\\vert { #1 } \\right\\rangle}", 1],
             Braket: ["Macro", "{\\left\\langle {#1} \\right\\rangle}", 1]
-
         }
     });
 });

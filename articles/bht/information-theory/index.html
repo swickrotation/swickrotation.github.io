@@ -73,7 +73,8 @@
                 </div>
 
                 <h5>Index</h5>
-
+                
+                <div class="list">
                 <ol type='i'>
                     <li><a href="#intro">Introduction & Motivation</a></li>
                     <li><a href="#capacity">Channel Capacity</a></li>
@@ -82,6 +83,7 @@
                     <li><a href="#infosource">Sources and Entropy</a></li>
                     <li><a href="#thermo">Information and Thermodynamics</a></li>
                 </ol>
+                </div>
 
                 <h5 id="intro">Section 2.1 - Introduction & Motivation</h5>
 
@@ -309,7 +311,9 @@
                     - individual letter distributions, digram and trigram
                     distributions, and so on. Resultant of this definition are
                     inferences that we can make on the structure of the graph
-                    defining such a process: 
+                    defining such a process:
+
+                    <div class="list">
                     <ol>
                         <li>
                             The graphs must not contain "islands" that are
@@ -333,6 +337,7 @@
                             graph are coprime.
                         </li>
                     </ol>
+                    </div>
                 </p>
 
                 <p>
@@ -375,6 +380,8 @@
                    "uncertainty" in the event measured. Say we have a function
                    $S$ of the probabilities that is intended to do this
                    measurement. $S$ should follow the following properties:
+
+                   <div class="list">
                    <ol>
                        <li>$S$ must be continuous in its domain</li>
                        <li>If the elements of its domain, the $p_i$, are all
@@ -384,6 +391,7 @@
                            choices, the total $S$ must be the weigthed sum of
                            individual values of $S$.</li>
                    </ol>
+                   </div>
                 </p>
 
                 <p>
@@ -451,6 +459,8 @@
                     that this function (which I will now call Shannon entropy,
                     or simply entropy) follows the same properties of
                     Boltzmann entropy, due to its logarithmic nature. Those are:
+
+                    <div class="list">
                     <ol>
                         <li>$S=0$ iff all $p_i$ are 0 except for one, which has
                         a value of one. Otherwise, $S$ is positive.</li>
@@ -482,6 +492,7 @@
                         <li>From properties 3 and 5, we can see that $S(y)
                         \geq S_x(y)$.</li>
                     </ol>
+                    </div>
                 </p>
                 
                 <h5 id="infosource">Sources and Entropy</h5>
@@ -533,6 +544,8 @@
                     <b>THEOREM 3:</b> Given any $\epsilon > 0 \text{ and }
                     \delta > 0$, we may find $n_0$ so that any sequences of
                     length $n \geq n_0$ fall into two cases:
+
+                    <div class="list">
                     <ol>
                         <li> a set whose total probability is less than 
                             $\epsilon$</li>
@@ -541,6 +554,7 @@
                         \left| \frac{\log p^{-1}}{n} - S\right| < \delta
                         $$
                         </li>
+                    </div>
                     </ol>
                 </p>
 
