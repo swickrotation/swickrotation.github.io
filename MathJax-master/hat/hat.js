@@ -1,10 +1,10 @@
-/*braket.js
+/*hat.js
  *  
- * Implements the Braket Package for LaTeX input.
+ * Implements the my preferred vector notation for LaTeX input in MathJax.
  *  
  * ---------------------------------------------------------------------
  *  
- * Copyright(c) 2018 William Gertler.
+ * Copyright(c) 2019 William Gertler.
  * 
  * Licensed under the Apache License, Version 2.0(the "License");
  * you may not use this file except in compliance with the License.
@@ -24,20 +24,13 @@ MathJax.Extension["TeX/boldsymbol"] = { version: "2.7.3" };
 
 MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
     MathJax.InputJax.TeX.Definitions.Add({
+    tex: {
         macros: {
-
-            bra: ["Macro", "{\\langle {#1} \\vert}", 1],
-            ket: ["Macro", "{\\vert {#1} \\rangle}", 1],
-            braket: ["Macro", "{\\langle {#1} \\rangle}", 1],
-            set: ["Macro", "{\\{ {#1} \\}}", 1],
-            Set: ["Macro", "{\\left\\{ {#1} \\right\\}}", 1],
-            Bra: ["Macro", "{\\left\\langle { #1} \\right\\vert}", 1],
-            Ket: ["Macro", "{\\left\\vert { #1 } \\right\\rangle}", 1],
-            Braket: ["Macro", "{\\left\\langle {#1} \\right\\rangle}", 1]
-
+            
+            }
         }
     });
 });
 
 MathJax.Hub.Startup.signal.Post("TeX braket Ready");
-MathJax.Ajax.loadComplete("[MathJax]/extensions/TeX/braket.js");
+MathJax.Ajax.loadComplete("[MathJax]/extensions/TeX/hat.js");
