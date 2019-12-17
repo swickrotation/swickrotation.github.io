@@ -129,10 +129,17 @@ img.img-intro {
     position: relative;
 }
 .content .post h4 {
-    color: #4d4d33;
+    color: #001100;
     font-family: "Futura", sans-serif;
     font-size: 16px;
     font-weight: 400;
+    position: relative;
+}
+.content .list {
+    color: #001100;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 300;
     position: relative;
 }
  .center {
