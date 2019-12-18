@@ -19,9 +19,7 @@
     * limitations under the License.
  *
  */
-
 MathJax.Extension["TeX/boldsymbol"] = { version: "2.7.3" };
-
 MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
     MathJax.InputJax.TeX.Definitions.Add({
         macros: {
@@ -36,6 +34,5 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
         }
     });
 });
-
 MathJax.Hub.Startup.signal.Post("TeX braket Ready");
 MathJax.Ajax.loadComplete("[MathJax]/extensions/TeX/braket.js");
