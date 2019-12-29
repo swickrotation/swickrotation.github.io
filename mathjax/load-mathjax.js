@@ -3,7 +3,7 @@ window.MathJax = {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
         }
-};
+    };
 
 (function () {
     var script = document.createElement('script');
