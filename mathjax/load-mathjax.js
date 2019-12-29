@@ -1,8 +1,8 @@
 window.MathJax = {
-    tex2jax: {
+    tex: {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
-    }
+    },
     autoload: {
         braket: ['braket']
         }
