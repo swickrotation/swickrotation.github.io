@@ -3,11 +3,8 @@ window.MathJax = {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
     },
-    tex: {
-        autoload: {
-            braket: ['braket']
-            }
-    }
+    loader: {load: ['[tex]/braket']},
+    tex: {packages: {'[+]': ['braket']}}
 };
 
 (function () {
