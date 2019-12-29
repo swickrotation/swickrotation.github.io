@@ -2,6 +2,10 @@ window.MathJax = {
     tex2jax: {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
+    },
+    tex: {
+        autoload: {
+            braket: ['bra', 'ket', 'braket', 'set', 'Bra', 'Ket', 'Braket', 'Set', 'ketbra', 'Ketbra']}
     }
 };
 
