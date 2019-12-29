@@ -4,10 +4,10 @@ window.MathJax = {
         processEscapes: true
     },
     tex: {
-    autoload: {
-      braket: ['braket']
+        autoload: {
+            braket: ['braket']
+            }
     }
-  }
 };
 
 (function () {
