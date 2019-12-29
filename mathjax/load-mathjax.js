@@ -1,6 +1,5 @@
 window.MathJax = {
     tex: {
-        packages: {'[+]': ['braket']}
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
     }
