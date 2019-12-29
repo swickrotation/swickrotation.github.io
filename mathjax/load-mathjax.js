@@ -1,10 +1,10 @@
 window.MathJax = {
     loader: {load: ['[tex]/braket']},
-    tex: {packages: {'[+]': ['braket']}}
+    tex: {packages: {'[+]': ['braket']}},
     tex2jax: {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
-    },
+    }
 };
 
 (function () {
