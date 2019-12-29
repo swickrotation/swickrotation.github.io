@@ -1,6 +1,6 @@
 window.MathJax = {
-    loader: {load: ['[tex]/amscd']},
-    tex: {packages: {'[+]': ['amscd']}},
+    loader: {load: ['[tex]/braket']},
+    tex: {packages: {'[+]': ['braket']}},
     tex2jax: {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
