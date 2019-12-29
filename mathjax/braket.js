@@ -20,7 +20,7 @@
  *
  */
 
-MathJax.Extension["TeX/boldsymbol"] = { version: "2.7.3" };
+MathJax.Extension["TeX/boldsymbol"] = { version: "3.0.0" };
 
 MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
     MathJax.InputJax.TeX.Definitions.Add({
