@@ -2,9 +2,9 @@ window.MathJax = {
     tex2jax: {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
-        loader: {load: ['[tex]/braket']},
-        tex: {packages: {'[+]': ['braket']}}
-  }
+    }
+    loader: {load: ['[tex]/braket']},
+    tex: {packages: {'[+]': ['braket']}}
 };
 
 (function () {
