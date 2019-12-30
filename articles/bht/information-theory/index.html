@@ -419,10 +419,14 @@
                     Considering the special case in which each of the $m$ groups
                     have $n$ elements, we have two important relations: 
                     $$
-                    f(N) = S(\frac{1}{m},\ldots,\frac{1}{m})+
-                    \sum^m_{i=1}\frac{1}{m}f(n), \\
+                    \begin{align}
+                    & f(N) = S(\frac{1}{m},\ldots,\frac{1}{m})+
+                    \sum^m_{i=1}\frac{1}{m}f(n),\\
                     \\
-                    f(N) = f(nm) = f(n) + f(m), \text{ for arbitrary } n,m.
+                    &f(N) = f(nm) = f(n) + f(m),\\
+                    \\
+                    &\text{ for arbitrary } n,m.
+                    \end{align}
                     $$
                     This second line is in fact a version of the Cauchy
                     functional equation, this type having only a single
@@ -433,11 +437,17 @@
                     condition 2).<br>
                     Plugging this back into the general case, we get
                     $$
-                    K\log(N) = S(p_1,\ldots,p_m) + \sum^m_{i=1}p_iKf(n_i)\\
-                    S(p_1,\ldots,p_m) = K\log(N) - \sum^m_{i=1}p_iKf(n_i)\\
-                    = K\sum^m_{i=1}p_i\log(N) - K\sum^m_{i=1}p_if(n_i)\\
-                    = K\sum^m_{i=1}p_i\log\left(\frac{N}{n_i}\right)\\
-                    =-K\sum^m_{i=1}p_i\log(p_i)
+                    \begin{align}
+                    & K\log(N) = S(p_1,\ldots,p_m) + \sum^m_{i=1}p_iKf(n_i)\\
+                    \\
+                    & S(p_1,\ldots,p_m) = K\log(N) - \sum^m_{i=1}p_iKf(n_i)\\
+                    \\
+                    & = K\sum^m_{i=1}p_i\log(N) - K\sum^m_{i=1}p_if(n_i)\\
+                    \\
+                    & = K\sum^m_{i=1}p_i\log\left(\frac{N}{n_i}\right)\\
+                    \\
+                    & =-K\sum^m_{i=1}p_i\log(p_i)
+                    \end{align}
                     $$
                     <span style="float:right;">
                         $\blacksquare$
