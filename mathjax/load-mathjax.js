@@ -1,5 +1,5 @@
 window.MathJax = {
-    tex2jax: {
+    tex: {
         inlineMath: [['$', '$'], ['$$', '$$']],
         processEscapes: true
     }
