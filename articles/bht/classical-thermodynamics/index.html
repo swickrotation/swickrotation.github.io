@@ -519,8 +519,9 @@
                     $$
                     \begin{align}
                     & \ln\Omega = \ln\left(\frac{(q+N-1)!}{q!N!}\right)
-                    \approx \ln\left(\frac{(q+N)!}{q!N!}\right)
-                    = \ln(q+N)! - \ln q! - \ln N! \\
+                    \approx \ln\left(\frac{(q+N)!}{q!N!}\right)\\
+                    \\
+                    & = \ln(q+N)! - \ln q! - \ln N! \\
                     \\
                     & \approx (q+N)\ln(q+N) - q\ln q - N \ln N,
                     \end{align}
@@ -562,17 +563,20 @@
                     $$
                     Taking the logarithm to simplify our manipulations,
                     $$
-                    \ln\left[\left(\frac{q}{2}\right)^2 - x^2 \right]^N =
-                    N\ln\left[\left(\frac{q}{2}\right)^2 - x^2 \right] \\
+                    \begin{align}
+                    \ln\left[\left(\frac{q}{2}\right)^2 - x^2 \right]^N &=
+                    N\ln\left[\left(\frac{q}{2}\right)^2 - x^2 \right]
                     =N\ln\left[\left(\frac{q}{2}\right)^2 
                     \left(1-\left(\frac{2x}{q}\right)^2\right) \right] \\
-                    \approx N\left[\ln\left(\frac{q}{2}\right)^2 - 
+                    \\
+                    & \approx N\left[\ln\left(\frac{q}{2}\right)^2 - 
                     \left(\frac{2x}{q}\right)^2\right].
+                    \end{align}
                     $$
                     Exponentiating yields
                     $$
                     \begin{align}
-                    \Omega &= \left(\frac{e}{N}\right)^{2N}
+                    & \Omega = \left(\frac{e}{N}\right)^{2N}
                     e^{N\ln(q/2)^2}e^{-N(2x/q)^2} = \\
                     \\
                     & \Omega_{\text{max}}\cdot e^{-N(2x/q)^2},
@@ -597,7 +601,8 @@
                     with $10^i{23}$ "units" of energy distributed amongst
                     them. The multiplicity of this system is given by
                     $$
-                    \binom{2 \times 10^{23}}{10^{23}} = \frac{(2 
+                    \begin{align}
+                    \binom{2 \times 10^{23}}{10^{23}} &= \frac{(2 
                     \times 10^{23})!}{(10^{23})!(10^{23})!} \\
                     \\
                     \approx \frac{\sqrt{2\pi (2\times 10^{23})}
@@ -605,11 +610,11 @@
                     {\left(\sqrt{2 \pi 10^{23}}\left(\frac{10^{23}}{e}\right)
                     ^{10^{23}}\right)^2} \\
                     \\
-                    = \frac{2\sqrt{\pi 10^{23}}}{2\pi 10^{23}}\frac{\left(\frac
+                    &= \frac{2\sqrt{\pi 10^{23}}}{2\pi 10^{23}}\frac{\left(\frac
                     {2 \times 10^{23}}{e}\right)^{2 \times 10^{23}}}
-                    {\left(\frac{10^{23}}{e}\right)^{2 \times 10^{23}}}\\
-                    \\
+                    {\left(\frac{10^{23}}{e}\right)^{2 \times 10^{23}}}
                     = \frac{2^{2 \times10^{23}}}{\sqrt{\pi 10^{23}}},
+                    \end{align}
                     $$
                      which is just an astoundingly large number. It is a number
                      so large, that it would be painful to even compute, let
@@ -760,8 +765,9 @@
                     $$
                     \begin{align}
                     S &\approx Nk \ln N - kN - k\left(\sum_i N_i \ln N_i
-                    - N_i\right)
-                    = Nk \ln N - k\left(\sum_i N_i \ln N_i\right)
+                    - N_i\right)\\
+                    \\
+                    &= Nk \ln N - k\left(\sum_i N_i \ln N_i\right)
                     = -k\left(\sum_i N_i \ln N_i - N\ln N \right) \\
                     \\
                     &= -kN \left(\sum_i p_i \ln N_i - \ln N \right)
