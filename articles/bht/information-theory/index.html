@@ -532,9 +532,12 @@
                     type is approximately $p \approx p_1^{np_1}p_2^{np_2} \ldots 
                     p_m^{np_m}$. We take the logarithm and tidy up:
                     $$
-                    \log p \approx m \sum_i^m p_i \log p_i\\
+                    \begin{align}
+                    \log p & \approx m \sum_i^m p_i \log p_i
                     \log p \approx -mS\\
-                    S \approx \frac{\log\frac{1}{p}}{n}.
+                    \\
+                    S &\approx \frac{\log\frac{1}{p}}{n}.
+                    \end{align}
                     $$
                     This result holds for any source, and we can tighten it up
                     with the following theorem:
