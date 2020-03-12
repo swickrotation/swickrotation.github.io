@@ -73,7 +73,8 @@
                     to grasp the concepts of angular momentum and spin in a 
                     quantum mechanical setting. We focus on what these terms
                     mean in the setting of the hydrogen atom, but much of what
-                    is discussed is adaptable to other settings. 
+                    is discussed is adaptable to other settings, including
+                    ferromagnetic materials.
                 </p>
 
                 <p>
@@ -127,6 +128,32 @@
                     \right) + \frac{1}{r^2\sin^2 \theta}
                     \frac{\partial^2 \phi}{\partial \phi^2} \right] - 
                     \frac{e^2}{4\pi \epsilon_0 r}\psi = E\psi.
+                    $$
+                </p>
+
+                <p>
+                    From here we use a classic trick in partial differential
+                    equations called "seperation of variables". The notion is to
+                    seperate the PDE into seperate ODEs with independent
+                    variables. In our case, we assume we can break our solution
+                    into a radial component, $R(r)$, and an angular component,
+                    $Y(\theta,\phi)$. That is, we write
+                    $$
+                    \psi(r,\theta,\phi) = R(r) \cdot Y(\theta,\phi).
+                    $$
+                    This means we can write
+                    $$
+                    \frac{\partial \psi}{\partial r} = Y\frac{dR}{dr},
+                    $$
+                    and so on for the angular partial derivatives. With this in
+                    mind, we're able to re-arrange the Schrodinger equation:
+                    $$
+                    \frac{Y}{r^2}\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)+
+                    \frac{R}{r^2 \sin\theta}\frac{\partial}{\partial \theta}
+                    \left(\sin \theta \frac{\partial Y}{\partial \theta}\right)
+                    + \frac{R}{r^2 \sin^2 \theta}
+                    \frac{\partial^2Y}{\partial \phi^2} + \frac{2\mu}{\hbar^2}
+                    \left(E + \frac{e^2}{4 \pi \epsilon_0 r}\right)RY =0
                     $$
                 </p>
 
