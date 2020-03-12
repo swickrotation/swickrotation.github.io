@@ -240,7 +240,36 @@
                 </p>
 
                 <p>
-                    Alright. Taking $B=m^2$ again,                   
+                    Alright. Taking $B=m^2$ again, the polar equation is
+                    $$
+                    \frac{\sin\theta}{\Theta}\frac{d}{d\theta}
+                    \left(\sin\theta\frac{d\Theta}{d\theta}\right) 
+                    + C\sin^2\theta - m^2= 0.
+                    $$
+                    Rearranging,
+                    $$
+                    \frac{1}{\sin\theta}\frac{d}{d\theta}
+                    \left(\sin\theta\frac{d\Theta}{d\theta}\right) 
+                    + \left(C-\frac{m^2}{\sin^2\theta}\right)\Theta = 0.
+                    $$
+                    Now we do something very clever. We make a substitution:
+                    $P(\cos\theta) \equiv \Theta(\theta) , x \equiv \cos\theta$.
+                    Our differential changes, now, to
+                    $$
+                    \frac{d}{d\theta} = \frac{dx}{d\theta}\frac{d}{dx}
+                    = -\sin\theta\frac{d}{dx}
+                    $$
+                    and
+                    $$
+                    \frac{1}{\sin\theta}(-\sin\theta)\frac{d}{dx}
+                    \left(\sin\theta(-\sin\theta\frac{dP}{dx}\right)+
+                    \left(C - \frac{m^2}{\sin^2\theta}\right)P = 0.
+                    $$
+                    We can make this cleaner. This rearranges to
+                    $$
+                    \frac{d}{dx}\left(\sin^2\theta\frac{dP}{dx}\right)+
+                    \left(C-\frac{m^2}{\sin^2\theta}\right)P =0
+                    $$
                 </p>
 
                 <p>    
