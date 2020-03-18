@@ -287,7 +287,34 @@
                     polynomials", which are hairy enough that it makes me want
                     to write an appendix to the appendix. I'm gonna do it here,
                     but you can <a href ="" >skip</a> to the solution if you're
-                    not up to it. 
+                    not up to it. Here goes nothing. 
+                </p>
+
+                <p>
+                    We start with the case that $m=0$. Our ODE becomes
+                    $$
+                    (1-x^2)\frac{d^2P}{dx^2} - 2x\frac{dP}{dx} + CP = 0.
+                    $$
+                    We notice that the coefficient on the 2nd term is the
+                    derivative of the coefficient on the first term. This leads
+                    us to suspect that our kernel is probably $(1-x^2)$. The
+                    multiple derivatives indicate we should make a substitution
+                    along the lines of $w = (1-x^2)^n$ , $w' = -2xn(1-x^2)^{n-1}
+                    which gives us the following relation:
+                    $$
+                    w'(1-x^2) +2nxw =0.
+                    $$
+                    However, repeated derivatives of this function don't give us
+                    the form of equation we're looking for. We Take our original
+                    equation and flip its sign:
+                    $$
+                    (x^2-1)\frac{d^2P}{dx^2} + 2x\frac{dP}{dx} - CP = 0,
+                    $$
+                    and we can use a similar substitution to find that, letting
+                    $\omega = (x^2-1)^n$,
+                    $$
+                    \omega'(x^2-1) - 2nx\omega =0.
+                    $$
                 </p>
 
                 <p>    
