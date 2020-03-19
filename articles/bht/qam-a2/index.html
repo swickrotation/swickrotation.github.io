@@ -315,6 +315,54 @@
                     $$
                     \omega'(x^2-1) - 2nx\omega =0.
                     $$
+                    The $n+1$th derivative of this statement gives you
+                    $$
+                    (x^2-1)\omega^{(n+2)}+2x\omega^{(n+1}-n(n+1)\omega^{(n)},
+                    $$
+                    which <em>is</em> in the form we're looking for. This means
+                    we may write
+                    $$
+                        P = \frac{d^s}{dx^s}(x^2-1), 
+                    $$
+                    which is the Legendre polynomial. This polynomial may be
+                    normalized by applying a factor $\frac{1}{2^n n!}$:
+                    $$
+                    P_l =\frac{1}{2^n n!} \frac{d^s}{dx^s}(x^2-1),
+                    $$
+                    This is the "Rodrigues formula". And it's all well and good,
+                    but it's still not what we're after &ndash; we don't
+                    generally have $m=0$. Let's explore the non-zero case.
+                </p>
+
+                <p>
+                    Unfortunately, the same solution does not work. Our new
+                    formulation would look something like
+                    $$
+                    (1-x^2)z''-2x(k+1)z'+(l(l+1)-k(k+1))z=0,
+                    $$
+                    if we took additional derivatives to power $k$ and replaced
+                    things as we had in the previous paragraph. If, instead, we
+                    recast the original equation (with non-zero $m$), we can get
+                    something of the form
+                    $$
+                    (1-x^2)^2y''-2x(k+1)y'+(l(l+1)(1-x^2)-m^2)z=0.
+                    $$
+                    This indicates that the final function should be of the form
+                    $$
+                    \xi = (1-x^2)^a\frac{d^b}{dx^b}y_n.
+                    $$
+                    Taking derivatives appropriately, we can see that
+                    $$
+                    \begin{align}
+                    &(1-x^2)\xi'' -2x\xi' + \left(l(l+1)-\frac{m^2}{1-x^2}\right)
+                    \xi\\
+                    \\
+                    & = -2a(1-x^2)^a+a(a-1)(4x^2)(1-x^2)^{a-1}\\
+                    & + yx^2a(1-x^2)^{a-1}+l(l+1)(1-x^2)^{a-1}\\
+                    & - m^2(1-x^2)^{a-1} = 0
+
+                    \end{align}
+                    $$
                 </p>
 
                 <p>    
