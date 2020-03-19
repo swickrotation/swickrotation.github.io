@@ -286,8 +286,8 @@
                     coefficients. The solutions are called "associated Legendre
                     polynomials", which are hairy enough that it makes me want
                     to write an appendix to the appendix. I'm gonna do it here,
-                    but you can <a href ="" >skip</a> to the solution if you're
-                    not up to it. Here goes nothing. 
+                    but you can <a href ="#coward" >skip</a> to the solution
+                    if you're not up to it. Here goes nothing. 
                 </p>
 
                 <p>
@@ -351,7 +351,10 @@
                     $$
                     \xi = (1-x^2)^a\frac{d^b}{dx^b}y_n.
                     $$
-                    Taking derivatives appropriately, we can see that
+                    Immediately, we see that $b$ has to be a positive integer
+                    &ndash; no Feynman half-derivative tricks allowed here.
+                    Taking derivatives appropriately, we can see that if we 
+                    force $y=x$ and let $b$ be 1,
                     $$
                     \begin{align}
                     &(1-x^2)\xi'' -2x\xi' + \left(l(l+1)-\frac{m^2}{1-x^2}\right)
@@ -359,10 +362,35 @@
                     \\
                     & = -2a(1-x^2)^a+a(a-1)(4x^2)(1-x^2)^{a-1}\\
                     & + yx^2a(1-x^2)^{a-1}+l(l+1)(1-x^2)^{a-1}\\
-                    & - m^2(1-x^2)^{a-1} = 0
-
+                    & - m^2(1-x^2)^{a-1} = 0.
                     \end{align}
                     $$
+                    For this whole thing to be zero, we need the coefficients to
+                    go to zero. This means we can coefficient-match our terms to
+                    solve for $a$. Doing so,
+                    $$
+                    a(a-1)4x^2(1-x^2)^{a-1}+4x^2a(1-x^2)^{a-1}-m^2(1-x^2)^{a-1}
+                    = 0,
+                    $$
+                    which yeilds that the relationship between coefficients of x
+                    is
+                    $$
+                    4a^2 = m^2 \rightarrow a = \frac{|m|}{2}.
+                    $$
+                    Now we can finally put this all together, and get our final
+                    relationship:
+                </p>
+
+                <p id="coward">
+                    $$
+                    P_l^m(x) = (1-x^2)^{\frac{|m|}{2}}\left(\frac{d}{dx}^{|m|}
+                    \right)\left(\frac{1}{2^l l!}\right)\left(\frac{d}{dx}
+                    \right)^l(x^2-1)^l,
+                    $$
+                    the famous "associated Legendre function", our solution to
+                    the polar equation. Notice the absolute values on $m$ here,
+                    this will have consequences for our alllowable quantum
+                    numbers that will be discussed below.
                 </p>
 
                 <p>    
