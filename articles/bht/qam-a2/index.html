@@ -325,9 +325,9 @@
                         P = \frac{d^s}{dx^s}(x^2-1), 
                     $$
                     which is the Legendre polynomial. This polynomial may be
-                    normalized by applying a factor $\frac{1}{2^n n!}$:
+                    rewritten as:
                     $$
-                    P_l =\frac{1}{2^n n!} \frac{d^s}{dx^s}(x^2-1),
+                    P_l =\frac{1}{2^l l!} \frac{d^l}{dx^l}(x^2-1)^l.
                     $$
                     This is the "Rodrigues formula". And it's all well and good,
                     but it's still not what we're after &ndash; we don't
@@ -377,20 +377,58 @@
                     $$
                     4a^2 = m^2 \rightarrow a = \frac{|m|}{2}.
                     $$
-                    Now we can finally put this all together, and get our final
+                    Now we can finally put this all together, and the
                     relationship:
                 </p>
 
-                <p id="coward">
+                <p>
                     $$
                     P_l^m(x) = (1-x^2)^{\frac{|m|}{2}}\left(\frac{d}{dx}
                     \right)^{|m|}\left(\frac{1}{2^l l!}\right)\left(\frac{d}{dx}
                     \right)^l(x^2-1)^l,
                     $$
-                    the famous "associated Legendre function", our solution to
+                    or,
+                    $$
+                    P_l^m(x) = (1-x^2)^{\frac{|m|}{2}}
+                    \left(\frac{d}{dx}right)^{|m|}P_l(x).
+                    $$
+                    The famous "associated Legendre function", our solution to
                     the polar equation. Notice the absolute values on $m$ here,
-                    this will have consequences for our alllowable quantum
-                    numbers that will be discussed below.
+                    this will have consequences for our allowable quantum
+                    numbers that will be discussed below. We often include in
+                    our solution a factor of $(-1)^m$, though this is a matter
+                    of convention as it is sometimes included in the definition
+                    of the spherical harmonics.
+                </p>
+
+                <p>
+                    The last step (this is truly the most painful part) is for
+                    us to find a constant that can normalize the angular
+                    portion of our solution. We say that the non-radial solution
+                    thus far is
+                    $$
+                    Y_l^m(\theta,\phi) = Ce^{im\phi}P_l^m\cos\theta.
+                    $$
+                    Using the Born rule, and noting that the radial and angular
+                    portions of the wave function may be normalized seperately,
+                    we see that
+                    $$
+                    \begin{align}
+                    & C^2\int_0^{2\pi}\int_0^{\pi}\|Y_l^m\|^2\sin\theta d\theta
+                    d\phi =1,\\
+                    \\
+                    & 2\pi C^2\int_{-1}^{1} \left(P_l^m(\cos\theta))\right)^2
+                    \sin\theta d \theta =1.
+                    $$
+                    We may substitute with our Rodrigues formula and with the
+                    definition of the associated Legendre polynomials to get
+                    $$
+                    
+                    $$
+                </p>
+
+                <p>
+                    
                 </p>
 
                 <p>    
