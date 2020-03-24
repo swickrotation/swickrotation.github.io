@@ -426,11 +426,25 @@
                     as setting $(x^2-1)=X$, to recover:
                     $$
                     2\pi C^2 \frac{(-1)^m}{2^{p+q}p!q!} \int_{-1}^1X^m
-                    \frac{d^m}{dx^m}\left(\frac{1}{p!}
-                    \left(\frac{d}{dx}\right)^pX^p\right) \frac{d^m}{dx^m}\left(
-                    \frac{1}{q!}\left(\frac{d^q}{dx^q}X^q\right)\right)dx =1,
+                    \frac{d^m}{dx^m}
+                    \left(\frac{d}{dx}\right)^pX^p \frac{d^m}{dx^m}
+                    \left(\frac{d^q}{dx^q}X^q\right)dx =1,
                     $$
-                    which looks a little daunting. We can break this down.
+                    which looks a little daunting. We can break this down. We
+                    us integration by parts $m+q$ times to get
+                    $$
+                    2\piC^2 \frac{(-1)^{2m+q}{2^{p+qp!q!}\int_{-1}^1
+                    \frac{d^{m+q}}{dx^{x+q}}\left(X^m\frac{d^{m+p}}{dx^{x+p}}X^p
+                    \right)X^qdx = 1.
+                    $$
+                    The Leibniz formula allows us to express our integrand as
+                    $$
+                    X^q
+                    \frac{d^{m+q}}{dx^{x+q}}\left(X^m\frac{d^{m+p}}{dx^{x+p}}X^p
+                    \right)
+                    $$
+                    First, we can see that $X^m$ has no power of $x$ greater
+                    than $x^{2m}$,
                 </p>
 
                 <p>
