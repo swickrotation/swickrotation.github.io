@@ -484,17 +484,49 @@
                     $$
                     \begin{align}
                     & \int_{-1}^1X^qdx = (-1)^q2\int_0^{\frac{\pi}{2}}
-                    \sin^{2q+1} \theta d\theta = \int_0^{\frac{\pi}{2}} 
+                    \sin^{2q+1} \theta d\theta = (-1)^{q+1}\int_0^{\frac{\pi}{2}} 
                     \sin^{2(\frac{1}{2}(2q+2))-1}\theta \cos^{2(\frac{1}{2})-1}
                     \theta d\theta\\
                     \\
-                    & = \frac{1}{2}\left(B\left(
+                    & = (-1)^q\frac{1}{2}\left(B\left(
                     2q+1,\frac{1}{2}\right)\right)
-                    = \frac{1}{2}\frac{\Gamma\left(\frac{2q+1}{2}\right)
+                    = (-1)^q\frac{1}{2}\frac{\Gamma\left(\frac{2q+2}{2}\right)
                     \Gamma\left(\frac{1}{2}\right)}{\Gamma\left(\frac{2q+1}{2}+1
-                    \right)}
+                    \right)} = (-1)^q \frac{\sqrt{\pi}}{2}\frac{\Gamma(q+1}
+                    {\Gamma \left(q+\frac{3}{2}\right)}.
                     \end{align}
                     $$
+                    For the last term's denominator, we invoke the Legendre
+                    duplication formula: $\Gamma(z)\Gamma(z+\frac{1}{2}) =
+                    2^{1-2z}\sqrt{\pi}\Gamma(2z).$ Writing $\Gamma(q+\frac{3}{2}
+                    )$ as $\Gamma((q+1)+\frac{1}{2}), we rearrange and pass to
+                    the Legendre formula. Plugging it all in, we get
+                    $$
+                    \int_{-1}^1X^qdx = \frac{(-1)^q(q!)^2(2^{2q+1}}{(2q+1)!}.
+                    $$
+                    Now we plug this back into our formula above, and we get
+                    that
+                    $$
+                    \begin{align}
+                    & \left(\frac{(-1)^{2m+q}(q+m)!(2q)!}{2^{2q}(q!)^2(q-m)!}
+                    \right)\left(\frac{(-1)^q(q!)^2(2^{2q+1}}{(2q+1)!}\right)//
+                    //
+                    & =(-1)^{2m+2q}\frac{2(q+m)!}{(2q+1)(q-m)!}
+                    = 1.
+                    \end{align}
+                    $$
+                    So letting $q=l$ and $\alpha = (-1)^{l+m}, we write
+                    $$
+                    \begin{align}
+                    & C = \sqrt{\frac{(2l+1)(l-m)!}{2(l+m)!}},//
+                    //
+                    & Y_l^m(\theta , \phi) = 
+                    \alpha \sqrt{\frac{(2l+1)(l-|m|)!}{2(l+|m|)!}}e^{im\phi}
+                    P_l^m(\cos \theta).
+                    $$
+                    At this point, I encourage the reader who has worked through
+                    this with me to take a sigh of relief and maybe a break,
+                    because that's what I did.
                 </p>
 
                 <p>
