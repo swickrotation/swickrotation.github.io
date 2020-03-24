@@ -454,7 +454,36 @@
                     that $q=p$, becuase otherwise the integral vanishes. We can
                     then write $i=q-m$, and proceed with that substitution:
                     $$
+                    \int_{-1}^1 (P_q^m(x))dx = \frac{(-1)^{2m+q}(q+m)!(2q)!}
+                    {2^{2q}(q!)^2(q-m)!(2m)!}\int_{-1}^1X^q\left(\frac{d^{2m}}
+                    {dx^{2m}}X^m\right)\left(\frac{d^{2q}}{dx^{2q}}X^q\right)dx.
+                    $$
+                    Noting that $\frac{d^{2m}}{dx^{2m}}X^m = (2m)!$, this is the
+                    same as writing
+                    $$
+                    \int_{-1}^1 (P_q^m(x))dx = \frac{(-1)^{2m+q}(q+m)!(2q)!}
+                    {2^{2q}(q!)^2(q-m)!}\int_{-1}^1X^q dq.
+                    $$
+                </p>
 
+                <p>
+                    Now for something a little less straightforward. We
+                    re-substitute $x = \cos \theta$ and write our integral in
+                    terms of sine. Then we express the integrand as a beta
+                    function, and further as gamma functions that will leave us
+                    with a fairly clean factorial term as our result. It should
+                    be noted that "seeing this" is not really expected. The way
+                    I was taught, there wasn't this much detail &ndash; we were
+                    supposed to just accept that the normalization factor
+                    presented was just correct and move on. I would never
+                    expect someone to calculate this result by hand and expect
+                    the physicists who came up with this model, most notably
+                    Bohr, used an integral table to get the answer that they
+                    did. Anyway, for the curious I have done the calculation
+                    below:
+                    $$
+                    \int_{-1}^1X^qdx = (-1)^q2\int_0^{\frac{\pi}{2}}\sin^n
+                    \theta d\theta = \int_0^{\frac{\pi}{2}}
                     $$
                 </p>
 
