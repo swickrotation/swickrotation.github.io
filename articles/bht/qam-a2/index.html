@@ -537,8 +537,23 @@
                     useful:
                     $$
                     \frac{-\hbar^2}{2\mu r}\frac{d^2}{dr^2}\left(rR\right)
-                    + \left(\frac{\hbar^2l(l+1)}{2\mu r}+E -\frac{e^2}{r}
+                    + \left(\frac{\hbar^2l(l+1)}{2\mu r}+|E| -\frac{e^2}{r}
                     \right)R = 0.
+                    $$
+                    We're writing an absolute value around $E$ because we're
+                    actually interested in the negative energy eigenstates, as
+                    they correspond to bounded (rather than scattering)
+                    solutions. We make a load of substitutions here to simplify
+                    our equation. I'll introduce them a few at a time rather
+                    than all at once. If we take 
+                    $|E| = \frac{\hbar^2\kappa^2}{2\mu}$, $\rho = 2\kappa r$,
+                    $r^2 = \frac{\rho^2}{4\kappa^2}$,$d\rho = 2\kappa dr$,
+                    $dr^2 = \frac{d\rho^2}{4 \kappa^2}$, we get
+                    $$
+                    \left(\frac{-4\kappa^2 d^2}{d \rho^2} 
+                    + \frac{l(l+1)4\kappa^2}{\rho^2} 
+                    - \frac{4\kappa^2\mu e^2}{\hbar^2 \rho} + \kappa^2
+                    \right)u =0
                     $$
                 </p>
 
