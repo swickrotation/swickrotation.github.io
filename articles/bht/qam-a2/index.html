@@ -137,7 +137,7 @@
                     seperate the PDE into seperate ODEs with independent
                     variables. In our case, we assume we can break our solution
                     into a radial component, $R(r)$, and an angular component,
-                    $Y(\theta,\phi)$. That is, we write
+                    $Y(\theta,\phi)$. That is, we write (up to a normalization)
                     $$
                     \psi(r,\theta,\phi) = R(r) \cdot Y(\theta,\phi).
                     $$
@@ -311,18 +311,18 @@
                     (x^2-1)\frac{d^2P}{dx^2} + 2x\frac{dP}{dx} - CP = 0,
                     $$
                     and we can use a similar substitution to find that, letting
-                    $\omega = (x^2-1)^n$,
+                    $\omega = (x^2-1)^l$,
                     $$
                     \omega'(x^2-1) - 2nx\omega =0.
                     $$
-                    The $n+1$th derivative of this statement gives you
+                    The $l+1$th derivative of this statement gives you
                     $$
-                    (x^2-1)\omega^{(n+2)}+2x\omega^{(n+1}-n(n+1)\omega^{(n)},
+                    (x^2-1)\omega^{(l+2)}+2x\omega^{(l+1)}-l(l+1)\omega^{(l)},
                     $$
                     which <em>is</em> in the form we're looking for. This means
-                    we may write
+                    we may write, noting that $C = l(l+1)$ now, that
                     $$
-                        P = \frac{d^s}{dx^s}(x^2-1), 
+                        P = \frac{d^l}{dx^l}(x^2-1), 
                     $$
                     which is the Legendre polynomial. This polynomial may be
                     rewritten as:
@@ -407,7 +407,7 @@
                     portion of our solution. We say that the non-radial solution
                     thus far is
                     $$
-                    Y_l^m(\theta,\phi) = Ce^{im\phi}P_l^m\cos\theta.
+                    Y_l^m(\theta,\phi) = Ae^{im\phi}P_l^m\cos\theta.
                     $$
                     Using the Born rule, and noting that the radial and angular
                     portions of the wave function may be normalized seperately,
@@ -417,7 +417,7 @@
                     & \int_0^{2\pi}\int_0^{\pi}\|Y_l^m\|^2\sin\theta d\theta
                     d\phi =1,\\
                     \\
-                    & 2\pi C^2\int_{-1}^{1} \left(P_l^m(\cos\theta))\right)^2
+                    & 2\pi A^2\int_{-1}^{1} \left(P_l^m(\cos\theta))\right)^2
                     \sin\theta d \theta =1.
                     \end{align}
                     $$
@@ -425,7 +425,7 @@
                     definition of the associated Legendre polynomials, as well
                     as setting $(x^2-1)=X$, to recover:
                     $$
-                    2\pi C^2 \frac{(-1)^m}{2^{p+q}p!q!} \int_{-1}^1X^m
+                    2\pi A^2 \frac{(-1)^m}{2^{p+q}p!q!} \int_{-1}^1X^m
                     \frac{d^m}{dx^m}
                     \left(\frac{d}{dx}\right)^pX^p \frac{d^m}{dx^m}
                     \left(\frac{d^q}{dx^q}X^q\right)dx =1,
@@ -433,7 +433,7 @@
                     which looks a little daunting. We can break this down. We
                     use integration by parts $m+q$ times to get
                     $$
-                    2\pi C^2 \frac{(-1)^{2m+q}}{2^{p+qp!q!}}\int_{-1}^1
+                    2\pi A^2 \frac{(-1)^{2m+q}}{2^{p+qp!q!}}\int_{-1}^1
                     \frac{d^{m+q}}{dx^{x+q}}\left(X^m\frac{d^{m+p}}{dx^{x+p}}X^p
                     \right)X^qdx = 1.
                     $$
@@ -517,7 +517,7 @@
                     So letting $q=l$ and $\alpha = (-1)^{l+m}$, we write
                     $$
                     \begin{align}
-                    & C = \sqrt{\frac{(2l+1)(l-m)!}{2(l+m)!}},\\
+                    & A = \sqrt{\frac{(2l+1)(l-m)!}{2(l+m)!}},\\
                     \\
                     & Y_l^m(\theta , \phi) = 
                     \alpha \sqrt{\frac{(2l+1)(l-|m|)!}{4 \pi(l+|m|)!}}e^{im\phi}
@@ -532,7 +532,14 @@
                 <p id="coward">
                     Ok, so with the angular part squared away we can finish our
                     description of the hydrogen atom by examining the radial
-                    equation.
+                    equation. While it is in one form above, it is possible to
+                    rewrite it in the followisng way, which I believe is more
+                    useful:
+                    $$
+                    \frac{-\hbar^2}{2\mu r}\frac{d^2}{dr^2\left(rR\right)
+                    + \left(\frac{\hbar^2l(l+1)}{2\mu r}+E -\frac{e^2}{r}
+                    \right)R = 0.
+                    $$
                 </p>
 
                 <p>    
