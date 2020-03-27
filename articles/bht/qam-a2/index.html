@@ -575,14 +575,24 @@
                     form of a wave function, which we will call $j$, which is
                     described by its singular values, and a polynomial, $P$,
                     which we will discuss more later. That is, we write
-                    $u = j_{s}P(r)$, where the set ${s}$ are the singular
+                    $u = j_i\{s\}P(r)$, where the set $\{s\}$ are the singular
                     points particular to $j$. We need singular points at the
-                    center of the atom, and at $n \rightarrow \inf$. We cover
+                    center of the atom, and at $n \rightarrow \infty$. We cover
                     the form of $j$ in those cases. First, the infinite distance
                     case &ndash; as $r$ gets very large, so does $\rho$ and our
                     middle two terms drop out. That leaves us with
                     $$
-                    \frac{d^2u}{d\rho^2}u -\frac{1}{4}u = 0
+                    \begin{align}
+                    & \frac{d^2u}{d\rho^2}u -\frac{1}{4}u = 0\\,
+                    & \rightarrow u = e^{\frac{\pm \rho}{2}}\\,
+                    & \frac{d^2u}{d\rho^2}u -\frac{1}{4}e^{\pm \rho}{2} = 0\\.
+                    \end{align}
+                    $$
+                    Nice. Now in the limit as $r \rightarrow 0$, we see that the
+                    terms of import are only the first and second &ndash; the
+                    other two don't grow quickly enough in the limit. We write
+                    $$
+                    \frac{d^2u}{d\rho^2}u -\frac{1}{4}u = 0\\,
                     $$
                 </p>
 
