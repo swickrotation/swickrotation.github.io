@@ -629,7 +629,40 @@
 
                 <p>
                     At this point, we write a cursory soluton: that 
-                    $u(\rho) = \rho^{l+1}e^{\frac{-\rho}{2}}L(\rho)$.
+                    $u(\rho) = \rho^{l+1}e^{\frac{-\rho}{2}}L(\rho)$. Plugging
+                    this into our original equation and performing a large
+                    amount of tedious but ultimately straightforward algebra, we
+                    get that
+                    $$
+                    \rho \frac{d^2L}{d\rho^2}+ (2l+1-\rho)\frac{dL}{d\rho} 
+                    + (\lambda -l -1)L = 0.
+                    $$ To get a recurrence relation for the coefficients of
+                    the polynomia $L$, we suppose that $L$ is expressible as a
+                    power series in terms of $\rho$ similar to how we found in
+                    the Frobenius method above. Expressing as series,
+                    $$
+                    \begin{align}
+                    & \sum_i(i)(i-1)a_i\rho{i-1}+(2l+2)\sum_ia_i\rho^{i-1}
+                    -\sum_ia_i\rho^i +(\lambda -l -1)\suma_i\rho^i = 0\\
+                    & = \sum_i[(i)(i-1) +(2l+2)(i)]a_i\rho^{i-1} 
+                    - \sum_i[(i)+\lambda-l-1](a_i)\rho^i =0.
+                    \end{align}
+                    $$
+                    If we adjust the index of the first term to be $i' = i-1$,
+                    we can rewrite our formula as
+                    $$
+                    \sum_{i}[(i'+1)(i') +(2l+2)(i'+1)]a_{i'+1}\rho^{i'} 
+                    - \sum_i[(i)+\lambda-l-1](a_i)\rho^i =0.
+                    $$
+                    Now everything is of the same power, and we can replace
+                    $i'$ with $i$ and establish our recursion relationship:
+                    $$
+                    \begin{align}
+                    & \sum_{i}[(i+1)(i) +(2l+2)(i+1)]a_{i+1}\rho^{i} 
+                    - \sum_i[(i)+\lambda-l-1](a_i)\rho^i =0//
+                    & \rightarrow a_{i+1} = 
+                    \frac{i+\lambda-l-1}{(i+1)(i+2l+2)}.
+                    $$
                 </p>
 
                 <p>    
