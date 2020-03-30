@@ -640,11 +640,13 @@
                     get that
                     $$
                     \rho \frac{d^2L}{d\rho^2}+ (2l+1-\rho)\frac{dL}{d\rho} 
-                    + (\lambda -l -1)L = 0.
-                    $$ To get a recurrence relation for the coefficients of
-                    the polynomial $L$, we suppose that $L$ is expressible as a
+                    + (\lambda -l -1)L = 0. \label{eq:laguerre} \tag{*}
+                    $$
+                    To get a recurrence relation for the coefficients of the
+                    polynomial $L$, we suppose that $L$ is expressible as a
                     power series in terms of $\rho$ similar to how we found in
-                    the Frobenius method above. Expressing as series,
+                    the Frobenius method above: we say $L= \sum_i a_i\rho^i$,
+                    and so
                     $$
                     \begin{align}
                     & \sum_i(i)(i-1)a_i\rho{i-1}+(2l+2)\sum_ia_i\rho^{i-1}
@@ -657,18 +659,46 @@
                     we can rewrite our formula as
                     $$
                     \sum_{i}[(i'+1)(i') +(2l+2)(i'+1)]a_{i'+1}\rho^{i'} 
-                    - \sum_i[(i)+\lambda-l-1](a_i)\rho^i =0.
+                    - \sum_i[(i)-\lambda+l+1](a_i)\rho^i =0.
                     $$
                     Now everything is of the same power, and we can replace
                     $i'$ with $i$ and establish our recursion relationship:
                     $$
                     \begin{align}
                     & \sum_{i}[(i+1)(i) +(2l+2)(i+1)]a_{i+1}\rho^{i} 
-                    - \sum_i[(i)+\lambda-l-1](a_i)\rho^i =0\\
+                    - \sum_i[(i)-\lambda+l+1](a_i)\rho^i =0\\
                     & \rightarrow a_{i+1} = 
-                    \frac{i+\lambda-l-1}{(i+1)(i+2l+2)}.
+                    \frac{a_i(i-\lambda+l+1)}{(i+1)(i+2l+2)}.
                     \end{align}
                     $$
+                <p>
+                    We need to make sure these polynomials don't blow up in the
+                    limit of large $i$. Taking the ratio between $a_{i+1}$ and
+                    $a_i$, we get that this approacjes $\frac{1}{i}$ for large
+                    $i$, the same power series ratio between terms of a
+                    positive exponential &ndash; we need the coefficients to 
+                    tend to zero if this is going to converge. The recursion
+                    relationship is a strictly mathematical result, to have a
+                    physical meaning we need to allow for a maximal value of
+                    $i$. To find this maximal value, we set
+                    $a_{i+1} =0$, and find $0 = i_{\max} - \lambda +l+1$, or
+                    $$
+                    \lambda = l+1+i_{\max}. 
+                    $$
+                    From this relationship, we see that $\lambda$ takes an
+                    integer value and that $\lambda \geq l+1$. If $l = 0$, as
+                    it is allowed, we have that $\lambda =1$. This is the
+                    lowest possible energy-value, showing that there is no zero
+                    energy level for the bound energy states of the hydrogen
+                    atom. That's pretty cool. We make the notational adjustment
+                    $\lambda \rightarrow n$ and call this integer the "principal
+                    quantum number". 
+                </p>
+
+                <p>
+                    Final stretch. The polynomial that we use to satisfy the
+                    equation $\eqref{eq:laguerre}$ is in the same form as the
+
                 </p>
 
                 <p>    
