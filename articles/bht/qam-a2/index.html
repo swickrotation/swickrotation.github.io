@@ -596,7 +596,40 @@
                     $$
                     This is a second order ODE with variable coefficients, and
                     to solve it we need Frobenius's method of assuming a power
-                    series solution. 
+                    series solution i.e. that $u(\rho)$ is representable as
+                    a power series. We can find part of our
+                    $$
+                    \begin{align}
+                    u(\rho) = \sum_{i=0}^{\infty} \alpha_i \rho^{i+b},\\
+                    u'(\rho) = \sum_{i=0}^{\infty}(i+b) \alpha_i \rho^{i+b},\\
+                    u''(\rho) = \sum_{i=0}^{\infty}(i+b)(i+b-1) \alpha_i 
+                    \rho^{i+b-2}.\\
+                    \end{align}
+                    $$
+                    Then,
+                    $$
+                    \begin{align}
+                    \sum_{i=0}^{\infty}(i+b)(i+b-1) \alpha_i \rho^{i+b-2} - 
+                    (l(l+1)\rho^{-2} \sum_{i=0}^{\infty} \alpha_i \rho^{i+b}=0\\
+                    \rightarrow \sum_i \alpha_i \rho^{i+b-2} ((i+b)(i+b-1) -
+                    l(l+1)) = 0.
+                    \end{align}
+                    $$
+                    As our sum $\sum_i \alpha_i \rho^{i+b-2} \neq 0$, we can
+                    extract our $i=0$ term and find the allowable solutions for
+                    $b$. We get that 
+                    $$
+                    b(b-1) - l(l+1) \rightarrow b = l+1, -l.
+                    $$
+                    Our second asymptotic solution for $u$ then is 
+                    $\lim_{\rho \rightarrow 0}u(\rho) = A\rho^{l+1}+B\rho^{-l}$,
+                    and we see that $B=0$ as otherwise the term blows up to
+                    infinity.
+                </p>
+
+                <p>
+                    At this point, we write a cursory soluton: that 
+                    $u(\rho) = \rho^{l+1}e^{\frac{-\rho}{2}}L(\rho)$.
                 </p>
 
                 <p>    
