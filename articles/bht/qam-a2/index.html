@@ -588,7 +588,12 @@
                     =0.
                     \end{align}
                     $$
-                    Nice. Now in the limit as $r \rightarrow 0$, we see that the
+                    We in fact discard the positive solution, as it diverges for
+                    large $\rho$.
+                </p>
+
+                <p>
+                    Now in the limit as $r \rightarrow 0$, we see that the
                     terms of import are only the first and second &ndash; the
                     other two don't grow quickly enough in the limit. We write
                     $$
@@ -600,18 +605,18 @@
                     a power series. We can find part of our
                     $$
                     \begin{align}
-                    u(\rho) = \sum_{i=0}^{\infty} \alpha_i \rho^{i+b},\\
-                    u'(\rho) = \sum_{i=0}^{\infty}(i+b) \alpha_i \rho^{i+b},\\
-                    u''(\rho) = \sum_{i=0}^{\infty}(i+b)(i+b-1) \alpha_i 
+                    & u(\rho) = \sum_{i=0}^{\infty} \alpha_i \rho^{i+b},\\
+                    & u'(\rho) = \sum_{i=0}^{\infty}(i+b) \alpha_i \rho^{i+b},\\
+                    & u''(\rho) = \sum_{i=0}^{\infty}(i+b)(i+b-1) \alpha_i 
                     \rho^{i+b-2}.\\
                     \end{align}
                     $$
                     Then,
                     $$
                     \begin{align}
-                    \sum_{i=0}^{\infty}(i+b)(i+b-1) \alpha_i \rho^{i+b-2} - 
+                    & \sum_{i=0}^{\infty}(i+b)(i+b-1) \alpha_i \rho^{i+b-2} - 
                     (l(l+1)\rho^{-2} \sum_{i=0}^{\infty} \alpha_i \rho^{i+b}=0\\
-                    \rightarrow \sum_i \alpha_i \rho^{i+b-2} ((i+b)(i+b-1) -
+                    & \rightarrow \sum_i \alpha_i \rho^{i+b-2} ((i+b)(i+b-1) -
                     l(l+1)) = 0.
                     \end{align}
                     $$
