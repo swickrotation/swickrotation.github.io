@@ -597,7 +597,7 @@
                     terms of import are only the first and second &ndash; the
                     other two don't grow quickly enough in the limit. We write
                     $$
-                    \frac{d^2u}{d\rho^2}u -\frac{l(l+1)}{\rho^2}u = 0.
+                    \frac{d^2u}{d\rho^2} -\frac{l(l+1)}{\rho^2}u = 0.
                     $$
                     This is a second order ODE with variable coefficients, and
                     to solve it we need Frobenius's method of assuming a power
@@ -702,9 +702,21 @@
 
                 <p>
                     Final stretch. A polynomial that satisfies the equation
-                    $\eqref{eq:laguerre}$ is called a 
-                    <em>Laguerre Polynomial</em>, and it needs to be normalized.
-                    
+                    $\eqref{eq:laguerre}$ is called an
+                    <em>associtated Laguerre Polynomial</em>. These are
+                    well-studied, and have the form, again due to Rodrigues,
+                    $$
+                    L_n^k(x)= \frac{e^xx^{-k}}{n!}
+                    \frac{d^n}{dx^n}(e^{-x}x^{n+k).
+                    $$
+                    They have the orthogonality and recursion relationships
+                    $$
+                    \begin{align}
+                    & int_o^{\infty} e^{-x}x^kL_n^k(x)L_m^k(x)
+                    = \frac{(n+k)!}{n!} \delta_{nm},\\
+
+                    \end{align}
+                    $$
                 </p>
 
                 <p>    
