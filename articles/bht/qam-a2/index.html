@@ -531,39 +531,45 @@
                 <p id="coward">
                     Ok, so with the angular part squared away we can finish our
                     description of the hydrogen atom by examining the radial
-                    equation. While it is in one form above, it is possible to
-                    rewrite it in the followisng way, which I believe is more
-                    useful: setting $4\pi \epsilon_0 =1$,
+                    equation, which is
                     $$
-                    \frac{-\hbar^2}{2\mu r}\frac{d^2}{dr^2}\left(rR\right)
-                    + \left(\frac{\hbar^2l(l+1)}{2\mu r}+|E| -\frac{e^2}{r}
-                    \right)R = 0.
+                    \frac{d}{dr}\left(r^2\frac{dR}{dr}\right)
+                    +\frac{2\mu r^2}{\hbar^2}\left(-E 
+                    + \frac{e^2}{4\pi \epsilon_0 r} 
+                    - \frac{\hbar^2l(l+1)}{2 \mu r^2}\right)R =0.
+                    $$
+                    While it is possible to proceed with this, we are also able
+                    to rewrite it in the followisng way, which I believe is more
+                    useful: setting $4\pi \epsilon_0 =1$ and realising that it
+                    is possible to rewrite the first term as 
+                    $r \frac{d^2}{dr^2}(rR)$,
+                    $$
+                    r\frac{d^2}{dr^2}(rR)
+                    +\frac{2\mu r^2}{\hbar^2}\left(-|E| 
+                    + \frac{e^2}{r} 
+                    - \frac{\hbar^2l(l+1)}{2 \mu r^2}\right)R =0.
                     $$
                     We're writing an absolute value around $E$ because we're
                     actually interested in the negative energy eigenstates, as
                     they correspond to bounded (rather than scattering)
                     solutions. We make a load of substitutions here to simplify
                     our equation. I'll introduce them a few at a time rather
-                    than all at once. If we take 
-                    $|E| = \frac{\hbar^2\kappa^2}{2\mu}$, $\rho = 2\kappa r$,
-                    $r^2 = \frac{\rho^2}{4\kappa^2}$,$d\rho = 2\kappa dr$,
-                    $dr^2 = \frac{d\rho^2}{4 \kappa^2}$, we get
+                    than all at once. If we take $\rho = 2\kappa r$,
+                    $d\rho = 2\kappa dr$, $r^2  = \frac{\rho^2}{4\kappa^2}$, and
+                    $dr^2 = \frac{1}{4\kappa^2}d\rho^2$, the equation above
+                    becomes
                     $$
-                    \left(\frac{-4\kappa^2 d^2}{d \rho^2} 
-                    + \frac{l(l+1)4\kappa^2}{\rho^2} 
-                    - \frac{4\kappa^2\mu e^2}{\hbar^2 \rho} + \kappa^2
-                    \right)u =0.
+                    \rho \frac{d^2}{d\rho^2}(\rho R)
+                    +\frac{\mu \rho}{2\kappa^2 \hbar^2}\left(-|E|
+                    + \frac{e^2}{\rho} 
+                    - \frac{2\kappa^2 \hbar^2l(l+1)}{2 \mu rho^2}\right)\rho R
+                    =0.
                     $$
-                    Next, we substitute $a_o = \frac{\hbar^2}{\mu e^2}$,
-                    $\lambda = \frac{1}{\kappa a_0} 
-                    = \frac{\mu e^2}{\kappa \hbar^2}$. Now we have
-                    $$
-                    \left(\frac{-4\kappa^2 d^2}{d\rho^2} 
-                    + \frac{l(l+1)4 \kappa^2}{\rho^2}
-                    - \frac{4 \kappa^2 \lambda}{\rho} + \kappa^2
-                    \right)u =0.
-                    $$
-                    Our final simplification is dividing out by $-4\kappa^2$:
+                    We divide by a factor of $\rho$ and make the replacements
+                    $|E| = \frac{\hbar^2 \kappa^2}{2\mu}$, 
+                    $a_0 = \frac{\hbar^2}{\em e^2}$, 
+                    $\lambda = \frac{1}{\kappa a_0}$,
+                    $u(\rho) = \rho R$ to get
                     $$
                     \left(\frac{d^2}{d\rho^2} 
                     - \frac{l(l+1)}{\rho^2}
@@ -574,12 +580,13 @@
                     form of a wave function, which we will call $j$, which is
                     described by its singular values, and a polynomial, $P$,
                     which we will discuss more later. That is, we write
-                    $u = j_i\{s\}P(r)$, where the set $\{s\}$ are the singular
-                    points particular to $j$. We need singular points at the
-                    center of the atom, and at $n \rightarrow \infty$. We cover
-                    the form of $j$ in those cases. First, the infinite distance
-                    case &ndash; as $r$ gets very large, so does $\rho$ and our
-                    middle two terms drop out. That leaves us with
+                    $u = \left(\Prod_ij_i\{s\}\right)P(r)$, where the set
+                    $\{s\}$ are the singular points particular to $j_i$. We
+                    need singular points at the center of the atom, and at $n
+                    \rightarrow \infty$. We cover the form of $j$ in those
+                    cases. First, the infinite distance case &ndash; as $r$
+                    gets very large, so does $\rho$ and our middle two terms
+                    drop out. That leaves us with
                     $$
                     \begin{align}
                     & \frac{d^2u}{d\rho^2}u -\frac{1}{4}u = 0i,\\
