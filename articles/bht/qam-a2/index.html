@@ -736,7 +736,7 @@
                     $u(\rho) = e^{\frac{-\rho}{2}}\rho^{l+1}L_{n-l-1}^{2n+1}$.
                     Realizing that $u(\rho) = \rho R(\rho)$, we can say that
                     $$
-                    R(\rho) = e^{\frac{-\rho}{2}}\rho^{l}L_{n-l-1}^{2n+1}.
+                    R(\rho) = e^{\frac{-\rho}{2}}\rho^{l}L_{n-l-1}^{2l+1}.
                     $$
                     Here's the grand finale. Our entire wavefunction must follow
                     the the relationship
@@ -748,7 +748,23 @@
                     substitution $\rho = 2\kappa r$, $d\rho = 2\kappa dr$, and
                     proceed with the following:
                     $$
-                    \frac{N^2}{(2\kappa)^3}
+                    \begin{align}
+                    & \frac{N^2}{(2\kappa)^3}\int_0^{\infty}
+                    e^{-\rho}\rho^{2l+2} \left(L_{n-l-1}^{2l+1}\right)^2\\
+                    & = \frac{N^2}{(2\kappa)^3}\int_0^{\infty}
+                    e^{-\rho}\rho^{2l+1} \left(\rho L_{n-l-1}^{2l+1}\right)
+                    \left(L_{n-l-1}^{2l+1}\right)\\
+                    & = \frac{N^2}{(2\kappa)^3}\frac{2n(n+l)!}{(n-l-1)!} = 1\\
+                    &\rightarrow N= \sqrt{\frac{(2\kappa)^3(n-l-1)!}{2n(n+l)!}}.
+                    $$
+                    We may now write the wavefunction, explicitly, and in full:
+                    $$
+                    \psi_{n,l,m}(r,\theta,\phi) = \alpha
+                    \left(\frac{2}{na_0}\right)^{\frac{3}{2}}
+                    \sqrt{\frac{(n-l-1)!}{(2n)(n+l)!}}e^{\frac{-r}{na_0}}
+                    \left(\frac{2r}{na_0}\right)^lL_{n-l-1}^{2l+1}\left(
+                    \frac{2r}{na_0}\right)\sqrt{\frac{(2l+1)(l-|m|)!}
+                    {4\pi(l+|m|)!}}e^{im\phi}P_l^m(\cos\theta).
                     $$
                 </p>
 
