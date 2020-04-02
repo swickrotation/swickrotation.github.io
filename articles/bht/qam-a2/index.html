@@ -719,9 +719,36 @@
                     They have the orthogonality and recursion relationships
                     $$
                     \begin{align}
-                    & int_o^{\infty} e^{-x}x^kL_n^k(x)L_m^k(x)
+                    & \int_0^{\infty} e^{-x}x^kL_n^k(x)L_m^k(x)
                     = \frac{(n+k)!}{n!} \delta_{nm},\\
+                    & xL_n^k = (2n+k+1)L_m^k - (n+k)L_{n-1}^k - (n+1)L_{n+1}^ka.
                     \end{align}
+                    $$
+                    We need to normalize this radial solution, and these
+                    relationships will help us do that. We remember that the
+                    form of our wavefunction is $\psi_{nlm}(r,\theta, \phi)
+                    = N_{n,l,m} R_{n,l}(r)*Y_{l,m}$, where N is our
+                    normalization constant.
+                </p>
+
+                <p>
+                    At this point, we write again our cursory solution &ndash;
+                    $u(\rho) = e^{\frac{-\rho}{2}}\rho^{l+1}L_{n-l-1}^{2n+1}$.
+                    Realizing that $u(\rho) = \rho R(\rho), we can say that
+                    $$
+                    R(\rho) = e^{\frac{-\rho}{2}}\rho^{l}L_{n-l-1}^{2n+1}.
+                    $$
+                    Here's the grand finale. Our entire wavefunction must follow
+                    the the relationship
+                    $$
+                    \int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}
+                    |\psi_{nlm}|^2 r^2\sin^2\theta dr d\theta d\phi =1.
+                    $$
+                    Having already normalized the angular portion, we make the
+                    substitution $\rho = 2\kappa r$, $d\rho = 2\kappa dr$, and
+                    proceed with the following:
+                    $$
+                    \frac{N^2}{(2\kappa)^3}
                     $$
                 </p>
 
