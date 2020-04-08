@@ -79,9 +79,10 @@
 
                 <p>
                     Sans much detail, what we call "spin" in quantum mechanics
-                    is a property of quantum objects. Spin can be understood as
-                    an intrinsic angular momentum fundamentally ascribed to a
-                    particle. It can be shown to exist observationally, by
+                    is a property of quantum objects. Spin should be
+                    understood as an intrinsic angular momentum fundamentally
+                    ascribed to a particle, unrelated to any rotation of the
+                    object. It can be shown to exist observationally, by
                     recalling the Stern-Gerlach experiment. Crucially, it is
                     also be seen to be a quantized value: the deflection of
                     silver atoms in the inhomogeneous magnetic field causes the
@@ -186,7 +187,8 @@
                     \begin{align}
                     & \frac{d}{dr}\left(r^2\frac{dR}{dr}\right) 
                     + \frac{2 \mu r^2}{\hbar^2}
-                    \left(-E + \frac{e^2}{4 \pi \epsilon_0 r}\right)R - CR = 0,\\
+                    \left(-E + \frac{e^2}{4 \pi \epsilon_0 r}\right)R - CR 
+                    = 0,\\
                     \\
                     & \frac{1}{\sin \theta}\frac{\partial}{\partial \theta}
                     \left( \sin \theta \frac{\partial Y}{\partial \theta}\right)
@@ -495,7 +497,8 @@
                     $$
                     \begin{align}
                     & \int_{-1}^1X^qdx = (-1)^q2\int_0^{\frac{\pi}{2}}
-                    \sin^{2q+1} \theta d\theta = (-1)^{q+1}\int_0^{\frac{\pi}{2}} 
+                    \sin^{2q+1} \theta d\theta =
+                    (-1)^{q+1}\int_0^{\frac{\pi}{2}}
                     \sin^{2(\frac{1}{2}(2q+2))-1}\theta \cos^{2(\frac{1}{2})-1}
                     \theta d\theta\\
                     \\
@@ -783,6 +786,47 @@
                     "hydrogen-like atoms", those with a single electron in the
                     valence. We send $\kappa \rightarrow Z\kappa$, $Z$ being the
                     atomic number &ndash; the number of protons in the nucleus.
+                </p>
+
+                <p>
+                    From here, it's a procedural matter to find the orbital
+                    angular momentum: all one needs to do is apply the
+                    angular momentum operator, $\vv{\bm{L}}^2$, to the wave
+                    function for hydrogen in order to determine its azimuthal
+                    quantum number and determine the orbital angular momentum,
+                    $$
+                    \vv{\bm{L}}^2\ket{\psi_{nlm}} = \hbarl(l+1)\ket{\psi_{nlm}}
+                    $$
+                    or you might apply the operator $\vv{\bm{L}}_z$ to find the
+                    magnetic quantum number:
+                    $$
+                    \vv{\bm{L}}_z\ket{\psi_{nlm}} = m_l\hbar \ket{\psi_{nlm}}.
+                    $$
+                </p>
+
+                <p>
+                    But this is not the total angular momentum of an electron
+                    orbiting a proton, and it is at this point we need to
+                    revisit spin. The initial work to describe the total
+                    angular momentum was done by Pauli in the late 1920's, but
+                    the equation he came up with is not derivable from the
+                    strict limitations of the Schrodinger equation &ndash;
+                    instead, we must ask a relativistic question, come up with
+                    a relativistic answer, and take a non-relativistic limit to
+                    come to the answer we know today. We will need Dirac's
+                    physics, but to get to it we first look at the too-often
+                    overlooked Klein-Gordon equation. Accordingly, we will be
+                    working in natural units for this section: $\hbar = c = 1$.
+                    Taking a second time derivative of the Schrodinger
+                    equation, multiplying again by $i$, we recover
+                    $$
+                    -\frac{\partial^2}{\partial t^2}\ket{\psi(t)}
+                    = H^2 \ket{\psi(t)}.
+                    $$
+                    Using our knowledge, from Einstein, that $H^2 = p^2 + m^2$,
+                    defining $\psi(\bm{x},t) \equiv \braket{\bm{X}}{\psi(t)}
+                    and the fact that $\bra{\bm{X}}p^2\ket{\psi(t)} = - \nabla^2
+                    \psi(\bm{x},t)
                 </p>
 
                 <p>
