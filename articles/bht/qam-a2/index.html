@@ -826,10 +826,31 @@
                     = H^2 \ket{\psi(t)}.
                     $$
                     Using our knowledge, from Einstein, that $H^2 = p^2 + m^2$,
-                    defining $\psi(\textbf{x},t) \equiv 
+                    defining $\Psi(\textbf{x},t) \equiv 
                     \braket{\textbf{x}|\psi(t)}$ and the fact that 
                     $\bra{\textbf{x}}p^2\ket{\psi(t)} 
-                    = - \nabla^2 \psi(\textbf{x},t)$.
+                    = - \nabla^2 \psi(\textbf{x},t)$, we can express this result
+                    as 
+                    $$ 
+                    \left[ \frac{\partial^2}{\partial t^2} - \nabla^2 +m \right]
+                    \Psi(\textbf{x},t) = 0.
+                    $$
+                    This is the Klein-Gordon equation. This is a notable
+                    equation for many reasons, the first of which is that it
+                    it provides a covariant wavefunction. This is more easily
+                    realised by observing that Lorentz transformation, which
+                    leaves the square of the spacetime interval invariant
+                    implies that the derivatives in this equation operate the
+                    same way on $(t,\textbf{x})$ as $(t',\textbf{x}')$.
+                </p>
+
+                <p>
+                    Adopting relativistic notation, the Klein-Gordgon equation
+                    can be rewritten as
+                    $$
+                    \left[\partial_{\mu}\partial^{\mu} +m^2\right]
+                    \Psi(\textbf{x},t) = 0.
+                    $$
                 </p>
 
                 <p>
