@@ -851,22 +851,95 @@
                     \left[\partial_{\mu}\partial^{\mu} +m^2\right]
                     \Psi(\textbf{x},t) = 0.
                     $$
-                    This equation is not without its problems. In further
-                    investigation, one realises that this equation does not
-                    yeild a postive definite probability density. It is not a
-                    problem without solution and a physical interpretation
-                    &mdash; but unfortunately, the solutions were ill-timed.
-                    The difficulties all stem from the fact that the equation is
-                    second-order in space and time. It took Dirac's stubborn
-                    assertion that a solution existed linear in time and space
-                    for relativistic quantum mechanics to really take off: and
-                    a byproduct of this is, finally, an explanation for spin.
+                    The Kelin-Gordon equation also fulfills our expectations
+                    for the solutions of a free relativistic particle of mass
+                    $m$. It has time dependence like $e^{-iEt}$, with $E$ an
+                    eigenvalue of the Hamiltonian, and spacial dependence like
+                    a plane wave: i.e. $e^{i\textbf{p}\cdot\textbf{x}}. This is
+                    to say, our solution is of the form
+                    $$
+                    \Psi(\textbf{x},t) = Ne^{-ip^{\mu}x_{\mu}},\\
+                    p^{\mu} = (E,\textbf{p}).
+                    $$
+                    This indeed does solve the equation as long as $-p^{\mu}
+                    p_{\mu}+m^2 = -E^2+\textbf{p}^2+m^2=0.$ That's a plus to be
+                    sure.  However, the Klein-Gordon equation is not without
+                    its problems. In further investigation, one realises that
+                    this equation does not yeild a postive definite
+                    probability density. It is not a problem without solution
+                    and a physical interpretation &mdash; but unfortunately,
+                    the solutions were ill-timed.  The difficulties all stem
+                    from the fact that the equation is second-order in space
+                    and time. It took Dirac's stubborn assertion that a
+                    solution existed linear in time and space for relativistic
+                    quantum mechanics to really take off: and a byproduct of
+                    this is, finally, an explanation for spin.
                 </p>
 
                 <p>
                     What Dirac asserted was an equation like the following:
                     $$
                     (i\gamma^{\mu}\partial_{\mu}-m)\Psi(\textbf{x},t) = 0.
+                    $$
+                    We must determine this factor $\gamma^{\mu}$, and we insist
+                    that our results manage to preserve the the correct energy
+                    eigenvalues for a free particle, those we found in our
+                    solution for the Klein-Gordon equation. But we can turn this
+                    equation into a form resembling the Klein-Gordon equation by
+                    operating on it with its conjugate! In so doing, we come up
+                    with
+                    $$
+                    (\gamma^{\nu}\partial_{\nu}\gamma^{\mu}\partial_{\mu}+m^2)
+                    \Psi(\textbf{x},t)=0,\\
+                    \gamma^{\nu}\partial_{\nu}\gamma^{\mu}\partial_{\mu} =
+                    \gamma^{\nu}\gamma^{\mu}\partial_{\nu}\partial_{\mu} =
+                    \partial^{\mu}\partial_{\mu}=\eta^{\mu \nu}\partial_{\nu}
+                    \partial_{\mu}.
+                    $$
+                    We can express this condition by symmetrizing:
+                    $$
+                    \frac{1}{2}
+                    (\gamma^{\mu}\gamma^{\nu}+\gamma^{\nu}\gamma^{\mu})\equiv
+                    \frac{1}{2}\{\gamma^{\mu},\gamma^{\nu}\} = \eta^{\mu \nu}.
+                    $$
+                    These entities $\gamma^{\mu}$, then, are not simply the
+                    complex numbers we are familiar with but rather elements of
+                    a Clifford algebra. Given our 
+                    <a href="/articles/metric-signature">values</a> for 
+                    $\eta^{\mu \nu}$, we are can infer that $(\gamma^0)^2 = 1$,
+                    $(\gamma^i)^2 = -1$, and $\gamma^{\mu}\gamma^{\nu} = 
+                    -\gamma^{\nu}\gamma^{\mu}$ if $\mu \neq \nu$.
+                </p>
+
+                <p>
+                    If we substitute the free particle solution from the
+                    Klein-Gordon equation into the Dirac equation, we find
+                    $$
+                    \gamma^{\mu}p_{\mu}-m = 0.
+                    $$
+                    If we write this in its timelike and spacelike components
+                    and multiply by $\gamma^0$, we can rearrange this to be
+                    $$
+                    E = \gamma^0\textbf{\gamma}\cdot\textbf{p}+ \gamma^0m.
+                    $$
+                    This leads to what has become known as the Dirac
+                    Hamiltonian: $H = \textbf{\alpha}\cdot\textbf{p}+ \beta m$.
+                    The Clifford algebra can be fulfilled by $\textbf{\alpha}$
+                    and $\beta$ provided they are at least 4-dimensional
+                    matrices. We also insist they are Hermitian.  This all
+                    has to make $\Psi$ a 4-dimensional column vector. We
+                    choose to construct these with the Pauli spin matrices,
+                    $$
+                    \textbf{\alpha}=
+                    \begin{pmatrix}
+                    \textbf{\sigma}&0\\
+                    0&\textbf{\sigma}
+                    \end{pmatrix},
+                    \beta = 
+                    \begin{pmatrix}
+                    \mathbb{\1}&0\\
+                    0&-\mathbb{1}
+                    \end{pmatrix}.
                     $$
                 </p>
 
