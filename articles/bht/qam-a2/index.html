@@ -1124,8 +1124,39 @@
                     momentum operator. The $\beta$ portion clearly commutes, so
                     we are left with
                     $$
-                    [\boldsymbol{\alpha}\cdot\textbf{p},L_i] = 
+                    \begin{gather}
+                    [\boldsymbol{\alpha}\cdot\textbf{p},L_i] 
+                    = [\alpha_l p_l, \epsilon_{ijk}x_jp_k]\\
+                    = \epsilon_{ijk}\alpha_l[p_l,x_j]p_k \\
+                    = -i \epsilon_{ijk}\alpha_j p_k.
+                    \end{gather}
                     $$
+                    The Dirac Hamiltonian does not commute with the orbital
+                    angular momentum, and thus orbital angular momentum is not
+                    a conserved quantity for spin-$\frac{1}{2}$ particles!
+                    But what about the operator, $\Sigma$?
+                    $$
+                    [\boldsymbol{\alpha}\cdot\textbf{p},\Sigma_j]
+                    = [\alpha_i,\Sigma_j]p_i = 2i \epsilon_{ijk}\alpha_k p_i.
+                    $$
+                    So spin, by itself, is not conserved either! However, if
+                    we modify the operator $\boldsymbol{\Sigma}$ by a factor of
+                    $\frac{\hbar}{2}$ and add it to the orbital angular momentum
+                    operator $\textbf{L}$, we can see that
+                    $$
+                    \begin{gather}
+                    \textbf{J} = \textbf{L}+ \frac{\hbar}{2}\boldsymbol{\Sigma}
+                    = \textbf{L} + \textbf{S},\\
+                    [H,\textbf{J}] = 0.
+                    \end{gather}
+                    $$
+                    Thus the <em>total</em> angular momentum is a conserved
+                    quantity. That the total is conserved but the components are
+                    not implies that the components can and do trade off with 
+                    each other: this is a phenomenon known as the "Spin-Orbit
+                    Interaction". To go into further elaboration on this
+                    phenomenon would digress too far even for me. Perhaps
+                    another day.
                 </p>
 
         </div>
