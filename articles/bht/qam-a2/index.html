@@ -941,8 +941,63 @@
                     0&-\mathbb{1}
                     \end{pmatrix}.
                     $$
-                    This all has to make $\Psi(\textbf{x},t)$ a 4-dimensional
-                    column matrix.
+                    This makes $\Psi(\textbf{x},t)$ a 4-dimensional
+                    column matrix. Examining the Dirac equation in the case of
+                    a stationary free particle, we can write
+                    $$
+                    i\partial_t \Psi = \beta m \Psi.
+                    $$
+                    We arrive at 4 independent solutions for the wavefunction,
+                    the upper half corresponding to positive energies and the
+                    lower half to negative. It will turn out that the two
+                    allowable values for each energy state will correspond to
+                    spin-up and spin-down states. Our solutions are given by:
+                    $$
+                    \Psi_1 = e^{-imt}
+                    \begin{bmatrix}
+                    1\\
+                    0\\
+                    0\\
+                    0
+                    \end{bmatrix},
+                    \Psi_2 = e^{-imt}
+                    \begin{bmatrix}
+                    0\\
+                    1\\
+                    0\\
+                    0
+                    \end{bmatrix},
+                    \Psi_3 = e^{imt}
+                    \begin{bmatrix}
+                    0\\
+                    0\\
+                    1\\
+                    0
+                    \end{bmatrix},
+                    \Psi_4 = e^{imt}
+                    \begin{bmatrix}
+                    0\\
+                    0\\
+                    0\\
+                    1
+                    \end{bmatrix}.
+                    $$
+                    Pressing forward, for a momentum in the $z$-direction, our
+                    Hamiltionian become 
+                    $$
+                    \begin{pmatrix}
+                    m & 0 & p & 0\\
+                    0 & m & 0 & -p\\
+                    p & 0 & -m & 0\\
+                    0 & -p & 0 & -m
+                    \end{pmatrix}
+                    \begin{bmatrix}
+                    u_1\\
+                    u_2\\
+                    u_3\\
+                    u_4
+                    \end{bmatrix}.
+                    $$
                 </p>
 
                 <p>
