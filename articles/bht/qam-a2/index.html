@@ -66,7 +66,7 @@
                     becoming alinged after some field is applied to them. We
                     tend to think of the systems as non-self-interacting. In
                     this picture, the alignment of the dipoles are due to a
-                    torque being applied to them by the external field &ndash;
+                    torque being applied to them by the external field &mdash;
                     the dipoles lining up parallel to the field lines. The
                     quantum picture of this alignment is closer to the truth, 
                     and requires greater detail. To understand, we first need
@@ -74,7 +74,10 @@
                     in a quantum mechanical setting. We focus on what these
                     terms mean in the setting of the hydrogen atom, but much
                     of what is discussed is adaptable to other settings,
-                    including ferromagnetic materials.
+                    including ferromagnetic materials. It is important to
+                    distinguish what we mean by each of these terms, if we are
+                    to understand them individually we must understand the
+                    differences between them.
                 </p>
 
                 <p>
@@ -87,7 +90,7 @@
                     also be seen to be a quantized value: the deflection of
                     silver atoms in the inhomogeneous magnetic field causes the
                     particles to cluster in two points. Classically, one would
-                    expect a uniform, continuous distribution &ndash; instead,
+                    expect a uniform, continuous distribution &mdash; instead,
                     two distinct concentrations of particles are seen. The beam
                     being split in two necessitates that this intrinsic
                     ground-state spin could not be quantized as an integer. If
@@ -985,12 +988,19 @@
                     Pressing forward, for a momentum in the $z$-direction, our
                     Hamiltionian become 
                     $$
-                    \begin{pmatrix}
+                    \begin{bmatrix}
                     m & 0 & p & 0\\
                     0 & m & 0 & -p\\
                     p & 0 & -m & 0\\
                     0 & -p & 0 & -m
-                    \end{pmatrix}
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                    u_1\\
+                    u_2\\
+                    u_3\\
+                    u_4
+                    \end{bmatrix}
+                    = E
                     \begin{bmatrix}
                     u_1\\
                     u_2\\
@@ -998,29 +1008,84 @@
                     u_4
                     \end{bmatrix}.
                     $$
+                    We notice the coupling of the 1-3 states and the 2-4 states,
+                    which turn out to be analagous spins between particle and
+                    antiparticle pairs. Going through the motions, it is
+                    possible to determine energy eigenvalues of $E = \pm
+                    \sqrt{m^2+p^2}$, the positive energies corresponding to
+                    matter and the negative energies to antimatter. For the
+                    positive energy case, where $E_p = +\sqrt{p^2+m^2}:
+                    $$
+                    u^{+}_{\uparrow}(p) = 
+                    \begin{bmatrix}
+                    1\\
+                    0\\
+                    \frac{p}{E_p+m}\\
+                    0
+                    \end{bmatrix},
+                    u^{+}_{\downarrow}(p) = 
+                    \begin{bmatrix}
+                    0\\
+                    1\\
+                    0\\
+                    \frac{-p}{E_p+m}
+                    \end{bmatrix}.
+                    $$
+                    The upper components in both of these vectors are dominating
+                    in the nonrelativistic case. If we consider the behaviour of
+                    the operator $\boldsymbol{\Sigma} \cdot \textbf{p} =
+                    \Sigma_z$, where 
+                    $$
+                    \boldsymbol{\Sigma} = 
+                    \begin{pmatrix}
+                    \boldsymbol{\sigma} & 0\\
+                    0 & \boldsymbol{\sigma}
+                    \end{\pmatrix}.
+                    $$
+                    We can see that $\textbf{S}=\frac{\hbar}{2}\boldsymbol
+                    {\Sigma}$ does indeed project the expected spin-up result
+                    where $u_1 \neq 0$ and the expected spin-down result for 
+                    $u_2 \neq 0$. There are analagous results for the spin
+                    states in the negative energy regime. 
                 </p>
 
                 <p>
                     That's been a serious digression, but an important one if
                     we are to understand the relationship between angular
-                    momentum, spin, and the magnetic moment of fermions. 
-                </p>
-
-                <p>    
-                    It turns out that this differential equation has a set of
-                    solutions for a given energy $E$, which we index using the
-                    "quantum numbers" $n$,$l$, and $m$. We write our solution as
-                    $\psi_{n,l,m}(r,\theta,\phi)$.  The first of these quantum
-                    numbers parameterizes the allowed values of the second, and
-                    the second parameterizes the allowed values of the third:
+                    momentum, spin, and the magnetic moment of fermions. We may
+                    introduce electromagnetic interactions via gauge
+                    transformation: $\tilde{\textbf{p}} \equiv \textbf{p}-e
+                    \textbf{A}$, and the dirac equation may be expressed in the
+                    form of a $2 \times 2$ matix: 
                     $$
-                    \begin{align}
-                    & n = 1,2,3,...,\\
-                    \\
-                    & l = 0,1,2,...,n-1,\\
-                    \\
-                    & m = -l, -l +1,...,l.
-                    \end{align}
+                    \begin{bmatrix}
+                    m  & \boldsymbol{\sigma} \cdot \tilde{\textbf{p}}\\
+                    \boldsymbol{\sigma} \cdot \tilde{\textbf{p}} & -m\\
+                    \end{bmatrix}
+                    \begin{bmatrix}
+                    u\\
+                    v
+                    \end{bmatrix}
+                    = E
+                    \begin{bmatrix}
+                    u\\
+                    v
+                    \end{bmatrix}.
+                    $$
+                    For nonrelativistic energy $E = T + m, T \ll m$ and the
+                    bottom equation is given by 
+                    $$
+                    \boldsymbol{\sigma} \cdot \tilde{\textbf{p}}u 
+                    =(E+m)v \approx 2mv.
+                    $$
+                    This lets us write the upper equation as
+                    $$
+                    \frac{(\boldsymbol{\sigma} \cdot \tilde{\textbf{p}})
+                    (\boldsymbol[{\sigma} \cdot \tilde{\textbf{p}})}{2m}u
+                    =\left[\frac{\tilde{\textbf{p}}^2}{2m}
+                    +\frac{i\boldsymbol{\sigma}}{2m}\cdot
+                    (\tilde{\textbf{p}} \times \tilde{\textbf{p}})\right]u
+                    =Tu
                     $$
                 </p>
 
