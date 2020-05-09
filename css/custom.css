@@ -32,7 +32,7 @@ a { font-family: "Open Sans", sans-serif }
 .group.top-nav { margin-bottom: -20px }
 .group.top-nav nav a { text-decoration: none }
 .group.top-nav nav a:hover { 
-	color: #3e2323; -webkit-transition: all .25s ease-in-out;
+	color: #000; -webkit-transition: all .25s ease-in-out;
    -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
      -o-transition: all .2s ease-in-out;
@@ -188,7 +188,7 @@ a.read-more {
     letter-spacing: 2px;
 }
 a.read-more:hover {
-	background-color: #3e2323;
+	background-color: #000;
 	color: #fff;
 	-webkit-transition: all .25s ease-in-out;
 	   -moz-transition: all .25s ease-in-out;
