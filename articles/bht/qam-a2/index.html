@@ -50,6 +50,33 @@
             <hr>
             <div class="in-content">
 
+                <h5>Contents</h5>
+                <div class="list">
+                <ol type='i'>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#schrodinger">The Schrodinger Equation for
+                            Hydrogen</a></li>
+                    <li><a href="#azimuth">The Azimuthal Equation</a></li>
+                    <li><a href="#polar">The Polar Equation</a></li>
+                        <ul>
+                            <li><a href="#legendre">The Associated Legendre
+                                Polynomial</a></li>
+                        </ul>
+                    <li><a href="#radial">The Radial Equation</a></li>
+                        <ul>
+                            <li><a href="#laguerre">The Associated Laguerre
+                                Polynomial</a></li>
+                        </ul>
+                    <li><a href="#orbital">Orbital Angular Momentum</a></li>
+                    <li><a href="#kgeqn">The Klein-Gordon Equation</a></li>
+                    <li><a href="#dirac">The Dirac Equation</a></li>
+                    <li><a href="#qam">Total Angular Momentum and Quantum
+                        Numbers</a></li>
+                </ol>
+                </div>
+
+                <h5 id="intro">1. Introduction</h5>
+
                 <p>
                     The ferromagnetic alignments discussed in chapter 2 of
                     Schroeder's Thermal Physics are a simplification on what is
@@ -115,6 +142,9 @@
                     to understand these values, we must look back to the
                     Schrodinger equation.
                 </p>
+
+                <h5 id="schrodinger">2. The Schrodinger Equation for
+                    Hydrogen</h5>
 
                 <p>
                     We ask what the Schrodinger equation predicts for the
@@ -235,10 +265,15 @@
                     & \frac{1}{\Phi}\frac{d^2\Phi}{d\phi^2} + B = 0.
                     \end{align}
                     $$
+                </p>
+
+                <h5 id="azimuth">3. The Azimuthal Equation</h5>
+
+                <p>
                     Now we can begin solving. I'm going to start with the
                     azimuthal portion, because it's the simplest. As anyone who
                     took first year physics should be able to recognize, this is
-                    a 2nd order linear ODE with constant coefficients &endash;
+                    a 2nd order linear ODE with constant coefficients &mdash;
                     it has a solution 
                     $$
                     \Phi(\phi) = a_1e^{im\phi}+a_2e^{-im\phi}
@@ -255,6 +290,8 @@
                     Next up is the much more involved polar equation. Deep
                     breaths, we'll get through it.
                 </p>
+
+                <h5 id="polar">4. The Polar Equation</h5>
 
                 <p>
                     Alright. Taking $B=m^2$ again, the polar equation is
@@ -307,6 +344,8 @@
                     if you're not up to it. Here goes nothing. 
                 </p>
 
+                <h5 id="legendre">4.a The Associated Legendre Polynomial</h5>
+
                 <p>
                     We start with the case that $m=0$. Our ODE becomes
                     $$
@@ -347,7 +386,7 @@
                     P_l =\frac{1}{2^l l!} \frac{d^l}{dx^l}(x^2-1)^l.
                     $$
                     This is the "Rodrigues formula". And it's all well and good,
-                    but it's still not what we're after &ndash; we don't
+                    but it's still not what we're after &mdash; we don't
                     generally have $m=0$. Let's explore the non-zero case.
                 </p>
 
@@ -369,7 +408,7 @@
                     \xi = (1-x^2)^a\frac{d^b}{dx^b}y_n.
                     $$
                     Immediately, we see that $b$ has to be a positive integer
-                    &ndash; no Feynman half-derivative tricks allowed here.
+                    &mdash; no Feynman half-derivative tricks allowed here.
                     Taking derivatives appropriately, we can see that if we 
                     force $y=x$ and let $b$ be 1,
                     $$
@@ -489,7 +528,7 @@
                     function, and further as gamma functions that will leave us
                     with a fairly clean factorial term as our result. It should
                     be noted that "seeing this" is not really expected. The way
-                    I was taught, there wasn't this much detail &ndash; we were
+                    I was taught, there wasn't this much detail &mdash; we were
                     supposed to just accept that the normalization factor
                     presented was just correct and move on. I would never
                     expect someone to calculate this result by hand and expect
@@ -545,6 +584,8 @@
                     this with me to take a sigh of relief and maybe a break,
                     because that's what I did.
                 </p>
+
+                <h5 id="radial">5. The Radial Equation</h5>
 
                 <p id="coward">
                     Ok, so with the angular part squared away we can finish our
@@ -602,7 +643,7 @@
                     $\{s\}$ are the singular points particular to $j_i$. We
                     need singular points at the center of the atom, and at $n
                     \rightarrow \infty$. We cover the form of $j$ in those
-                    cases. First, the infinite distance case &ndash; as $r$
+                    cases. First, the infinite distance case &mdash; as $r$
                     gets very large, so does $\rho$ and our middle two terms
                     drop out. That leaves us with
                     $$
@@ -619,7 +660,7 @@
 
                 <p>
                     Now in the limit as $r \rightarrow 0$, we see that the
-                    terms of import are only the first and second &ndash; the
+                    terms of import are only the first and second &mdash; the
                     other two don't grow quickly enough in the limit. We write
                     $$
                     \frac{d^2u}{d\rho^2} -\frac{l(l+1)}{\rho^2}u = 0.
@@ -701,7 +742,7 @@
                     limit of large $i$. Taking the ratio between $a_{i+1}$ and
                     $a_i$, we get that this approacjes $\frac{1}{i}$ for large
                     $i$, the same power series ratio between terms of a
-                    positive exponential &ndash; we need the coefficients to 
+                    positive exponential &mdash; we need the coefficients to 
                     tend to zero if this is going to converge. The recursion
                     relationship is a strictly mathematical result, to have a
                     physical meaning we need to allow for a maximal value of
@@ -725,10 +766,12 @@
                     $$
                 </p>
 
+                <h5 id="laguerre">5a. The Associated Laguerre Polynomial</h5>
+
                 <p>
                     Final stretch. A polynomial that satisfies the equation
                     $\eqref{eq:laguerre}$ is called an
-                    <em>associtated Laguerre Polynomial</em>. These are
+                    <em>associtated Laguerre polynomial</em>. These are
                     well-studied, and have the form, again due to Rodrigues,
                     $$
                     L_n^k(x)= \frac{e^xx^{-k}}{n!}
@@ -750,7 +793,7 @@
                 </p>
 
                 <p>
-                    At this point, we write again our cursory solution &ndash;
+                    At this point, we write again our cursory solution &mdash;
                     $u(\rho) = e^{\frac{-\rho}{2}}\rho^{l+1}L_{n-l-1}^{2n+1}$.
                     Realizing that $u(\rho) = \rho R(\rho)$, we can say that
                     $$
@@ -788,8 +831,10 @@
                     This, in fact, may be generalized slightly for 
                     "hydrogen-like atoms", those with a single electron in the
                     valence. We send $\kappa \rightarrow Z\kappa$, $Z$ being the
-                    atomic number &ndash; the number of protons in the nucleus.
+                    atomic number &mdash; the number of protons in the nucleus.
                 </p>
+
+                <h5 id="orbital">6. Orbital Angular Momentum</h5>
 
                 <p>
                     From here, it's a procedural matter to find the orbital
@@ -815,15 +860,20 @@
                     revisit spin. The initial work to describe the total
                     angular momentum was done by Pauli in the late 1920's, but
                     the equation he came up with is not derivable from the
-                    strict limitations of the Schrodinger equation &ndash;
+                    strict limitations of the Schrodinger equation &mdash;
                     instead, we must ask a relativistic question, come up with
                     a relativistic answer, and take a non-relativistic limit to
                     come to the answer we know today. We will need Dirac's
                     physics, but to get to it we first look at the too-often
-                    overlooked Klein-Gordon equation. Accordingly, we will be
-                    working in natural units for this section: $\hbar = c = 1$.
-                    Taking a second time derivative of the Schrodinger
-                    equation, multiplying again by $i$, we recover
+                    overlooked Klein-Gordon equation. 
+                </p>
+
+                <h5 id="kgeqn">7. The Klein-Gordon Equation</h5>
+
+                <p>
+                    We will be working in natural units for this section:
+                    $\hbar = c = 1$.  Taking a second time derivative of the
+                    Schrodinger equation, multiplying again by $i$, we recover
                     $$
                     -\frac{\partial^2}{\partial t^2}\ket{\psi(t)}
                     = H^2 \ket{\psi(t)}.
@@ -854,7 +904,7 @@
                     \left[\partial_{\mu}\partial^{\mu} +m^2\right]
                     \Psi(\textbf{x},t) = 0.
                     $$
-                    The Kelin-Gordon equation also fulfills our expectations
+                    The Klein-Gordon equation also fulfills our expectations
                     for the solutions of a free relativistic particle of mass
                     $m$. It has time dependence like $e^{-iEt}$, with $E$ an
                     eigenvalue of the Hamiltonian, and spacial dependence like
@@ -878,6 +928,8 @@
                     quantum mechanics to really take off: and a byproduct of
                     this is, finally, an explanation for spin.
                 </p>
+
+                <h5 id="dirac">8. The Dirac Equation</h5>
 
                 <p>
                     What Dirac asserted was an equation like the following:
@@ -1114,6 +1166,9 @@
                     much of quantum mechanical theory, and finally invoke
                     relativistic physics. It is a spectacularly deep question!
                 </p>
+
+                <h5 id="qam">9. Total Angular Momentum and Quantum
+                    Numbers</h5>
 
                 <p>
                     We will close with some final remarks about the measurement
