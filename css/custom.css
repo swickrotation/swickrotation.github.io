@@ -164,6 +164,22 @@ img.img-intro {
      -o-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out; 
 }
+ol {
+    counter-reset: item;
+}
+
+ol > li {
+    counter-increment: item;
+}
+
+ol ol > li {
+    display: block;
+}
+
+ol ol > li:before {
+    content: counters(item, ".") ". ";
+    margin-left: -20px;
+}
 .content .post p {
     color: #001100;
     font-family: "Open Sans", sans-serif;
