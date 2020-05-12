@@ -165,7 +165,7 @@ img.img-intro {
         transition: all .2s ease-in-out; 
 }
 ol {
-    counter-increment: item;
+    counter-reset: item;
 }
 
 ol > li {
