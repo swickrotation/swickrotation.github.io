@@ -72,8 +72,14 @@ p.p-intro {
     text-transform: uppercase;
     padding: 10px 25px;
     background-color: #F5F5F5;
+    border: 1px solid #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: inset 0 -3px 0 #000000;
     position: relative;
 }
+/*
 p.p-intro:after {
     content: '';
     position: absolute;
@@ -98,20 +104,7 @@ p.p-intro:before {
     left: -10px;
     top: 10px;
 }
-img.img-intro {
-    border-radius: 100px;
-    width: 47px;
-    background-color: #FFF;
-    border: 1px solid #000000;
-    -moz-box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
-    -webkit-box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0.5px 0.9px 5px rgba(0, 0, 0, 0.05);
-    /*
-    -webkit-animation: smooth-entry-btn 1s;
-	-moz-animation: smooth-entry-btn 1s;
-	animation: smooth-entry-btn 1s;
-    */
-}
+*/
 .content { padding-top: 75px }
 .post { margin-bottom: 40px }
 .content .post a { text-decoration: none }
