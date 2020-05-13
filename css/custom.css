@@ -44,6 +44,7 @@ a { font-family: "Open Sans", sans-serif }
     font-weight: 700;
     font-size: 35px;
     color: #000;
+    text-transform: lowercase;
     letter-spacing: -2px;
 }
 .navigation-toggle .logo {
