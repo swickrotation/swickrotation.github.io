@@ -307,21 +307,22 @@
                     </div>
 					
                     <p>
-						In this diagram, $\ket{b}$ and  $\ket{c}$ are the 
-                        entangled qubits making up the bell state, the former 
-                        belonging to Alice and the latter to Bob. Word to the 
-                        wise: circuit diagrams are read from left to right and 
-                        top-down, but the operations performed by the gates are 
-                        still applied on the left of the input bits unless 
-                        otherwise specified. 
-					</p>
-
+						In this diagram, $q_1$ and  $1_2$ will be the entangled
+                        qubits making up the bell state, the former belonging
+                        to Alice and the latter to Bob. Word to the wise:
+                        circuit diagrams are read from left to right and
+                        top-down, but the operations performed by the gates
+                        are still applied on the left of the input bits unless
+                        otherwise specified.  </p> 
 					<p>
-						Alice starts by interacting $\ket{a}$ with her half of 
+						Alice starts by interacting $q_0$ with her half of 
                         the entangled pair: this results in 
                         
-                        $$\ket{\psi_0} = \frac{1}{\sqrt{2}}\biggl[\alpha \ket{0}(\ket{00}+\ket{11)} + \beta\ket{1}(\ket{00}+\ket{11)}\biggr].$$
-
+                        $$
+                        \ket{\psi_0} = \frac{1}{\sqrt{2}}\biggl[\alpha
+                        \ket{0}(\ket{00}+\ket{11)} + \beta\ket{1}(\ket{00}
+                        +\ket{11)}\biggr].
+                        $$
 					</p>
 
 					<p>
@@ -330,7 +331,11 @@
                         to one, it flips the bit on the second line, in this 
                         case. We get 
                         
-                        $$\ket{\psi_1} = \frac{1}{\sqrt{2}}\biggl[\alpha \ket{0}(\ket{00}+\ket{11)} + \beta\ket{1}(\ket{10}+\ket{01)}\biggr].$$
+                        $$
+                        \ket{\psi_1} = \frac{1}{\sqrt{2}}\biggl[\alpha 
+                        \ket{0}(\ket{00}+\ket{11)} + \beta\ket{1}(\ket{10}
+                        +\ket{01)}\biggr].
+                        $$
 
 					</p>
 
@@ -340,7 +345,8 @@
                         the first qubit. The Hadamard (in two dimensions) gate 
                         takes the form
 
-						$$H = \frac{1}{\sqrt{2}} 
+						$$
+                        H = \frac{1}{\sqrt{2}} 
 						\begin{pmatrix}
 						1 & 1 \\
 						1 & -1 \\
@@ -349,12 +355,23 @@
 						
                         and when applied to the first qubit yields 
                         
-                        $$\ket{\psi_2} = \frac{1}{2}\biggl[\alpha (\ket{0}+\ket{1})(\ket{00}+\ket{11)} + \beta(\ket{0}-\ket{1})(\ket{10}+\ket{01)}\biggr].$$ 
+                        $$
+                        \ket{\psi_2} = \frac{1}{2}\biggl[\alpha 
+                        (\ket{0}+\ket{1})(\ket{00}+\ket{11)} + \beta(\ket{0}
+                        -\ket{1})(\ket{10}+\ket{01)}\biggr].
+                        $$ 
                         
-                        Knowing that the Kronecker product is associative, we can re-arrange this result after distributing all the products. This recovers 
+                        Knowing that the Kronecker product is associative, we
+                        can re-arrange this result after distributing all the
+                        products. This recovers 
                         
-                        $$\ket{\psi_2} = \frac{1}{2}\biggl[\alpha \ket{00}(\alpha\ket{0}+\beta\ket{1}) + \ket{01}(\alpha\ket{1}+\beta\ket{0}) + \ket{10}(\alpha\ket{0}-\beta\ket{1}) + \ket{11}(\alpha\ket{1}\beta\ket{0})\biggr].$$
-
+                        $$
+                        \ket{\psi_2} = \frac{1}{2}\biggl[\alpha 
+                        \ket{00}(\alpha\ket{0}+\beta\ket{1}) + 
+                        \ket{01}(\alpha\ket{1}+\beta\ket{0}) + 
+                        \ket{10}(\alpha\ket{0}-\beta\ket{1}) + 
+                        \ket{11}(\alpha\ket{1}\beta\ket{0})\biggr].
+                        $$
 					</p>
 					</div>
 
