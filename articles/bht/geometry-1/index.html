@@ -127,6 +127,51 @@
 
                 <h5 id=#'topo'>3.2 - Elements of Topology</h5>
 
+                <p>
+                    In order to understand topological manifolds, we must
+                    understand the structure of topological space. We take the
+                    simpler route through open sets rather than the historic
+                    neighbourhood approach. The name "open sets" is slightly
+                    misleasing and is a historical artifact due to the
+                    development of topology as a means towards analytical ends.
+                    What we call open sets, in a strict topological setting, are
+                    simply elements contained in topological space. It is upon
+                    us now to define that space.
+                </p>
+
+                <p>
+                    <b>DEFINITION 3.2.1:</b> A <em>Topological Space</em> 
+                    $(X,\mathcal{T})$ is a set $X$ and a collection of subsets
+                    of $X$, $\mathcal{T}$ which satisfy the following three
+                    properties:
+                    <div class='list'>
+                        <ol type='1'>
+                            <li>
+                                The union of an arbitrary collection of subsets,
+                                each members of $\mathcal{T}$, is also open and
+                                thus a member of $\mathcal{T}$. This may be
+                                written as
+                                $$
+                                \text{if} O_{\alpha} \in \mathcal{T} \forall
+                                \alpha, \Cup_{\alpha} O_{\alpha} \in 
+                                \mathcal{T}.
+                                $$
+                            </li>
+                            <li>
+                                The finite intersection of elements of
+                                $\mathcal{T}$ is an element of $\mathcal{T}$.
+                                That is,
+                                $$
+                                \text{for} O_1 \ldots O_n \in \mathcal{T}.
+                                $$
+                            </li>
+                            <li>
+                                The set $X$ and the empty set $\varnothing$ are
+                                elements of $\mathcal{T}$.
+                            </li>
+                        </ol>
+                    </div>
+                </p>
 
             </div>
         </div>
