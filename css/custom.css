@@ -16,7 +16,7 @@ a { font-family: "Open Sans", sans-serif }
 }
 .image {
     margin: auto;
-    width: 100%;
+    max-width: 100%;
 }
 /* Navigation */
 .main-nav {
@@ -62,7 +62,8 @@ a { font-family: "Open Sans", sans-serif }
     width: 100%;
     height: 272px;
     padding-top: 117px;
-    background: url(/img/header.jpeg) #F7F7F7 center top;
+    background: url(/img/header.jpeg) #F7F7F7 center top no-repeat;
+    background-size: cover;
 }
 p.p-intro {
     color: #000000;
