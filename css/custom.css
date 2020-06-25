@@ -16,7 +16,7 @@ a { font-family: "Open Sans", sans-serif }
 }
 .image {
     margin: auto;
-    max-width: 100%;
+    width: 100%;
 }
 /* Navigation */
 .main-nav {
