@@ -466,17 +466,26 @@
 
                     <div class="list">
                     <ol>
-                        <li>$S=0$ iff all $p_i$ are 0 except for one, which has
-                        a value of one. Otherwise, $S$ is positive.</li>
-                        <li>$S$ is maximised when all probabilities are equal.
+                        <li>
+                            $S=0$ iff all $p_i$ are 0 except for one, which has
+                        a value of one. Otherwise, $S$ is positive.
+                        </li>
+                        <li>
+                            $S$ is maximised when all probabilities are equal.
                         This is also the situation with the most uncertainty,
-                        for purposes of intuition.</li>
-                        <li> The joint entropy is less than the sum of the
+                        for purposes of intuition.
+                        </li>
+                        <li>
+                            The joint entropy is less than the sum of the
                         individual entropies, i.e. $S(x,y) \leq S(X) + 
-                        S(y)$.</li>
-                        <li>Any change towards equalizing the probabilities in
-                        the domain of $S$ increases $S$.</li>
-                        <li>Say we have two events $x,y$ not necessarily
+                        S(y)$.
+                        </li>
+                        <li>
+                            Any change towards equalizing the probabilities in
+                        the domain of $S$ increases $S$.
+                        </li>
+                        <li>
+                            Say we have two events $x,y$ not necessarily
                         inedpendent of each other. For any value $i$ that $x$
                         can assume, there is a conditional probability $p_i(j)$
                         that $y$ takes the value $j$. This conditional
@@ -493,8 +502,10 @@
                         The joint entropy of $x,y$ is the entropy of $x$ plus
                         the conditional entropy of $y$ on known $x$.
                         </li>
-                        <li>From properties 3 and 5, we can see that $S(y)
-                        \geq S_x(y)$.</li>
+                        <li>
+                            From properties 3 and 5, we can see that $S(y)
+                        \geq S_x(y)$.
+                        </li>
                     </ol>
                     </div>
                 </p>
@@ -538,7 +549,7 @@
                     $$
                     \begin{align}
                     \log p & \approx m \sum_i^m p_i \log p_i
-                    \log p \approx -mS\\
+                    \log p \approx -mS,\\
                     \\
                     S &\approx \frac{\log\frac{1}{p}}{n}.
                     \end{align}
@@ -558,7 +569,7 @@
                             $\epsilon$</li>
                         <li>The remainder, whose probabilities satisfy
                         $$
-                        \left| \frac{\log p^{-1}}{n} - S\right| < \delta
+                        \left| \frac{\log p^{-1}}{n} - S\right| < \delta.
                         $$
                         </li>
                     </div>
