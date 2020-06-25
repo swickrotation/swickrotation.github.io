@@ -125,34 +125,34 @@
 
                 <p>
                     With the bookkeeping out of the way, we get to the proof of 
-                    the theorem. It goes like this- we start in the forward 
-                    direction: if $A$ is compact, then the sequences $\{x_n\}$ 
-                    in $A$ have accumulation points in $A$. The definition of 
-                    compactness of a set is that any open covering of that set 
-                    must admit a finite subcovering. We attempt a proof by 
-                    contradicton, in that we start with a comapct set set in 
-                    which the seqeunces do not have accumulation points in the 
-                    set. It is our hope that this leads to a regime in which $A$ 
+                    the theorem. 
+                    
+                    <b>PROOF:</b> we start in the forward direction: if $A$ is
+                    compact, then the sequences $\{x_n\}$ in $A$ have
+                    accumulation points in $A$. The definition of compactness
+                    of a set is that any open covering of that set must admit
+                    a finite subcovering. We attempt a proof by contradicton,
+                    in that we start with a comapct set set in which the
+                    seqeunces do not have accumulation points in the set. It
+                    is our hope that this leads to a regime in which $A$
                     cannot be compact, thus invalidating the assumption. 
                 </p>
 
                 <p>
                     For each $a \in A$, we choose an open set $\ \mathcal{U}_a$ 
                     containing $a$ such that a sequence $\{x_n\}$ contains a 
-                    finite amount of points in $\ \mathcal{U}_a$. 
-                    $\{\mathcal{U}_a | a \in A \}$ is an open cover of $A$, 
-                    namely the set 
-                    $\{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$. 
-                    However, if 
-                    $\{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$ is an 
-                    open cover, 
-                    $\{x_n \} \subset \{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$. 
-                    Then some $\mathcal{U}_{a_i}\}$ in 
-                    $\{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$ 
-                    contains infinitely many points of $\{x_n\}$  as the 
-                    sequence $\{x_n\}$ is infinite. A contradiction! If there 
-                    are to be finitely many sets covering $A$, these sets must 
-                    contain accumulation points.
+                    finite amount of points in $\ \mathcal{U}_a$.
+                    $\{\mathcal{U}_a | a \in A \}$ is an open cover of $A$,
+                    namely the set $\{ \mathcal{U}_{a_1}, \ldots ,
+                    \mathcal{U}_{a_n} \}$.  However, if $\{ \mathcal{U}_{a_1},
+                    \ldots , \mathcal{U}_{a_n} \}$ is an open cover, $\{x_n \}
+                    \subset \{ \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n}
+                    \}$.  Then some $\mathcal{U}_{a_i}\}$ in $\{
+                    \mathcal{U}_{a_1}, \ldots , \mathcal{U}_{a_n} \}$ contains
+                    infinitely many points of $\{x_n\}$  as the sequence
+                    $\{x_n\}$ is infinite. A contradiction! If there are to be
+                    finitely many sets covering $A$, these sets must contain
+                    accumulation points.
                 </p>
                 
                 <p>
@@ -161,8 +161,7 @@
                     2nd-countable, and if every sequence $\{x_n\}$ in $A$ has an 
                     accumulation point in $A$, that $A$ is compact. This will be 
                     done directly, though we will invoke an idea from a 
-                    hitherto-unused part of mathematics. Don't worry, it's 
-                    straightforward. 
+                    hitherto-unused part of mathematics.
                 </p>
 
                 <p>
@@ -209,14 +208,14 @@
                     every infinite subset has a limit point iff every sequence 
                     has a cluster point.</i> 
                     <br> 
-                    We start with the last point: 
-                    let $K$ be an infinite set, and suppose every sequence has a 
-                    cluster point. Clearly, we may construct a sequence in $K$ 
-                    such that its cluster point is a limit point in $K$. Now on 
-                    the other hand, suppose that any infinite subset has an 
-                    accumulation point.  We take some infinite subset $k \in K$ : 
-                    consider any distinct sequence $\{x_n\}$ with distinct 
-                    elements. Any of these elements is a cluster point. 
+                    <b>PROOF:</b>We start with the last point &ndash; let $K$
+                    be an infinite set, and suppose every sequence has a
+                    cluster point. Clearly, we may construct a sequence in $K$
+                    such that its cluster point is a limit point in $K$. Now
+                    on the other hand, suppose that any infinite subset has an
+                    accumulation point.  We take some infinite subset $k \in
+                    K$ : consider any distinct sequence $\{x_n\}$ with
+                    distinct elements. Any of these elements is a cluster point. 
                     <br> 
                     Now suppose $X$ is compact. Let $\{x_n\}$ be a sequence in 
                     $X$ and say $B_n = \overline{\{x_i\}}_{i=n}^{\infty}$ so 
@@ -228,7 +227,12 @@
                     a sequence of closed sets such that they satisfy the 
                     property of finite intersections. We choose any 
                     $x_n \in B_1 \cap \ldots \cap B_n$. Any cluster point of 
-                    $\{x_n\}$, like $x$, is therefore in $\cap_{n=1}^{\infty}B_n$. 
+                    $\{x_n\}$, like $x$, is therefore in
+                    $\cap_{n=1}^{\infty}B_n$.
+                    <span style="float:right;">
+                        $\blacksquare$
+                    </span>
+                    <br>
                 </p>
 
                 <p>
@@ -242,6 +246,10 @@
                     that fact, one might take some uncountable open covering of 
                     $X$ which would admit no finite subcovering. This 
                     acknowledgement concludes the proof. 
+                    <span style="float:right;">
+                        $\blacksquare$
+                    </span>
+                    <br>
                 </p>
 
             </div>
