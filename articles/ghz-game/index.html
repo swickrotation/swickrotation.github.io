@@ -90,33 +90,6 @@
                         of classical GHZ game" class="image">
                     </p>
                 </div>
-                
-
-                <!--
-                <script type="text/tikz">
-                    \begin{tikzpicture}
-                        \hspace{0.7cm}
- 15                     \node (ref) [block] {Referee};
- 16                     \node (bob) [block, below of=ref, node distance = 2.4cm] {Bob answers $b$};
- 17                     \node (alice) [block, left of=bob, node distance = 3.5cm] {Alice answers $a$};
- 18                     \node (charlie) [block, right of=bob, node distance = 3.5cm] {Charlie answers $c$};
- 19                     \node (measure1) [block, below of=alice, node distance = 2.4cm] {Measure Bit $a$};
- 20                     \node (measure2) [block, below of=bob, node distance = 2.4cm] {Measure Bit $b$};
- 21                     \node (measure3) [block, below of=charlie, node distance = 2.4cm] {Measure Bit $c$};
- 22                     \node (result) [block, below of=measure2, node distance = 2.4cm] {$a \oplus b \oplus     c \stackrel{?}{=} r \vee s \vee t$};
- 23                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$s$} (bob);
- 24                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$r$} (alice);
- 25                     \path[->] (ref) edge[line] node[ fill=white, anchor=center, pos=0.5,font=\bfseries] {$t$} (charlie);
- 26                     \path [line] (alice) ~~ (bob);
- 27                     \path [line] (alice) -- (measure1);
- 28                     \path [line] (bob) -- (measure2);
- 29                     \path [line] (charlie) -- (measure3);
- 30                     \path [line] (measure1) -- (result);
- 31                     \path [line] (measure2) -- (result);
- 32                     \path [line] (measure3) -- (result);
- 33                 \end{tikzpicture}
-                </script>
-                //-->
 
                 <p>
                     We say that $r,s,t \in \{0,1\}$ and that the bit strings 
@@ -178,7 +151,10 @@
                     seperated, we can see that there are strategies which allow 
                     the players to win every game. Here's how it works: the 
                     players share an entangled state that looks something like 
-                    $$\ket{\psi} = \frac{1}{2}\ket{000}-\frac{1}{2}\ket{011}-\frac{1}{2}\ket{101}-\frac{1}{2}\ket{110}$$
+                    $$
+                    \ket{\psi} = \frac{1}{2}\ket{000}-\frac{1}{2}\ket{011}
+                    -\frac{1}{2}\ket{101}-\frac{1}{2}\ket{110}
+                    $$
                 </p>
 
                 <p>
@@ -213,12 +189,25 @@
 
                 <p>
                     We remember that 
-                    $$\ket{\psi} = \frac{1}{2}\ket{000}-\frac{1}{2}\ket{011}-\frac{1}{2}\ket{101}-\frac{1}{2}\ket{110}\\
-                    = \frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\ket{00}-\frac{1}{\sqrt{2}}\ket{11}\right)\ket{0}-\frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\ket{01}+\frac{1}{\sqrt{2}}\ket{10}\right)\ket{1}.$$ 
+                    $$
+                    \ket{\psi}
+                    = \frac{1}{2}\ket{000}-\frac{1}{2}\ket{011}
+                    -\frac{1}{2}\ket{101}-\frac{1}{2}\ket{110}\\
+                    = \frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\ket{00}
+                    -\frac{1}{\sqrt{2}}\ket{11}\right)\ket{0}
+                    -\frac{1}{\sqrt{2}}\left(\frac{1}{\sqrt{2}}\ket{01}
+                    +\frac{1}{\sqrt{2}}\ket{10}\right)\ket{1}.
+                    $$ 
                     From here, we see that upon applying hadamard gates to the 
                     first two qubits in each term, we get 
-                    $$\left(H \otimes H\right)\left(\frac{1}{\sqrt{2}}\ket{00}-\frac{1}{\sqrt{2}}\ket{11}\right) = \frac{1}{\sqrt{2}}\ket{01}+\frac{1}{\sqrt{2}}\ket{10} \\
-                    \left(H \otimes H\right)\left(\frac{1}{\sqrt{2}}\ket{01}+\frac{1}{\sqrt{2}}\ket{10}\right) = \frac{1}{\sqrt{2}}\ket{00}-\frac{1}{\sqrt{2}}\ket{11}$$
+                    $$
+                    \left(H \otimes H\right)\left(\frac{1}{\sqrt{2}}\ket{00}
+                    - \frac{1}{\sqrt{2}}\ket{11}\right)
+                    = \frac{1}{\sqrt{2}}\ket{01}+\frac{1}{\sqrt{2}}\ket{10} \\
+                    \left(H \otimes H\right)\left(\frac{1}{\sqrt{2}}\ket{01}
+                    +\frac{1}{\sqrt{2}}\ket{10}\right) 
+                    = \frac{1}{\sqrt{2}}\ket{00}-\frac{1}{\sqrt{2}}\ket{11}
+                    $$
                 </p>
 
                 <p>
@@ -226,7 +215,11 @@
                     to each of these qubits returns terms that we saw in the 
                     original state $\ket{\psi}$. Putting this all together, 
                     we're going to get something like this:
-                    $$\left(H \otimes H \otimes I\right)\ket{\psi} =  \frac{1}{2}\left(\ket{010}+\ket{100}+\ket{001}-\ket{111}\right)$$
+                    $$
+                    \left(H \otimes H \otimes I\right)\ket{\psi}
+                    =  \frac{1}{2}\left(\ket{010}+\ket{100}+\ket{001}
+                    -\ket{111}\right)
+                    $$
                     which, upon measurement of $a \oplus b \oplus c$ will yeild 
                     the desired result of $1$ no matter which state is measured 
                     by each player. This will be the case regardless of what 

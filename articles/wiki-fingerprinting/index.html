@@ -51,19 +51,86 @@
 					I know so much more about wikipedia now than I ever meant
                     to learn. I've probably forgotten more about wikipedia's
                     inner workings than most of its power-users and top
-                    contributors. Over the past few years, I've spent a lot of
-                    moonlighting hours decompressing from physics, stuck in
-                    bus stations, frustrated at other projects and taking out
-                    that frustration on what this project could have been
-                    &ndash; only to find that every question I and my
-                    collaborator had seeked to ask had been answered more than
-                    a year before we'd begun working on it.
+                    contributors ever need to learn. Over the past few years,
+                    I've spent a lot of moonlighting hours decompressing from
+                    physics, stuck in bus stations, frustrated at other
+                    projects and taking out that frustration on what this
+                    project could have been &ndash; only to find that every
+                    question I and my collaborator had seeked to ask had been
+                    answered more than a year before we'd begun working on it,
+                    most comprehensively in the doctoral thesis of
+                    <a href="https://uwspace.uwaterloo.ca/bitstream/handle/10012/10123/Wang_Tao.pdf?sequence=3&isAllowed=y">
+                        Tao Wang</a> in 2015, done at the CrySP lab at
+                    Waterloo, and brought to my attention recently by friend
+                    (and CrySP alum)
+                    <a href="https://annalorimer.com/">Anna Lorimer</a>. Many
+                    thanks to Anna. At time of writing, Dr. Wang is a professor
+                    of computer science at HKUST, and Anna is a cryptography
+                    researcher at the University of Chicago.
 				</p>
 
                 <p>
-                    It all started in the Winter of 2016.
+                    It all started in the Winter of 2016. My friend
+                    <a href="https://www.chosenplaintext.ca/">Tim McLean</a>
+                    and I were bored and looking for something to do, and we
+                    start playing around with some ideas about website
+                    fingerprinting. Tim's a security engineer, primarily, and
+                    had been spending a lot of his time in those days reading
+                    abou side-channel attacks. HTTP/2 had only come out that
+                    past May. There was a lot to be learned by civilians like
+                    me about how information was transferred over the internet
+                    in the first place, let alone in this new framework. We had
+                    some notion about being able to identify websites from
+                    their packet sizes, in load-order.
+                </p>
+                
+                <p>
+                    Now, I don't really know the first thing about internet
+                    protocol or transmission control protocol, or much about
+                    networking generally. But what I did have was a working
+                    understanding of statistical modelling and a bit of time on
+                    my hands. I still don't have much grasp on the technological
+                    points, so if what I write has some errors in it, it will
+                    not come as a shock to me (and if you spot one or many, do
+                    let me know).
                 </p>
 
+                <p>
+                    My understanding is that as a webpage is loaded, it calls
+                    things in a particular order. First, you might have some
+                    site or process-specific overhead, things like decal
+                    formatting or navicons or things of that nature that don't
+                    change from page to page but must be loaded with each. That
+                    might be some html and then some associated CSS, javascript,
+                    and media. The html needs to come in first, because it's
+                    what dictates where everything else goes. The other items
+                    just get called. If that's right, it explains why on a poor
+                    load-job you get a very bare-bones looking white page with
+                    no formatting and big walls of text.
+                </p>
+
+                <p>
+                    Tim, for his part, wrote a script for us to load the web
+                    pages and collect the traffic data &ndash; so for our
+                    purposes, that included the URLs and the packets, as well
+                    as the time and date at which we collected them. We then
+                    assembled that into a database. This database would be used
+                    to compare with the data collected from an unwitting target.
+                    That target data wouldn't include the URL's and wouldn't
+                    have the date and time associated with it. All that would
+                    be available to the attacker would be the target's packet
+                    sizes, and what website they were on (but not which specific
+                    page). I'll explain the approach we took both in words and
+                    also with a pretty diagram.
+                </p>
+
+                <div class="image">
+                    <p style="text-align:center;">
+                        <img src="/articles/wiki-fingerprinting/scheme.png"
+                        alt="Diagrammatic description of our
+                        statistical attack process" class="image">
+                    </p>
+                </div>
 
             </div>
         </div>
