@@ -42,7 +42,7 @@
         <!-- Post -->
         <div class="post">
             <!-- Heading -->
-                <h1>Handshake the Devil: Website Fingerprinting after HTTP/2</h1>
+                <h1>A Brief Sojourn in Network Security</h1>
                 <h4>March, 2021</h4>
             <hr>
             <div class="in-content">
@@ -76,7 +76,7 @@
                     start playing around with some ideas about website
                     fingerprinting. Tim's a security engineer, primarily, and
                     had been spending a lot of his time in those days reading
-                    abou side-channel attacks. HTTP/2 had only come out that
+                    about side-channel attacks. HTTP/2 had only come out that
                     past May. There was a lot to be learned by civilians like
                     me about how information was transferred over the internet
                     in the first place, let alone in this new framework. We had
@@ -131,6 +131,62 @@
                         statistical attack process" class="image">
                     </p>
                 </div>
+
+                <p>
+                    In point of fact, this diagram details more than I managed
+                    to accomplish before finding out we'd gotten scooped before
+                    even beginning. I never got around to doing page-view
+                    correlations, but I imagine I would've tried to see which
+                    articles might have linked to eachother or maybe have come
+                    up with some categorization scheme following that which many
+                    wiki articles already dutifully provide. The frequency
+                    analysis would have been the last-ditch attempt to increase
+                    accuracy, based solely on which pages were more popular to
+                    provide the best guess. We probably would have only used
+                    that in the unlikely event of a tie.
+                </p>
+
+                <p>
+                    As for the direct matching, I wrote a few scripts that did
+                    a post-processing on the URL's to make sure that they
+                    would be the same length (so that we might compare pages
+                    sans media to pages which included images, sound, and/or
+                    video) to those without. Then I put those vectors, now
+                    usually something like 13-dimensional into a
+                    cosine-similarity test. After a bit of tweaking one
+                    Saturday night a couple weeks ago, I'd managed to get a
+                    match rate of just over 30&percent; between a database and
+                    some generated target data collected 6 months apart from
+                    each other. That was an exciting result. We'd spent some
+                    time on this over the years, a few late nights here and
+                    there, a few hours tinkering away getting the code together,
+                    me getting myself familiar with LaTeX-ing a proper article
+                    in many columns! It was nice to think that maybe it would go
+                    somewhere after all. We even had a title agreed upon, we
+                    were gonna call the paper "Handshake the Devil: Statistical
+                    Analysis of TLS Traffic Records and Cryptanalytic
+                    Implications". Alas...
+                </p>
+
+                <p>    
+                    I asked Anna if she thought this was a direction worth
+                    moonlighting on. She was encouraging, but followed up
+                    fairly quickly with the thesis linked above and all hopes
+                    were dashed. According to her, and she is an authority,
+                    the environment for website fingerprinting attack research
+                    is mostly along the lines of machine learning these days.
+                    I've got no serious background in ML, so that's a bridge
+                    too far for the time being &ndash; and I expect by the
+                    time I've got cause to learn enough, the avenue will be
+                    explored. So for the first time, I took all the data and
+                    all the code we wrote, and all the papers we read over
+                    those 5 years, and I put them on a usb which now rests in
+                    a box in the deep of my own desk drawer. It's a sad but
+                    relieving feeling to put something like that away.  I'll
+                    be holding onto some of the nice memories of our working
+                    sessions, as well as much of the knowledge I gained, for
+                    quite some time.
+                </p>
 
             </div>
         </div>
