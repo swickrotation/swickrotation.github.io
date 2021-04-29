@@ -92,9 +92,16 @@ p.p-intro {
     position: relative;
 }
 .content .post h4 {
+    color: #000;
+    font-family: "Futura", sans-serif;
+    font-size: 20;
+    font-weight: 400;
+    position: relative;
+}
+.content .post h5 {
     color: #001100;
     font-family: "Futura", sans-serif;
-    font-size: 16px;
+    font-size: 16;
     font-weight: 400;
     position: relative;
 }
