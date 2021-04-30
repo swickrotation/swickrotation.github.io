@@ -172,13 +172,53 @@ $\langle \mathbb{Z}_2 \times \mathbb{Z}_2 , +_2 \rangle $.
 \underline{Problem 1-3.1:} Give the elements of the regular subgroup of $S_6$
 which is isomorphic with the cyclic group of order 6.
 
-\underline{Solution:}
+\underline{Solution:} To see the regular subgroup isomorphic to $C_6$, we need
+only write one of the cayley tables for that group and read off the results:
+\begin{align*}
+    \noindent\begin{tabular}{c| c c c c c c}
+        & e & a & b & c & d & f\\
+       \cline{1-6}
+       e & e & a & b & c & d & f\\
+       a & a & b & c & d & f & e\\
+       b & b & c & d & f & e & a\\
+       c & c & d & f & e & a & b\\
+       d & d & f & e & a & b & c\\
+       f & f & e & a & b & c & d\\ 
+    \end{tabular} \rightarrow 
+    \begin{cases}
+        \binom{123456}{123456} &= e\\
+        \binom{123456}{234561} &= (123456)\\
+        \binom{123456}{345612} &= (135)(246)\\
+        \binom{123456}{456123} &= (14)(25)(36)\\
+        \binom{123456}{561234} &= (153)(264)\\
+        \binom{123456}{612345} &= (165432)\\
+    \end{cases}.
+\end{align*}
+We can see that this group is indeed regular. These are all the elements, up to
+some isomorphisms.
 
 \underline{Problem 1-3.2:} Use Cayley's theorem to find the possible structures
 of groups of order 6.
 
-\underline{Solution:}
+\underline{Solution:} Cayley's theorem states that every group $G$ of order $n$
+is isomorphic with a subgroup of the symmetric group $S_n$. In our case, $n=6$.
+From our work above, we have already done much of our task. We can further break
+down our result: we presume there are no allowed 6-cycles. Then, because the
+cycles need be of the same length, we can have two 3-cycles and three 2-cycles,
+plus $e$. That gives us
+\[ 
+\{(123), (132), (12), (13), (23), e\},
+\]
+which happens to be the symmetric 3-group, $S_3$.
 
+Is that it? It is! How do we know there aren't more? Well, suppose we disallow
+3-cycles. Then $G$ has only 2-cycles and the identity. The group has to have 6
+elements in total, so we need to have 5 2-cycles as well as the identity. But
+by the theorem, that puts us at trying to find a group isomorphic to a subset
+of $S_{10}$, not $S_{6}$. It's just too big.
+
+So there are only two ways to structure a group of order 6: the Abelian group
+$C_6$ and the non-Abelian group $S_3$.
 
 \end{document}
 
