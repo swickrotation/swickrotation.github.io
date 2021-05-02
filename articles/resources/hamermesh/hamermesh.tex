@@ -234,6 +234,48 @@ group of order 4 is given by
 C_4 = \{ e, (1234), (13)(24), (1432)\}.
 \]
 
+To break up $S_4$ into cosets partitioned by $C_4$, we need only apply elements
+of $S_4$ that are not present in $C_4$. Doing this successively and checking
+to make sure none of your needed elements have already been used, you can
+construct $S_4$ in a straightforward manner. 
+
+I will write the solution I found and give an example for comparison with the
+right cosets afterwards: we find that 
+
+\[
+    S_4 = C_4 + (12)C_4 + (13)C_4 + (14)C_4 + (23)C_4 + (34)C_4.
+\]
+
+Nice. Let's compare an example of left and right cosets.
+
+\[
+    (12)C_4 = \{ (12), (234), (1324), 143)  \}
+\]
+
+is the left coset. Our right coset is
+
+\[
+    C_4(12) = \{ (12), (134), (1423), (243)  \}.
+\]
+
+They're not the same! And in fact, they generally will not be the same ---
+that's because the application of permutations may lead to differing and 
+dependent cycles, which do not commute. Those portions partition portions that
+are equal for both the left and right coset are called "normal subgroups",
+and will be covered later in the text. In generality the left and right cosets
+will have the same index and produce the same results in summation. 
+
+\underline{Problem 1-4.2:} Find the possible structures of groups of order 8.
+
+\underline{Solution:} By Lagrange's theorem, we know that the elements of the
+group must have order dividing the order of the group. For a group of order 8,
+that means the elements may take orders 1,2,4, and 8. 
+
+If the group has an order-8 element, it has to be the cyclic group of order 8,
+$C_8$. 
+
+Next, suppose $x^2 = e$ for all the elements of the group. This group is 
+$\mathbb{Z} \times \mathbb{Z} \times \mathbb{Z}$, 
 
 
 \end{document}
