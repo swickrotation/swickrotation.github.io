@@ -498,10 +498,26 @@ i^2 = j^2 = k^2 = -1, \text{  } ij = k, jk = i, ki = j.
 \]
 \underline{Solution:} Let $a = (1234)(5678)$ and $b = (1537)(2846)$. Then from
 our previous work discovering the quarternion group, we can see that the group
-elements are going to be
+elements are going to be without doing much work --- though it is
+straightforward to verify that this is the group:
 \[
-G = \langle e, a, a^2, a^3, b, ab, a^2b, a^3b \rangle.
-\]
+G = \langle e, a, a^2, a^3, b, ab, b^3, ba \rangle.
+\].
+
+We see a few important relations that will let us define the isomorphism. Those
+relations are:
+\begin{enumerate}
+    \item $a^4 = b^4 = e$,
+    \item $a^2 = b^2$,
+    \item $a^3 =ab^2 = b^2a$,
+    \item $b^3 =ba^2 = a^2b$,
+    \item $ba = a^3b$.
+\end{enumerate}
+
+So seeing $a^2$ is its own element and $(a^2)^2 = 1$, with 1 already taken, we
+assign $a^2 = -1$. Further, we assign $a = i$. Then $a^3 = -i$. We assign
+$b = j$, $b^3 = -j$, and $ab = k$, $ba = -k$. This assignment satisfies all the
+requirements of the quaternion group and follows the same group relations.
 
 \newpage
 
