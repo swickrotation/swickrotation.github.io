@@ -430,11 +430,97 @@ classes.
 
 \underline{Solution:} The conjugate classes of $S_5$ are as follows:
 \begin{enumerate}
-    \item $e$
-    \item $(12), (13), (14), (15), (23), (24), (25), (34), (35), (45)$
-    \item $(123), (124), (125), (134), (135), (145), (234), (235)$
+    \item We have the identity cycle, the collection of 1-cycles on 5 elements.
+        This has just a single element, $e$.
+    \item We have the single 2-cycles, the collection of distinct cycles over
+        just two elements. This has ${5 \choose 2} = 10$ elements.
+    \item We have the collections of independent double 2-cycles, two 2-cycles
+        over independent elements: This class has
+        ${5 \choose 2} \cdot {3 \choose 2} \cdot \frac{1}{2} = 15$ elements, where
+        %the factor of $\frac{1}{2}$ is to eliminate a double-count because the
+        %ordering of each cycle is not important (i.e. $(13)(24) = (24)(13)$).
+    \item We have the class of single 3-cycles, which have ${5 \choose 3}
+        \cdot2! = 20$ elements (the factorial from the number of internal
+        arrangements allowable within a cycle over 3 elements --- $(123) \neq
+        (132)$, etc.
+    \item We have the collection of independent 3-cycle and 2-cycle
+        arrangements, which have ${5 \choose 3} \cdot 2! = 20$ elements. This
+        follows exactly the same logic as the previous case, as we have no
+        choice in our 2-cycle once the 3-cycle is determined.
+    \item We have the class of 4-cycles, which have ${5 \choose 4} \cdot 3! = 30$
+        elements.
+    \item We have the class of 5-cycles, which simply have $4!=24$ elements.
 \end{enumerate}
 
+If we add the number of elements up, we can see that we get $120 = 5!$, which
+is exactly what we should expcect from the symmetric group over 5.
 
+\underline{Problem 1-5.2:} Continue the table to $n = 5,6,7$. For $n=5$, give
+the cycle structure corresponding to each partition.
+
+\underline{Solution:}
+\begin{align*}
+    S_5: \text{  }&(5),(41),(32),(31^2),(2^21),(21^3)(1^5)\\
+    S_6: \text{  }&(6),(51),(42),(41^2),(3^2),(321),(31^3),(2^3),
+                           (2^21^2),(21^4),(1^6)\\
+    S_7: \text{  }&(7),(61),(52),(51^2),(43),(421),(41^3),(3^21), (32^2),(321^2),
+    (31^4),\\&(2^31), (2^21^3),(21^5),(1^7)
+\end{align*}
+For $S_5$, the cyclic structures are given by 
+\[
+    (abcde), (abcd), (abc)(de),(abc), (ab)(cd), (ab) \text{ and } e,
+\]
+respectively.
+
+\underline{Problem 1-5.3:} Find the number of permutations in each class of
+$S_5$.
+
+\underline{Solution:} Already done, see the solution for 1-5.1. Got ahead of
+myself! However, I will use the formula for one case to illustrate how it is
+done: Say for the partition $(32)$ in the table, we have $n=5$ and so
+\[
+    \frac{n!}{\prod_i^n \nu_i! i^{\nu_i}} = \frac{120}{(0!(1^0)(4^0)(5^0))
+    (1!2^1)(1!3^1)} = \frac{120}{6} = 20,
+\]
+as there is one 3-cycle and one 2-cycle in this partition, and zero 1-, 4-, and
+5-cycles.
+
+\underline{Problem 1-5.4:} By taking successive products of the permutations 
+\[
+    (1234)(5678) \text{      and       } (1537)(2846)
+\]
+show that one generates a group of order 8. Seperate the elements of the
+group into conjugate classes. Show that this group (the quaternion group) is
+isomorphic to the group with elements
+\[
+1, -1, i, -i, j, -j, k, -k; \\
+i^2 = j^2 = k^2 = -1, \text{  } ij = k, jk = i, ki = j.
+\]
+\underline{Solution:} Let $a = (1234)(5678)$ and $b = (1537)(2846)$. Then from
+our previous work discovering the quarternion group, we can see that the group
+elements are going to be
+\[
+G = \langle e, a, a^2, a^3, b, ab, a^2b, a^3b \rangle.
+\]
+
+\newpage
+
+\textbf{Invariant subgroups. Factor groups. Homomorphism.}
+
+\underline{Problem 1-6.1:} Without enumerating, find the conjugate subgroups of
+$S_3$ in $S_4$; of $S_2$ in $S_4$; of the cyclic group $\{e , (123), 132) \}$
+in $S_4$. 
+
+\underline{Solution:} 
+
+\underline{Problem 1-6.2:} Prove that a subgroup of index 2 is necessarily
+invariant. 
+
+\underline{Solution:} 
+
+\underline{Problem 1-6.3:} Show that all subgroups of the quarternion group are
+invariant.
+
+\underline{Solution:} 
 
 \end{document}
