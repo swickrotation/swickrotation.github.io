@@ -3,8 +3,8 @@
  */
 
 @font-face {
-    font-family: "Futura";
-    src: url("fonts/FuturaBT-Medium.ttf")
+    font-family: "iosevka";
+    src: url("/fonts/iosevka-medium.ttf")
 }
 
 body { margin-bottom: 50px }
@@ -40,7 +40,7 @@ a { font-family: "Open Sans", sans-serif }
 }
 .top-nav a.logo,
 .logo {
-    font-family: 'Futura', sans-serif;
+    font-family: 'iosevka', sans-serif;
     font-weight: 700;
     font-size: 35px;
     color: #000;
@@ -53,21 +53,21 @@ a { font-family: "Open Sans", sans-serif }
 }
 .top-nav .item-nav li.active a { color: #000000 }
 .top-nav .item-nav li a {
-    font-family: "Futura", sans-serif;
+    font-family: "iosevka", sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #A4A4A4;
 }
 .intro {
     width: 100%;
-    height: 272px;
+    height: 172px;
     padding-top: 117px;
     background: url(../img/header.jpeg) #F7F7F7 center top no-repeat;
     background-size: cover;
 }
 p.p-intro {
     color: #000000;
-    font-family: 'Futura', sans-serif;
+    font-family: 'iosevka', sans-serif;
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 700;
@@ -86,21 +86,21 @@ p.p-intro {
 .content .post a { text-decoration: none }
 .content .post h1 {
     color: #000;
-    font-family: "Futura", sans-serif;
+    font-family: "iosevka", sans-serif;
     font-size: 22px;
     font-weight: 400;
     position: relative;
 }
 .content .post h4 {
     color: #000;
-    font-family: "Futura", sans-serif;
+    font-family: "iosevka", sans-serif;
     font-size: 20;
     font-weight: 400;
     position: relative;
 }
 .content .post h5 {
     color: #001100;
-    font-family: "Futura", sans-serif;
+    font-family: "iosevka", sans-serif;
     font-size: 16;
     font-weight: 400;
     position: relative;
